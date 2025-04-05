@@ -13,8 +13,17 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->text('excerpt')->nullable();
+            $table->longText('content')->nullable();
+            $table->string('featured_image')->nullable();
+            $table->enum('status', ['draft', 'published'])->default('draft');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->json('meta')->nullable(); // meta_title, meta_description
             $table->timestamps();
         });
+
     }
 
     /**
