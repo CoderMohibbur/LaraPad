@@ -34,218 +34,399 @@
                                 </svg><span class="px-3 flex-1 whitespace-nowrap"
                                     data-testid="flowbite-sidebar-item-content"
                                     id="flowbite-sidebar-item-:r6:">Dashboard</span></a></li>
-                        <li><a aria-labelledby="flowbite-sidebar-item-:r7:"
-                                class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                href="/kanban"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                    viewBox="0 0 20 20" aria-hidden="true"
-                                    class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-item-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
-                                    </path>
-                                </svg><span class="px-3 flex-1 whitespace-nowrap"
-                                    data-testid="flowbite-sidebar-item-content"
-                                    id="flowbite-sidebar-item-:r7:">Kanban</span></a></li>
-                        <li><a aria-labelledby="flowbite-sidebar-item-:r8:"
-                                class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                href="/mailing/inbox"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                    viewBox="0 0 20 20" aria-hidden="true"
-                                    class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-item-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z">
-                                    </path>
-                                    <path
-                                        d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z">
-                                    </path>
-                                </svg><span class="px-3 flex-1 whitespace-nowrap"
-                                    data-testid="flowbite-sidebar-item-content"
-                                    id="flowbite-sidebar-item-:r8:">Inbox</span><span
-                                    class="flex h-fit items-center gap-1 font-semibold bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-300 rounded-full px-2 py-1 p-1 text-xs"
-                                    data-testid="flowbite-sidebar-label"><span>3</span></span></a></li>
-                        <li><button
-                                class="group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                id="flowbite-sidebar-collapse-:r9:" title="E-commerce" type="button"><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true"
-                                    class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-collapse-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Post-dropdown" data-collapse-toggle="Post-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd"
-                                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                                        clip-rule="evenodd"></path>
-                                </svg><span class="ml-3 flex-1 whitespace-nowrap text-left"
-                                    data-testid="flowbite-sidebar-collapse-label">E-commerce</span><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true" class="h-6 w-6" height="1em" width="1em"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item="">Post</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
-                            <ul aria-labelledby="flowbite-sidebar-collapse-:r9:" class="space-y-2 py-2"
-                                hidden="">
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r4v:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/e-commerce/products"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r4v:">Products</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r50:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/e-commerce/billing"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r50:">Billing</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r51:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/e-commerce/invoice"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r51:">Invoice</span></a></li>
+                                </svg>
+                            </button>
+                            <ul id="Post-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
+                                        Post</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
+                                        New Post</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Catagories</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Tags</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><button
-                                class="group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                id="flowbite-sidebar-collapse-:rd:" title="Users" type="button"><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true"
-                                    class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-collapse-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">
-                                    </path>
-                                </svg><span class="ml-3 flex-1 whitespace-nowrap text-left"
-                                    data-testid="flowbite-sidebar-collapse-label">Users</span><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true" class="h-6 w-6" height="1em" width="1em"
+                        <li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Media-dropdown" data-collapse-toggle="Media-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Media</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
-                            <ul aria-labelledby="flowbite-sidebar-collapse-:rd:" class="space-y-2 py-2"
-                                hidden="">
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r52:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/users/list"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r52:">Users list</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r53:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/users/profile"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r53:">Profile</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r54:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/users/feed"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r54:">Feed</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r55:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/users/settings"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r55:">Settings</span></a></li>
+                                </svg>
+                            </button>
+                            <ul id="Media-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Libary</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Add
+                                        New Media File</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><button
-                                class="group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                id="flowbite-sidebar-collapse-:ri:" title="Pages" type="button"><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true"
-                                    class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-collapse-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="user-dropdown" data-collapse-toggle="user-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd"
-                                        d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z"
-                                        clip-rule="evenodd"></path>
-                                </svg><span class="ml-3 flex-1 whitespace-nowrap text-left"
-                                    data-testid="flowbite-sidebar-collapse-label">Pages</span><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true" class="h-6 w-6" height="1em" width="1em"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Pages</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
-                            <ul aria-labelledby="flowbite-sidebar-collapse-:ri:" class="space-y-2 py-2"
-                                hidden="">
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r56:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/pages/pricing"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r56:">Pricing</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r57:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/pages/maintenance"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r57:">Maintenace</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r58:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/pages/404"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r58:">404 not found</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r59:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/pages/500"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r59:">500 server error</span></a></li>
+                                </svg>
+                            </button>
+                            <ul id="user-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
+                                        pages</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
+                                        New page</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><button
-                                class="group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                id="flowbite-sidebar-collapse-:rn:" title="Authentication" type="button"><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true"
-                                    class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                    data-testid="flowbite-sidebar-collapse-icon" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg><span class="ml-3 flex-1 whitespace-nowrap text-left"
-                                    data-testid="flowbite-sidebar-collapse-label">Authentication</span><svg
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true" class="h-6 w-6" height="1em" width="1em"
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="dropdown-crud" data-collapse-toggle="dropdown-crud"
+                                aria-expanded="false">
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 3l8 4.5v9l-8 4.5l-8 -4.5v-9l8 -4.5"></path>
+                                    <path d="M12 12l8 -4.5"></path>
+                                    <path d="M8.2 9.8l7.6 -4.6"></path>
+                                    <path d="M12 12v9"></path>
+                                    <path d="M12 12l-8 -4.5"></path>
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Comments</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
-                            <ul aria-labelledby="flowbite-sidebar-collapse-:rn:" class="space-y-2 py-2"
-                                hidden="">
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r5a:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/authentication/sign-in"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r5a:">Sign in</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r5b:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/authentication/sign-up"><span class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r5b:">Sign up</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r5c:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/authentication/forgot-password"><span
-                                            class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r5c:">Forgot password</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r5d:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/authentication/reset-password"><span
-                                            class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r5d:">Reset password</span></a></li>
-                                <li><a aria-labelledby="flowbite-sidebar-item-:r5e:"
-                                        class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group w-full pl-8 transition duration-75"
-                                        href="/authentication/profile-lock"><span
-                                            class="px-3 flex-1 whitespace-nowrap"
-                                            data-testid="flowbite-sidebar-item-content"
-                                            id="flowbite-sidebar-item-:r5e:">Profile lock</span></a></li>
+                                </svg>
+                            </button>
+                            <ul id="dropdown-crud" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/products/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Products</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Users</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Comments-dropdown" data-collapse-toggle="Comments-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Appearance</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="Comments-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Themes</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Editor</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Plugins-dropdown" data-collapse-toggle="Plugins-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Plugins</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="Plugins-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Installed
+                                        plugins</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Add
+                                        New plugin </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Users-dropdown" data-collapse-toggle="Users-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Users</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="Users-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
+                                        Users</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700  ">All
+                                        Users </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">Add
+                                        New User </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-7">Profile
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Tools-dropdown" data-collapse-toggle="Tools-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Tools</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="Tools-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
+                                        Users</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Available
+                                        Tools </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Import
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Exprot
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">site
+                                        Helath </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Export
+                                        Personal Date </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Erase
+                                        Personal Date </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Theme
+                                        File Editor </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">plugin
+                                        File Editor </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                aria-controls="Settings-dropdown" data-collapse-toggle="Settings-dropdown"
+                                aria-expanded="false">
+
+                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                    sidebar-toggle-item="">Settings</span>
+                                <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="Settings-dropdown" class="space-y-2 py-2 hidden">
+                                <li>
+                                    <a href="/admin/users/"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">General</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Writing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Reading
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Discussion
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">permalinks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/admin/roles"
+                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">privacy
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
                     </ul>
-                    <ul class="mt-4 space-y-2 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0 dark:border-gray-700"
+                    {{-- <ul class="mt-4 space-y-2 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0 dark:border-gray-700"
                         data-testid="flowbite-sidebar-item-group">
                         <li><a aria-labelledby="flowbite-sidebar-item-:rt:"
                                 class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -287,7 +468,7 @@
                                 </svg><span class="px-3 flex-1 whitespace-nowrap"
                                     data-testid="flowbite-sidebar-item-content"
                                     id="flowbite-sidebar-item-:rv:">Help</span></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="flex items-center justify-center gap-x-5"><button
