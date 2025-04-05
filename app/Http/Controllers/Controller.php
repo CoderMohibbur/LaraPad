@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 abstract class Controller
 {
     // app/Http/Controllers/Admin/UserController.php

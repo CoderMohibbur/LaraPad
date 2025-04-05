@@ -9,20 +9,15 @@ use Illuminate\Support\Facades\Hash;
 
 class RolePermissionSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
-        app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
-
-        $roles = ['Admin', 'Editor', 'Author', 'Contributor'];
-
-        foreach ($roles as $role) {
-            Role::firstOrCreate(['name' => $role]);
-        }
+        Role::firstOrCreate(['name' => 'Admin']);
+        Role::firstOrCreate(['name' => 'Editor']);
 
         $admin = User::firstOrCreate(
-            ['email' => 'mohibbur@gmaill.com'],
+            ['email' => 'admin@larapad.test'],
             [
-                'name' => 'Admin',
+                'name' => 'Super Admin',
                 'password' => Hash::make('password'),
             ]
         );
