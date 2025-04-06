@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +28,8 @@ Route::middleware([
 Route::resource('posts', PostController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('tags', TagController::class);
+Route::resource('pages', PageController::class);
+
 
 
 // Route::prefix('admin')->middleware(['auth', 'role:admin|Editor'])->group(function () {
