@@ -26,6 +26,54 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
+
+
+    <!-- ✅ drag and drop CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+    <!-- ✅ TinyMCE Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js" referrerpolicy="origin"></script>
+
+    {{-- tinymce dark mood light mode --}}
+    <style>
+        /* ✅ Remove TinyMCE Border */
+        .tox .tox-editor-container,
+        .tox .tox-tinymce {
+            border: #374151 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+        }
+
+        /* ✅ Remove Extra Padding */
+        .tox .tox-tinymce {
+            padding: 0 !important;
+        }
+
+        /* ✅ Fix TinyMCE Toolbar & Statusbar Background in Dark Mode */
+        .tox .tox-toolbar,
+        .tox .tox-statusbar,
+        .tox .tox-toolbar-overlord {
+
+            border: none !important;
+        }
+
+        /* ✅ Fix TinyMCE Editor Background in Dark Mode */
+        .tox .tox-edit-area__iframe {
+            background-color: #374151 !important;
+            /* Dark Mode Background */
+            color: white !important;
+            /* Dark Mode Text */
+        }
+
+        /* ✅ Remove "Upgrade" Button & Premium Alerts */
+        .tox .tox-notification,
+        .tox .tox-statusbar__branding,
+        .tox .tox-promotion {
+            display: none !important;
+        }
+    </style>
+
+
 </head>
 
 <body class="font-sans antialiased">
@@ -47,12 +95,14 @@
             <div class="px-4 pt-6">
                 {{ $slot }}
             </div>
-            
+
         </main>
 
 </body>
 
 </html>
+
+{{-- Dark Mode light mode --}}
 <script>
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -94,5 +144,159 @@
             }
         }
 
+    });
+</script>
+
+{{-- drag and drop --}}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const uploadArea = document.querySelector('.upload-area');
+        const fileInput = document.getElementById('fileInput');
+        const uploadForm = document.getElementById('uploadForm');
+
+        // ✅ Click to open file selector
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // ✅ Auto submit when file is selected
+        fileInput.addEventListener('change', () => {
+            uploadForm.submit();
+        });
+
+        // ✅ Drag & Drop behavior
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('border-blue-400', 'bg-blue-50');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('border-blue-400', 'bg-blue-50');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('border-blue-400', 'bg-blue-50');
+
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files; // Set dropped file
+                uploadForm.submit(); // Submit form
+            }
+        });
+    });
+</script>
+
+{{-- tinymce er image intrigate js --}}
+<script>
+    function openModal(url) {
+        const modal = document.getElementById('orderModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('modalContent').innerHTML = data;
+
+                // টিনিমসি রি-ইনিশিয়ালাইজ যদি দরকার হয়
+                setTimeout(() => {
+                    if (document.getElementById("description")) {
+                        tinymce.remove();
+                        initTinyMCE();
+                    }
+                }, 100);
+            });
+    }
+
+
+    function insertImageToEditor(url) {
+        if (typeof tinymce !== 'undefined' && tinymce.activeEditor) {
+            tinymce.activeEditor.execCommand('mceInsertContent', false, `<img src="${url}" alt="" />`);
+            document.getElementById('orderModal').classList.add('hidden'); // মডাল বন্ধ
+        } else {
+            console.error("TinyMCE not initialized!");
+        }
+    }
+</script>
+{{-- tinymce er image intrigate js end --}}
+
+
+{{-- upload progress bar in media Library --}}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropZone = document.getElementById("dropZone");
+        const uploadFileInput = document.getElementById("uploadFile");
+        const progressWrapper = document.getElementById("progressWrapper");
+        const progressBar = document.getElementById("uploadProgress");
+        const progressText = document.getElementById("progressText");
+
+        // ✅ Drop Zone Click => Open File Picker
+        dropZone.addEventListener("click", () => uploadFileInput.click());
+
+        // ✅ File Picker
+        uploadFileInput.addEventListener("change", () => {
+            if (uploadFileInput.files.length > 0) {
+                uploadFile(uploadFileInput.files[0]);
+            }
+        });
+
+        // ✅ Drag & Drop Events
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("border-blue-600", "bg-blue-50");
+        });
+
+        dropZone.addEventListener("dragleave", () => {
+            dropZone.classList.remove("border-blue-600", "bg-blue-50");
+        });
+
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            dropZone.classList.remove("border-blue-600", "bg-blue-50");
+            const file = e.dataTransfer.files[0];
+            if (file) uploadFile(file);
+        });
+
+        // ✅ Upload Function with Progress
+        function uploadFile(file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            // Show Progress Bar
+            progressWrapper.classList.remove("hidden");
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "{{ route('admin.media.upload') }}", true);
+            xhr.setRequestHeader('X-CSRF-TOKEN', document.querySelector('meta[name="csrf-token"]').content);
+
+            xhr.upload.addEventListener("progress", e => {
+                if (e.lengthComputable) {
+                    const percent = Math.round((e.loaded / e.total) * 100);
+                    progressBar.style.width = percent + "%";
+                    progressText.innerText = percent + "%";
+                }
+            });
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    progressText.innerText = "Uploaded ✅";
+
+                    setTimeout(() => {
+                        progressWrapper.classList.add("hidden");
+                        progressBar.style.width = "0%";
+                        progressText.innerText = "0%";
+
+                        // ✅ Optional: Reload or dynamically add new image to grid
+                        location.reload();
+                    }, 1000);
+                } else {
+                    alert("Upload failed!");
+                    progressWrapper.classList.add("hidden");
+                }
+            };
+
+            xhr.send(formData);
+        }
     });
 </script>
