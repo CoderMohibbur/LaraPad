@@ -15,7 +15,6 @@ class PostController extends Controller
         $posts = Post::with('categories', 'tags')->latest()->paginate(10);
         return view('admin.post.index', compact('posts'));
     }
-
     public function create()
     {
         $categories = Category::all();
@@ -23,12 +22,14 @@ class PostController extends Controller
         return view('admin.post.create', compact('categories', 'tags'));
     }
 
+
     public function edit(Post $post)
     {
         $categories = Category::all();
         $tags = Tag::all();
         return view('admin.post.edit', compact('post', 'categories', 'tags'));
     }
+
 
 
 

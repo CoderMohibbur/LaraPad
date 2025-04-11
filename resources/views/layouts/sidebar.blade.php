@@ -24,7 +24,7 @@
                         data-testid="flowbite-sidebar-item-group">
                         <li><a aria-labelledby="flowbite-sidebar-item-:r6:"
                                 class="flex items-center justify-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
-                                href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                href="/dashboard"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
                                     viewBox="0 0 20 20" aria-hidden="true"
                                     class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                                     data-testid="flowbite-sidebar-item-icon" height="1em" width="1em"
@@ -57,21 +57,21 @@
                             </button>
                             <ul id="Post-dropdown" class="space-y-2 py-2 hidden">
                                 <li>
-                                    <a href="/admin/users/"
+                                    <a href="/posts"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
                                         Post</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/roles"
+                                    <a href="/posts/create"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
                                         New Post</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/roles"
+                                    <a href="/categories"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Catagories</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/roles"
+                                    <a href="/tags"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Tags</a>
                                 </li>
                             </ul>
@@ -135,12 +135,12 @@
                             </button>
                             <ul id="user-dropdown" class="space-y-2 py-2 hidden">
                                 <li>
-                                    <a href="/admin/users/"
+                                    <a href="/pages"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
                                         pages</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/roles"
+                                    <a href="/pages/create"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
                                         New page</a>
                                 </li>
@@ -273,11 +273,7 @@
                                 </svg>
                             </button>
                             <ul id="Users-dropdown" class="space-y-2 py-2 hidden">
-                                <li>
-                                    <a href="/admin/users/"
-                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
-                                        Users</a>
-                                </li>
+
                                 <li>
                                     <a href="/admin/roles"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700  ">All

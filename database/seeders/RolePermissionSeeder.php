@@ -11,17 +11,17 @@ class RolePermissionSeeder extends Seeder
 {
     public function run()
     {
-        Role::firstOrCreate(['name' => 'Admin']);
-        Role::firstOrCreate(['name' => 'Editor']);
+        $admin = Role::firstOrCreate(['name' => 'Admin']);
+        $editor = Role::firstOrCreate(['name' => 'Editor']);
 
-        $admin = User::firstOrCreate(
-            ['email' => 'admin@larapad.test'],
-            [
-                'name' => 'Super Admin',
-                'password' => Hash::make('password'),
-            ]
-        );
+        $user = \App\Models\User::firstOrCreate([
+            'email' => 'admin@example.com'
+        ], [
+            'name' => 'Super Admin',
+            'password' => bcrypt('password'),
+        ]);
 
-        $admin->assignRole('Admin');
+        $user->assignRole($admin);
     }
+
 }

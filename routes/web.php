@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Admin\TagController;
+
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\ReadingSettingController;
@@ -13,13 +14,14 @@ use App\Http\Controllers\Admin\WritingSettingController;
 use App\Http\Controllers\Admin\DiscussionSettingController;
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome2');
-});
+// Route::get('/', function () {
+//     return view('welcome2');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -34,6 +36,8 @@ Route::middleware([
 Route::resource('posts', PostController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('tags', TagController::class);
+Route::resource('pages', PageController::class);
+
 
 
 
@@ -97,3 +101,13 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
 //     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 // });
 
+// Route::prefix('admin')->middleware(['auth', 'role:Admin'])
+//     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+// });
+Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+// Route::get('admin/settings', [SettingController::class, 'index'])->name('settings.index')->middleware('role:Admin');
+// Route::post('admin/settings', [SettingController::class, 'store'])->name('settings.store')->middleware('role:Admin');
+Route::prefix('admin/settings')->middleware(['auth', 'role:Admin'])->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\GeneralController::class, 'general'])->name('settings.index');
+    Route::post('/', [App\Http\Controllers\Admin\GeneralController::class, 'store'])->name('settings.store');
+});
