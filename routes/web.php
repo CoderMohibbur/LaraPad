@@ -2,22 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Admin\MediaController;
-
 use App\Http\Controllers\PostController;
+
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\SettingController;
 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome2');
-});
+// Route::get('/', function () {
+//     return view('welcome2');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -68,3 +69,13 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
 //     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 // });
 
+// Route::prefix('admin')->middleware(['auth', 'role:Admin'])
+//     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+// });
+Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+// Route::get('admin/settings', [SettingController::class, 'index'])->name('settings.index')->middleware('role:Admin');
+// Route::post('admin/settings', [SettingController::class, 'store'])->name('settings.store')->middleware('role:Admin');
+Route::prefix('admin/settings')->middleware(['auth', 'role:Admin'])->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\GeneralController::class, 'general'])->name('settings.index');
+    Route::post('/', [App\Http\Controllers\Admin\GeneralController::class, 'store'])->name('settings.store');
+});
