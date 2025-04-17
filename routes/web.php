@@ -16,9 +16,54 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/', function () {
-//     return view('welcome2');
-// });
+
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
+Route::get('/awards', function () {
+    return view('pages.awards');
+});
+
+Route::get('/blog', function () {
+    return view('pages.blog');
+});
+
+Route::get('/blogbacklink', function () {
+    return view('pages.blogbacklink');
+});
+
+Route::get('/careers', function () {
+    return view('pages.careers');
+});
+
+Route::get('/member-info', function () {
+    return view('pages.memberinfo');
+});
+
+
+Route::get('/reviews', function () {
+    return view('pages.reviews');
+});
+
+Route::get('/team', function () {
+    return view('pages.team');
+});
+
+
+
+
+
+
+
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
