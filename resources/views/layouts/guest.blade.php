@@ -38,6 +38,11 @@
             {{ $slot }}
         </div>
 
+        <!-- ✅ Include Footer from components -->
+        @include('components.footer')
+
         @livewireScripts
+        
     </body>
+
 </html>

@@ -31,6 +31,7 @@
                         <th class="px-6 py-3">Title</th>
                         <th class="px-6 py-3">Status</th>
                         <th class="px-6 py-3">Author</th>
+                        <th class="px-6 py-3">Image</th>
                         <th class="px-6 py-3">Categories</th>
                         <th class="px-6 py-3 text-right">Actions</th>
                     </tr>
@@ -49,14 +50,26 @@
                                 </span>
                             </td>
 
-                            <td class="px-6 py-4">{{ $post->author->name ?? '-' }}</td>
+                            <td class="px-6 py-4">{{ optional($post->author)->name ?? '-' }}</td>
+
+                            <td class="px-6 py-4">
+                                @if(!empty($post->image_url))
+                                    <img src="{{ $post->image_url }}" class="w-16 h-12 object-cover rounded">
+                                @else
+                                    <span class="text-sm text-gray-400">No Image</span>
+                                @endif
+                            </td>
 
                             <td class="px-6 py-4 space-x-1">
-                                @foreach($post->categories as $cat)
-                                    <span class="inline-block px-2 py-0.5 text-xs bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-white rounded">
-                                        {{ $cat->name }}
-                                    </span>
-                                @endforeach
+                                @if($post->categories && count($post->categories))
+                                    @foreach($post->categories as $cat)
+                                        <span class="inline-block px-2 py-0.5 text-xs bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-white rounded">
+                                            {{ $cat->name }}
+                                        </span>
+                                    @endforeach
+                                @else
+                                    <span class="text-sm text-gray-400">No Category</span>
+                                @endif
                             </td>
 
                             <td class="px-6 py-4 text-right space-x-2">
@@ -76,7 +89,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5" class="px-6 py-6 text-center text-gray-500 dark:text-gray-400">
+                            <td colspan="6" class="px-6 py-6 text-center text-gray-500 dark:text-gray-400">
                                 No posts found.
                             </td>
                         </tr>
@@ -86,8 +99,10 @@
         </div>
 
         {{-- Pagination --}}
-        <div class="mt-6">
-            {{ $posts->links() }}
-        </div>
+        @if(method_exists($posts, 'links'))
+            <div class="mt-6">
+                {{ $posts->links() }}
+            </div>
+        @endif
     </div>
 </x-app-layout>

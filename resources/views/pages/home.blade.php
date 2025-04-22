@@ -75,10 +75,12 @@
             </div>
         </section>
         <!-- Section Two Start -->
-        <section class="border-y-2">
+
+
+        {{-- <section class="border-y-2">
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center pt-5 px-5">
                 <div class="w-full md:w-1/2 flex justify-center md:justify-center order-1 mt-8">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2018/09/Sean-Harcum.png" alt="Image"
+                    <img src="uploads/2025/04/mahamudul.png" alt="Image"
                         class="w-80 h-96">
                 </div>
                 <div class="md:w-1/2 md:order-2 text-center py-">
@@ -95,7 +97,62 @@
                         Remodelers</p>
                 </div>
             </div>
+        </section> --}}
+
+        <section class="relative overflow-hidden w-full border border-y bg-gray-50 dark:bg-gray-900">
+            <!-- Slider Container -->
+            <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out" style="width: 200%;">
+                <!-- Slide 1 -->
+                <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
+                    <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
+                        <img src="uploads/2025/04/mahamudul.png" alt="Image" class="w-[360px] h-[420px] object-cover">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
+                            “The way they <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">pitch</span> their services is
+                            <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">exactly what you get</span>.”
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+                            Unlike most SEO companies, they set clear expectations and deliver on them. It’s rare to find such transparency and commitment.
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mohibbur Rohman</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 italic">CEO & CTO, Japan Bangladesh IT</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
+                    <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
+                        <img src="uploads/2025/04/mahamudull.png" alt="Image" class="w-[360px] h-[420px] object-cover">
+                    </div>
+                    <div class="w-full md:w-2/3 lg:w-2/3 text-center md:text-left">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
+                            “Their SEO approach <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">delivers results</span> and their
+                            communication is <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">transparent</span>.”
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+                            We saw results within weeks. The clarity, communication, and effectiveness of their work were top-notch.
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mahamudul Islam</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 italic">Developers, Khalid IT</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="absolute inset-y-0 left-0 flex items-center">
+                <button onclick="prevSlide()" class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-r shadow">
+                    ❮
+                </button>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center">
+                <button onclick="nextSlide()" class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-l shadow">
+                    ❯
+                </button>
+            </div>
         </section>
+
+
         <!-- Section Three Start -->
         <section class="max-w-screen-xl mx-auto py-6">
             <h1 class="text-center text-[#5d7183] text-xl lg:text-2xl font-semibold pb-8 px-5">Our results have been
@@ -880,7 +937,7 @@
                 </div>
             </div>
         </section>
-        <!-- The Search Engine Marketing Agency -->
+        {{-- <!-- The Search Engine Marketing Agency -->
         <section
             class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
             <div class="max-w-screen-xl flex flex-col lg:flex-row items-center py-8 mx-auto px-3">
@@ -1044,10 +1101,43 @@
                             Policy</a></li>
                 </ul>
             </div>
-        </section>
+        </section> --}}
     </section>
 
 </x-guest-layout>
 <!-- script start -->
 <script src="nav.js"></script>
 <!-- script end -->
+
+
+<script>
+    let currentSlide = 0;
+    const totalSlides = 2; // Slide count
+
+    function showSlide(index) {
+        const slider = document.getElementById('testimonial-slider');
+        const slideWidth = window.innerWidth;
+
+        // Slide in from right: reset animation first
+        slider.style.transition = 'none';
+        slider.style.transform = `translateX(-${(index - 1 + totalSlides) % totalSlides * slideWidth}px)`;
+
+        // Force reflow to restart animation
+        void slider.offsetWidth;
+
+        // Apply smooth transition to current slide
+        slider.style.transition = 'transform 0.7s ease-out';
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // ✅ Auto slide every 3 seconds
+    setInterval(nextSlide, 3000);
+
+    // ✅ Adjust on screen resize
+    window.addEventListener('resize', () => showSlide(currentSlide));
+</script>

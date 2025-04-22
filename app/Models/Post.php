@@ -37,6 +37,39 @@ public function tags()
 {
     return $this->belongsToMany(\App\Models\Tag::class, 'post_tag');
 }
+// Post.php
+public function category()
+{
+    return $this->belongsTo(Category::class);
+}
+
+public function author()
+{
+    return $this->belongsTo(User::class, 'author_id');
+}
+
+
+
+// app/Models/Post.php
+// public function getImageUrlAttribute()
+// {
+//     if ($this->featured_image && file_exists(public_path($this->featured_image))) {
+//         return asset($this->featured_image);
+//     }
+//     return asset('images/no-image.png');
+// }
+
+// app/Models/Post.php
+
+public function getImageUrlAttribute()
+{
+    if (!$this->featured_image) {
+        return null;
+    }
+
+    return asset('storage/' . $this->featured_image);
+}
+
 
 }
 

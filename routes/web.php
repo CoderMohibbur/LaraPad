@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BlogController;
+
 use App\Http\Controllers\PostController;
-
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\Admin\TagController;
 
+use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\ReadingSettingController;
@@ -15,12 +17,12 @@ use App\Http\Controllers\Admin\DiscussionSettingController;
 
 
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/home', function () {
     return view('pages.home');
 });
 
@@ -58,7 +60,10 @@ Route::get('/team', function () {
 });
 
 
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
 
 
@@ -138,6 +143,12 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::post('media/sort', [MediaController::class, 'sort'])->name('media.sort');
     Route::get('media/insert-modal', [MediaController::class, 'insertModal'])->name('media.insert-modal');
     Route::get('media-library/popup', [MediaController::class, 'popup'])->name('media.library.popup');
+   // routes/web.php
+    Route::get('/admin/media/insert-modal', [MediaController::class, 'insertModal'])->name('media.insert-modal');
+    Route::post('/media/sync', [MediaController::class, 'syncFromPublic'])->name('media.sync');
+
+
+
 
 });
 
@@ -156,3 +167,4 @@ Route::prefix('admin/settings')->middleware(['auth', 'role:Admin'])->group(funct
     Route::get('/', [App\Http\Controllers\Admin\GeneralController::class, 'general'])->name('settings.index');
     Route::post('/', [App\Http\Controllers\Admin\GeneralController::class, 'store'])->name('settings.store');
 });
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');

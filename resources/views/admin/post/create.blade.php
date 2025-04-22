@@ -31,7 +31,7 @@
         @endif
 
         {{-- Form --}}
-        <form action="{{ route('posts.store') }}" method="POST">
+        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -41,23 +41,27 @@
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Title <span class="text-red-500">*</span></label>
                         <input type="text" name="title" value="{{ old('title') }}"
                                class="input input-bordered w-full dark:bg-gray-900 dark:text-white" required>
+                        @error('title')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Slug <span class="text-red-500">*</span></label>
                         <input type="text" name="slug" value="{{ old('slug') }}"
                                class="input input-bordered w-full dark:bg-gray-900 dark:text-white" required>
+                        @error('slug')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Excerpt</label>
                         <textarea name="excerpt" rows="3" class="input input-bordered w-full dark:bg-gray-900 dark:text-white">{{ old('excerpt') }}</textarea>
+                        @error('excerpt')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Content</label>
                         <textarea id="content-editor" name="content" rows="12"
                                   class="input input-bordered w-full dark:bg-gray-900 dark:text-white">{{ old('content') }}</textarea>
+                        @error('content')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
                 </div>
 
@@ -70,6 +74,7 @@
                             <option value="page">Page</option>
                             <option value="custom">Custom</option>
                         </select>
+                        @error('post_type')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
@@ -78,6 +83,7 @@
                             <option value="draft" @selected(old('status') == 'draft')>Draft</option>
                             <option value="published" @selected(old('status') == 'published')>Published</option>
                         </select>
+                        @error('status')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
@@ -89,6 +95,7 @@
                                 </option>
                             @endforeach
                         </select>
+                        @error('categories')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
@@ -100,23 +107,27 @@
                                 </option>
                             @endforeach
                         </select>
+                        @error('tags')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
-                        <label class="block font-medium text-gray-700 dark:text-gray-200">Featured Image URL</label>
-                        <input type="text" name="featured_image" value="{{ old('featured_image') }}"
-                               class="input input-bordered w-full dark:bg-gray-900 dark:text-white">
+                        <label for="featured_image" class="block mb-2 text-sm font-medium">Featured Image</label>
+                        <input type="file" name="featured_image" id="featured_image"
+                               class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer">
+                        @error('featured_image')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Meta Title</label>
                         <input type="text" name="meta_title" value="{{ old('meta_title') }}"
                                class="input input-bordered w-full dark:bg-gray-900 dark:text-white">
+                        @error('meta_title')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
 
                     <div>
                         <label class="block font-medium text-gray-700 dark:text-gray-200">Meta Description</label>
                         <textarea name="meta_description" class="input input-bordered w-full dark:bg-gray-900 dark:text-white">{{ old('meta_description') }}</textarea>
+                        @error('meta_description')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
                     </div>
                 </div>
             </div>

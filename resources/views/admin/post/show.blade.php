@@ -4,22 +4,28 @@
 
         <div class="text-sm text-gray-500 mb-4">
             Status: <span class="font-medium">{{ ucfirst($post->status) }}</span> |
-            Published by: {{ $post->author->name ?? 'Unknown' }} |
+            Published by: {{ optional($post->author)->name ?? 'Unknown' }} |
             Categories:
-            @foreach($post->categories as $cat)
-                <span class="text-blue-600">{{ $cat->name }}</span>
-            @endforeach
+            @if($post->categories && $post->categories->count())
+                @foreach($post->categories as $cat)
+                    <span class="text-blue-600">{{ $cat->name }}</span>
+                @endforeach
+            @else
+                <span class="text-gray-400">No Category</span>
+            @endif
         </div>
 
-        @if($post->featured_image)
+        @if(!empty($post->featured_image))
             <img src="{{ $post->featured_image }}" alt="{{ $post->title }}" class="rounded shadow w-full max-h-96 object-cover">
+        @else
+            <div class="text-gray-400">No Featured Image</div>
         @endif
 
         <div class="prose max-w-full dark:prose-invert">
-            {!! $post->content !!}
+            {!! $post->content ?? '<p class="text-gray-400">No content available.</p>' !!}
         </div>
 
-        @if($post->tags->count())
+        @if($post->tags && $post->tags->count())
             <div class="mt-6">
                 <h4 class="font-semibold">Tags:</h4>
                 @foreach($post->tags as $tag)
@@ -28,9 +34,11 @@
                     </span>
                 @endforeach
             </div>
+        @else
+            <div class="text-gray-400">No Tags</div>
         @endif
 
-        @if($post->meta)
+        @if($post->meta && (isset($post->meta['title']) || isset($post->meta['description'])))
             <div class="mt-6 text-gray-500 text-sm">
                 <strong>Meta Title:</strong> {{ $post->meta['title'] ?? '-' }}<br>
                 <strong>Meta Description:</strong> {{ $post->meta['description'] ?? '-' }}
