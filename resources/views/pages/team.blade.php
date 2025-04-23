@@ -16,7 +16,7 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:px-20">
                 <div class="text-center mx-auto">
-                    <a href=""><img src="uploads/2025/04/WhatsApp.png" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg"  alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>

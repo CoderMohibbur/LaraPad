@@ -89,19 +89,19 @@
                     <div class="absolute top-full left-0 bg-white dark:bg-gray-800 shadow-xl p-6 w-56 rounded-lg border border-gray-200 dark:border-gray-700
                                 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200 z-50">
                         <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200">
-                            <li><a href="#" class="hover:text-blue-600">About Us</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Careers</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Our Team</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Mission & Values</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Privacy Policy</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Terms & Conditions</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Contact Us</a></li>
+                            <li><a href="/" class="hover:text-blue-600">About Us</a></li>
+                            <li><a href="/awards" class="hover:text-blue-600">Award</a></li>
+                            <li><a href="/team" class="hover:text-blue-600">Our Team</a></li>
+                            <li><a href="/careers" class="hover:text-blue-600">Careers</a></li>
+                            <li><a href="/member-info" class="hover:text-blue-600">member-info</a></li>
+                            <li><a href="/reviews" class="hover:text-blue-600">Reviews</a></li>
+                            <li><a href="/contact" class="hover:text-blue-600">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Links -->
-                <a href="#" class="font-semibold hover:text-blue-600">Case Studies</a>
+                <a href="/blog" class="font-semibold hover:text-blue-600">Blog</a>
                 <a href="#"
                    class="ml-6 px-6 py-2 uppercase font-bold italic text-lg bg-white text-[#ff5056] border-2 border-[#ff5056] rounded hover:text-white hover:bg-[#ff5056] transition duration-500 ease-in-out">
                     Free Action Plan
