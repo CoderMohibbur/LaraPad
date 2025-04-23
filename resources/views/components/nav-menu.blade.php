@@ -4,8 +4,8 @@
         <div class="px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="/">
-                <img src="https://www.searchbloom.com/wp-content/uploads/2019/07/logo-1.png"
-                     alt="Logo" class="w-[110px] h-[50px] object-contain">
+                <img src="uploads\2025\04\khalidit-logo-removebg-preview.png"
+                     alt="Logo" class="w-[250px] h-[70px] object-contain">
             </a>
 
             <!-- Mobile Toggle -->

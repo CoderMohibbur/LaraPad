@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="py-10 flex border-b lg:border-x items-center justify-center order-1 lg:order-2">
-                        <img class="w-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/07/logo-1.png"
+                        <img class="w-[320px]" src="uploads\2025\04\khalidit-logo-removebg-preview.png"
                             alt="image">
                     </div>
 
