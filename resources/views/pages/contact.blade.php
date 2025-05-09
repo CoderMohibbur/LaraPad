@@ -90,65 +90,8 @@
             </div>
         </div>
     </section>
-    <!-- Every online detail checked and analyzed -->
-    <section
-        class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
-        <div class="max-w-screen-xl flex flex-col lg:flex-row items-center py-8 mx-auto px-3">
-            <div class="w-full lg:w-3/2 text-center lg:text-left">
-                <h1 class="text-white font-semibold text-4xl">Every online detail checked and analyzed</h1>
-                <p class="text-white text-md pt-3 font-semibold">It goes without saying that every site is different.
-                    Make your mark with a custom strategy.</p>
-            </div>
-            <div class="w-full lg:w-1/3 text-center lg:text-right mt-5">
-                <button
-                    class="text-white bg-[#ff5056] rounded text-md font-bold px-10 p-3 italic uppercase hover:opacity-75 duration-200">Free
-                    Action Plan</button>
-            </div>
-        </div>
-    </section>
-    <!-- Sevices and Tools -->
-    <section class="border-b">
-        <div class="max-w-screen-xl mx-auto px-3">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div class="py-10 order-2 lg:order-1 text-center lg:text-left border-b">
-                    <h2 class="pb-4 font-bold text-[#444b4e]">Services</h2>
-                    <ul>
-                        <li class="py-1"><a href="#"
-                                class="text-[#686868] hover:text-[#3db8da] duration-300">National SEO Services</a></li>
-                        <li class="py-1"><a href="#"
-                                class="text-[#686868] hover:text-[#3db8da] duration-300">Local SEO Services</a></li>
-                        <li class="py-1"><a href="#"
-                                class="text-[#686868] hover:text-[#3db8da] duration-300">E-Commerce SEO Services</a>
-                        </li>
-                        <li class="py-1"><a href="#"
-                                class="text-[#686868] hover:text-[#3db8da] duration-300">PPC Management Services</a>
-                        </li>
-                        <li class="py-1"><a href="#"
-                                class="text-[#686868] hover:text-[#3db8da] duration-300">Technical SEO Agency</a></li>
-                    </ul>
-                </div>
 
-                <div class="py-10 flex border-b lg:border-x items-center justify-center order-1 lg:order-2">
-                    <img class="w-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/07/logo-1.png"
-                        alt="image">
-                </div>
-
-                <div class="py-10 lg:pl-28 order-3 text-center lg:text-left border-b">
-                    <h2 class="pb-4 font-bold text-[#444b4e]">Free Tools</h2>
-                    <ul>
-                        <li class="py-1 text-[#686868]"><a href="#"
-                                class="hover:text-[#3db8da] duration-300">Schema Markup Generator</a></li>
-                        <li class="py-1 text-[#686868]"><a href="#"
-                                class="hover:text-[#3db8da] duration-300">Local Search Results</a></li>
-                        <li class="py-1 text-[#686868]"><a href="#"
-                                class="hover:text-[#3db8da] duration-300">Keyword Mixer</a></li>
-                        <li class="py-1 text-[#686868]"><a href="#"
-                                class="hover:text-[#3db8da] duration-300">All Tools</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- Social Links -->
     <section class="border-b">
         <div class="max-w-screen-xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-2">
