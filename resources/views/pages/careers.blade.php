@@ -206,7 +206,7 @@
         <div class="flex flex-col md:flex-row lg:flex-row items-center mt-10 gap-3">
           <div class="w-full md:full lg:w-2/5">
             <a href="#">
-              <img src="https://www.searchbloom.com/wp-content/uploads/2024/03/searchbloom_thumb.jpg" alt="Image">
+              <img src="uploads\2025\04\khalidit-logo-removebg-preview.png" alt="Image">
             </a>
           </div>
           <div class="w-full md:full lg:w-3/5 lg:pl-10">

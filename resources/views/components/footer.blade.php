@@ -141,7 +141,7 @@
         <!-- Footer -->
         <section class="max-w-screen-xl mx-auto py-4 flex flex-col lg:flex-row items-center justify-between">
             <div class="order-2 lg:order-1 pt-5 lg:pt-0">
-                <p class="text-xs text-[#333]">2025© Searchbloom®<br>All Rights Reserved.</p>
+                <p class="text-xs text-[#333]">2025© Khalid IT<br>All Rights Reserved.</p>
             </div>
             <div class="order-1 lg:order-2 text-center lg:text-left">
                 <ul class="flex flex-col lg:flex-row gap-3">
