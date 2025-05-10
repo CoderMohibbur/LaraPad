@@ -84,30 +84,28 @@
                             <li class="flex"><img class="w-[15px] h-[20px] mt-1 mr-4"
                                     src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/pin.png"
                                     alt="image"><a class="hover:text-[#3db8da] duration-300"
-                                    href="https://maps.google.com/?cid=11105605054832802961">12884 Frontrunner Blvd
-                                    #140,
-                                    Draper, UT 84020</a></li>
+                                    href="https://maps.google.com/?cid=11105605054832802961">997, Bashtola, Mollapara, Barandi, Jashore 7400</a></li>
                             <li class="flex py-6"><img class="w-[20px] h-[15px] mt-1 mr-3"
                                     src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/envelope.png"
                                     alt="image"><a class="hover:text-[#3db8da] duration-300"
-                                    href="#">hello@searchbloom.com</a></li>
+                                    href="#">khalid@khalidit.com</a></li>
                             <li class="flex"><img class="w-[18px] h-[20px] mt-1 mr-4"
                                     src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/phone.svg"
-                                    alt="image"><a href="#">801.590.4051</a></li>
+                                    alt="image"><a href="#">+880 1927-802206</a></li>
                         </ul>
                         <ul class="flex gap-3 pt-5 justify-center lg:justify-start">
-                            <li><a href="#"><img class="w-[30px]"
+                            <li><a href="https://www.facebook.com/khaliditGlobal/"><img class="w-[30px]"
                                         src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg"
                                         alt="image"></a></li>
-                            <li><a href="#"><img class="w-[30px]"
+                            <li><a href="https://www.linkedin.com/company/khaliditglobal/"><img class="w-[30px]"
                                         src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg"
                                         alt="image"></a></li>
-                            <li><a href="#"><img class="w-[30px]"
+                            <li><a href="https://www.instagram.com/khaliditglobal/#"><img class="w-[30px]"
                                         src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg"
                                         alt="image"></a></li>
-                            <li><a href="#"><img class="w-[30px]"
+                            {{-- <li><a href="#"><img class="w-[30px]"
                                         src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-twitter.svg"
-                                        alt="image"></a></li>
+                                        alt="image"></a></li> --}}
                         </ul>
                     </div>
                 </div>
