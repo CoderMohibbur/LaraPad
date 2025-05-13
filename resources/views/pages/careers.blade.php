@@ -6,15 +6,15 @@
                 <p class="text-[#5d7183] text-2xl pb-5">People are at the heart of everything we do. We’re a bunch of dreamers and doers grounded in building lasting relationships and an environment of collaboration and fun.</p>
             </div>
             <div class="w-full lg:w-3/5 lg:pl-20">
-                <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/career-image.png" alt="Image" class="w-full h-auto">
+                <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/career-image.png" alt="Image" class="w-full h-auto">
             </div>
         </div>
     </section>
     <!-- Join the Searchbloom family. -->
     <section class="border-b">
       <div class="max-w-screen-xl mx-auto px-4 py-10 text-center">
-          <h1 class="text-4xl font-bold pb-8">Join the Searchbloom family.</h1>
-          <p class="text-[#5d7183] text-2xl pb-5">Working for Searchbloom means you’ll be part of a team of passionate and driven individuals who are experts in the Search Engine Marketing industry. You’ll learn and grow quickly in a fast-paced environment where our team members are valued and provided ample opportunity to advance within the company as you increase your value.</p>
+          <h1 class="text-4xl font-bold pb-8">Join the Khalid IT family.</h1>
+          <p class="text-[#5d7183] text-2xl pb-5">Working for Khalid IT means you’ll be part of a team of passionate and driven individuals who are experts in the Search Engine Marketing industry. You’ll learn and grow quickly in a fast-paced environment where our team members are valued and provided ample opportunity to advance within the company as you increase your value.</p>
       </div>
     </section>
     <!-- Open Positions -->
@@ -101,7 +101,7 @@
             </div>
             <!-- Read More -->
             <div class="flex flex-col md:flex-row lg:flex-row items-center gap-4 md:justify-between lg:justify-between mt-12">
-               <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/glassdoor.svg" alt="Image" class="w-[234px] h-[54px]">
+               <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/glassdoor.svg" alt="Image" class="w-[234px] h-[54px]">
                <div>
                    <p class="text-[#858585] text-xl text-center">28 Reviews</p>
                    <span class="text-2xl text-[#0caa41] font-bold">5.0 ★</span>
@@ -126,27 +126,27 @@
         <!-- Card -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-7">
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/lasting-relationship.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/lasting-relationship.png" alt="Image">
             <h5 class="text-xl font-semibold">Lasting Relationships</h5>
           </div>
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/own-it.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/own-it.png" alt="Image">
             <h5 class="text-xl font-semibold">Own It</h5>
           </div>
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/keep-it-crystal.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/keep-it-crystal.png" alt="Image">
             <h5 class="text-xl font-semibold">Keep it Crystal</h5>
           </div>
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/take-pulse.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/take-pulse.png" alt="Image">
             <h5 class="text-xl font-semibold">Take Pulse</h5>
           </div>
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/we-got-this.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/we-got-this.png" alt="Image">
             <h5 class="text-xl font-semibold">We Got This</h5>
           </div>
           <div class="flex items-center gap-3 p-5 bg-white border">
-            <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/never-rest-it.png" alt="Image">
+            <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/never-rest-it.png" alt="Image">
             <h5 class="text-xl font-semibold">Never Let it Rest</h5>
           </div>
         </div>
@@ -248,7 +248,7 @@
         <div class="text-center">
           <h1 class="text-5xl font-bold pb-8">Come work with bloomers all over the world</h1>
           <p class="text-[#5d7183] text-xl pb-16 lg:px-40">We are committed to creating an inclusive environment where everyone has a sense of belonging, and can make an impact aligned with their strengths.</p>
-          <img src="https://www.searchbloom.com/wp-content/uploads/2023/01/map.png" alt="Image">
+          <img src="https://www.Searchbloom.com/wp-content/uploads/2023/01/map.png" alt="Image">
           <button class="mt-10 lg:mt-10 border-2 border-red-400 text-red-500 font-semibold py-3 px-10 rounded transition hover:bg-red-500 hover:text-white hover:border-red-500">Meet the Team</button>
         </div>
       </div>

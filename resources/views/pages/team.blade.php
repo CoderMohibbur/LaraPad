@@ -3,7 +3,7 @@
     <!-- Banner -->
     <section class="border-b">
         <div class="py-16 max-w-screen-xl mx-auto text-center lg:text-left px-3">
-            <h1 class="font-bold text-5xl lg:text-7xl">Searchbloom’s Mission:</h1>
+            <h1 class="font-bold text-5xl lg:text-7xl">Khalid IT Mission:</h1>
             <p class="text:xl lg:text-2xl text-[#5d7183] pt-6">We are the <strong class="bg-[#bceaf7]">most trusted</strong>, <strong class="bg-[#bceaf7]">transparent</strong>, and <strong class="bg-[#bceaf7]">results-driven</strong> search engine marketing company in the industry.</p>
         </div>
     </section>
@@ -16,32 +16,32 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:px-20">
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg"  alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg"  alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>
                 <div class="text-center mx-auto">
-                    <a href=""><img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
+                    <a href=""><img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="#" class="w-full h-auto lg:w-[320px] lg:h-[350px]"></a>
                     <h2 class="text-xl font-bold pt-3">Cody C. Jensen</h2>
                     <p class="text-[#5c7183] font-semibold py-1">CEO & Founder</p>
                 </div>

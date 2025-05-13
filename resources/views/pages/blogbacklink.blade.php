@@ -8,7 +8,7 @@
                 <div class="w-full lg:w-2/3 h-dvh overflow-y-auto">
                     <!-- header -->
                     <a href="#">
-                        <img src="https://www.searchbloom.com/wp-content/uploads/2019/01/4-Ways-to-Keep-Your-PPC-Ads-Fresh.jpg" alt="image" class="w-full">
+                        <img src="https://www.Searchbloom.com/wp-content/uploads/2019/01/4-Ways-to-Keep-Your-PPC-Ads-Fresh.jpg" alt="image" class="w-full">
                     </a>
                     <a href="#" class="hover:underline text-[#2ba8e2] font-semibold">Google Ads,</a> <a href="#" class="hover:underline text-[#2ba8e2] font-semibold">Google Shopping,</a> <a href="#" class="hover:underline text-[#2ba8e2] font-semibold">Pay Per Click</a>
                     <h2 class="text-3xl font-bold hover:text-[#fca900] py-2">4 Ways to Keep Your PPC Ads Fresh</h2>
@@ -49,14 +49,14 @@
                     <div class="flex flex-col lg:flex-row gap-5">
                         <div class="w-full lg:w-1/3">
                             <a href="#">
-                                <img src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="Image" class="w-full h-auto md:w-96 md:h-auto lg:w-[300px] lg:h-[300px]">
+                                <img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg" alt="Image" class="w-full h-auto md:w-96 md:h-auto lg:w-[300px] lg:h-[300px]">
                             </a>
                         </div>
                         <div class="w-full lg:w-2/3">
                             <a href="#"><h2 class="font-bold text-xl hover:underline py-2">Cody Jensen</h2></a>
-                            <p>Cody Jensen began his career with the corporate giant, Google Inc. He has been in Search Engine Marketing ever since, and has a specific acumen for paid advertising. As the Founder of Searchbloom, Cody leads the strategy and execution in providing world class digital marketing.Cody Jensen began his career with the corporate giant, Google Inc. He has been in Search Engine Marketing ever since, and has a specific acumen for paid advertising. As the Founder of Searchbloom, Cody leads the strategy and execution in providing world class digital marketing.</p>
+                            <p>Cody Jensen began his career with the corporate giant, Google Inc. He has been in Search Engine Marketing ever since, and has a specific acumen for paid advertising. As the Founder of Khalid IT, Cody leads the strategy and execution in providing world class digital marketing.Cody Jensen began his career with the corporate giant, Google Inc. He has been in Search Engine Marketing ever since, and has a specific acumen for paid advertising. As the Founder of Khalid IT, Cody leads the strategy and execution in providing world class digital marketing.</p>
                             <a href="#">
-                                <img src="https://www.searchbloom.com/wp-content/uploads/2019/08/linkedin-brands.svg" alt="icon" class="w-[32px] h-[32px] my-5">
+                                <img src="https://www.Searchbloom.com/wp-content/uploads/2019/08/linkedin-brands.svg" alt="icon" class="w-[32px] h-[32px] my-5">
                             </a>
                         </div>
                     </div>
@@ -228,7 +228,7 @@
                     </ul>
                 </div>
                 <div class="py-10 flex border-b lg:border-x items-center justify-center order-1 lg:order-2">
-                    <img class="w-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/07/logo-1.png" alt="image">
+                    <img class="w-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/07/logo-1.png" alt="image">
                 </div>
                 <div class="py-10 lg:pl-28 order-3 text-center lg:text-left border-b">
                     <h2 class="pb-4 font-bold text-[#444b4e]">Free Tools</h2>
@@ -255,15 +255,20 @@
             <div class="lg:border-l py-5 lg:py-10">
                 <div class="lg:ml-auto w-full lg:w-[500px] lg:px-10">
                     <ul>
-                        <li class="flex"><img class="w-[15px] h-[20px] mt-1 mr-4" src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/pin.png" alt="image"><a class="hover:text-[#3db8da] duration-300" href="https://maps.google.com/?cid=11105605054832802961">12884 Frontrunner Blvd #140, Draper, UT 84020</a></li>
-                        <li class="flex py-6"><img class="w-[20px] h-[15px] mt-1 mr-3" src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/envelope.png" alt="image"><a class="hover:text-[#3db8da] duration-300" href="#">hello@searchbloom.com</a></li>
-                        <li class="flex"><img class="w-[18px] h-[20px] mt-1 mr-4" src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/phone.svg" alt="image"><a href="#">801.590.4051</a></li>
+                        <li class="flex"><img class="w-[15px] h-[20px] mt-1 mr-4" src="https://www.Searchbloom.com/wp-content/themes/
+
+
+
+
+                            _optimized/assets/img/pin.png" alt="image"><a class="hover:text-[#3db8da] duration-300" href="https://maps.google.com/?cid=11105605054832802961">12884 Frontrunner Blvd #140, Draper, UT 84020</a></li>
+                        <li class="flex py-6"><img class="w-[20px] h-[15px] mt-1 mr-3" src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/envelope.png" alt="image"><a class="hover:text-[#3db8da] duration-300" href="#">hello@Khalidit.com</a></li>
+                        <li class="flex"><img class="w-[18px] h-[20px] mt-1 mr-4" src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/phone.svg" alt="image"><a href="#">801.590.4051</a></li>
                     </ul>
                     <ul class="flex gap-3 pt-5 justify-center lg:justify-start">
-                        <li><a href="#"><img class="w-[30px]" src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg" alt="image"></a></li>
-                        <li><a href="#"><img class="w-[30px]" src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg" alt="image"></a></li>
-                        <li><a href="#"><img class="w-[30px]" src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg" alt="image"></a></li>
-                        <li><a href="#"><img class="w-[30px]" src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-twitter.svg" alt="image"></a></li>
+                        <li><a href="#"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg" alt="image"></a></li>
+                        <li><a href="#"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg" alt="image"></a></li>
+                        <li><a href="#"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg" alt="image"></a></li>
+                        <li><a href="#"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-twitter.svg" alt="image"></a></li>
                     </ul>
                 </div>
             </div>
@@ -273,23 +278,23 @@
      <section class="border-b">
         <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row justify-between px-3 gap-3">
             <div class="flex items-center gap-8 py-4">
-                <div><img class="w-[185px] h-[185px]" src="https://www.searchbloom.com/wp-content/uploads/2022/07/Google-partner.svg" alt="Image"></div>
+                <div><img class="w-[185px] h-[185px]" src="https://www.Searchbloom.com/wp-content/uploads/2022/07/Google-partner.svg" alt="Image"></div>
                 <div>
-                    <img class="lg:w-[230px] h-[50px] lg:h-[65px] mb-4" src="https://www.searchbloom.com/wp-content/uploads/2018/09/bing-ads.png" alt="Image">
-                    <img class="lg:w-[230px] h-[50px] lg:h-[65px]" src="https://www.searchbloom.com/wp-content/uploads/2018/09/Facebook_Marketing_Partner_badge.jpg" alt="Image">
+                    <img class="lg:w-[230px] h-[50px] lg:h-[65px] mb-4" src="https://www.Searchbloom.com/wp-content/uploads/2018/09/bing-ads.png" alt="Image">
+                    <img class="lg:w-[230px] h-[50px] lg:h-[65px]" src="https://www.Searchbloom.com/wp-content/uploads/2018/09/Facebook_Marketing_Partner_badge.jpg" alt="Image">
                 </div>
             </div>
             <div class="flex items-center gap-5 pb-5 lg:pb-0">
-                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/10/2-1_3e22b681da3d988514485b573402dbc9.png" alt="Image">
-                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/10/3-1_2516d10f66bbb22b474d12b66803a57f.png" alt="Image">
-                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/10/1-1.png" alt="Image">
+                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/2-1_3e22b681da3d988514485b573402dbc9.png" alt="Image">
+                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/3-1_2516d10f66bbb22b474d12b66803a57f.png" alt="Image">
+                <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/1-1.png" alt="Image">
             </div>
         </div>
      </section>
     <!-- Footer -->
     <section class="max-w-screen-xl mx-auto py-4 flex flex-col lg:flex-row items-center justify-between">
         <div class="order-2 lg:order-1 pt-5 lg:pt-0">
-            <p class="text-xs text-[#333]">2025© Searchbloom®<br>All Rights Reserved.</p>
+            <p class="text-xs text-[#333]">2025© Khalid IT<br>All Rights Reserved.</p>
         </div>
         <div class="order-1 lg:order-2 text-center lg:text-left">
             <ul class="flex flex-col lg:flex-row gap-3">

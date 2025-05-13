@@ -12,7 +12,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 my-8">
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Fall 2024</p>
@@ -20,7 +20,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Spring 2024</p>
@@ -28,7 +28,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Top 1000 2023</p>
@@ -36,7 +36,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Fall 2023</p>
@@ -44,7 +44,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Fall 2024</p>
@@ -52,7 +52,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Spring 2024</p>
@@ -60,7 +60,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Top 1000 2023</p>
@@ -68,7 +68,7 @@
             </div>
             <div class="shadow rounded-lg">
                 <div class="flex items-center h-auto lg:h-[250px]">
-                    <img src="https://www.searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png" alt="Image" class="w-[200px] lg:w-full h-auto p-6 mx-auto">
                 </div>
                 <div class="flex items-center h-[100px] border-t">
                     <p class="text-xl font-semibold p-5 text-center">Clutch Global SEO Company Fall 2023</p>

@@ -11,34 +11,34 @@
                 </h1>
                 <ul class="text-l md:text-3xl text-[#29435a] w-80 mx-auto md:w-full pt-4">
                     <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                             alt="logo">
                         ROI-Driven Strategies
                     </li>
                     <li class="flex gap-4 py-2 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                             alt="logo">
                         Proven Methodologies
                     </li>
                     <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                             alt="logo">
                         Trusted, Transparent, Results-Driven
                     </li>
                 </ul>
                 <ul class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mt-6 lg:my-6">
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2024/11/Searchbloom-Best-SEO-Services-Of-2024-2024-PNG.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2024/11/Searchbloom-Best-SEO-Services-Of-2024-2024-PNG.png"
                             alt="Image"></li>
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2024/12/SEO-Singular.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2024/12/SEO-Singular.png"
                             alt="Image">
                     </li>
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/07/top-seo-companies.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/07/top-seo-companies.svg"
                             alt="Image"></li>
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/07/top-ppc-agencies.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/07/top-ppc-agencies.svg"
                             alt="Image"></li>
                 </ul>
             </div>
@@ -70,7 +70,7 @@
                     </div>
                     <p class="text-[#5d7183] font-bold text-xl md:text-2xl text-center leading-[2] mt-4 px-3">Don't
                         worry,
-                        we hate spam too.<br>At Searchbloom, we respect your inbox.</p>
+                        we hate spam too.<br>At Khalid IT, we respect your inbox.</p>
                 </div>
             </div>
         </section>
@@ -160,28 +160,28 @@
                 about by:</h1>
             <ul class="grid grid-cols-3 md:grid-cols-6 items-center justify-center">
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/fobes.png" alt="#"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/fobes.png" alt="#"
                         class="w-[160px] p-2"></li>
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/usa-today.png" alt="#"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/usa-today.png" alt="#"
                         class="w-[160px] p-2"></li>
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/the-wall-street-journal.png"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/the-wall-street-journal.png"
                         alt="#" class="w-[160px] p-2"></li>
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/inc.png" alt="#"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/inc.png" alt="#"
                         class="w-[160px] p-2"></li>
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/entrepreneur.png" alt="#"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/entrepreneur.png" alt="#"
                         class="w-[160px] p-2"></li>
                 <li class="border md:border-none"><img
-                        src="https://www.searchbloom.com/wp-content/uploads/2018/07/yahoo.png" alt="#"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/yahoo.png" alt="#"
                         class="w-[160px] p-2"></li>
             </ul>
         </section>
         <!-- Section Four Start -->
         <section
-            class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
+            class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
             <h1 class="text-center text-white font-semibold text-4xl py-8 md:py-16">Dedicated Analyst - Custom
                 Strategies -
                 No Lengthy Contracts</h1>
@@ -191,7 +191,7 @@
             <div class="max-w-screen-xl mx-auto py-6">
                 <div class="text-center">
                     <h1 class="text-[#2ca8d9] text-4xl lg:text-5xl font-semibold">Our Unique Approach</h1>
-                    <p class="text-[#5d7183] text-2xl px-5 md:px-5 lg:px-48 py-8">Searchbloom collaborates with our
+                    <p class="text-[#5d7183] text-2xl px-5 md:px-5 lg:px-48 py-8">Khalid IT collaborates with our
                         partners
                         to develop comprehensive digital marketing strategies that are predictable, repeatable, and,
                         most
@@ -200,13 +200,13 @@
                 <div class="flex flex-col lg:flex-row px-3">
                     <div class="w-full md:w-full lg:w-1/3 order-2 lg:order-1">
                         <img class="border border-[#ebebeb] shadow-inner shadow-[rgba(0,0,0,0.1)] w-full h-vh md:w-[320px] md:h-[100px] lg:w-[320px] lg:h-[100px] p-4 mt-4 rounded-lg mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2021/11/sel_awards_winner_2021.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2021/11/sel_awards_winner_2021.png"
                             alt="#">
                         <p class="text-[#5d7183] font-semibold text-center pt-4 pb-2">Best Retail Ecommerce SEO
                             Initiative
                             2021</p>
                         <img class="w-[200px] h-[260px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2022/04/award_sec_img02-e1648835385507.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2022/04/award_sec_img02-e1648835385507.png"
                             alt="#">
                     </div>
 
@@ -253,7 +253,7 @@
                                 aria-labelledby="accordion-collapse-heading-2">
                                 <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
                                     <p class="mb-2 text-gray-500 dark:text-gray-400">Unlike other agencies, as a
-                                        Searchbloom partner, you work directly with your dedicated analyst and not an
+                                        Khalid IT partner, you work directly with your dedicated analyst and not an
                                         account manager, which allows for less back and forth and more direct
                                         accountability
                                         and transparency. No more waiting on hold just to find out the person you're
@@ -268,7 +268,7 @@
                                     class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-1 border-gray-200 dark:focus:white dark:border-gray-700 dark:text-gray-400 gap-3"
                                     data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                                     aria-controls="accordion-collapse-body-3">
-                                    <span>The Searchbloom Promise</span>
+                                    <span>The Khalid IT Promise</span>
                                     <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -280,7 +280,7 @@
                                 aria-labelledby="accordion-collapse-heading-3">
                                 <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
                                     <p class="mb-2 text-gray-500 dark:text-gray-400">Our promise is centralized on our
-                                        partners' bottom line. Before providing a proposal, the Searchbloom leadership
+                                        partners' bottom line. Before providing a proposal, the Khalid IT leadership
                                         team
                                         ensures that our promise will be upheld. We stack the deck and only partner with
                                         businesses for whom we absolutely KNOW we can generate an ROI. Our promise
@@ -308,7 +308,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-2">
                         <div
                             class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
-                            <img src="https://www.searchbloom.com/wp-content/uploads/2020/02/Local-SEO.png"
+                            <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/Local-SEO.png"
                                 alt="#" class="w-300px mx-auto">
                             <h2 class="text-3xl py-3 font-semibold">Local SEO<br>Services</h2>
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">Increasing online visibility in your
@@ -321,7 +321,7 @@
                         </div>
                         <div
                             class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
-                            <img src="https://www.searchbloom.com/wp-content/uploads/2020/02/National-SEO.png"
+                            <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/National-SEO.png"
                                 alt="#" class="w-300px mx-auto">
                             <h2 class="text-3xl py-3 font-semibold">National SEO<br>Services</h2>
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">Winning in National SEO is how we built
@@ -335,7 +335,7 @@
                         </div>
                         <div
                             class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
-                            <img src="https://www.searchbloom.com/wp-content/uploads/2020/02/ECommerce-SEO.png"
+                            <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/ECommerce-SEO.png"
                                 alt="#" class="w-300px mx-auto">
                             <h2 class="text-3xl py-3 font-semibold">ECommerce SEO<br>Services</h2>
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">E-Commerce SEO takes a 'super nerd'
@@ -348,7 +348,7 @@
                         <div
                             class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                             <a href="">
-                                <img src="https://www.searchbloom.com/wp-content/uploads/2020/02/PPC-Management.png"
+                                <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/PPC-Management.png"
                                     alt="#" class="w-300px mx-auto">
                                 <h2 class="text-3xl py-3 font-semibold">PPC Management<br>Services</h2>
                                 <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">We have geeks in our lab with
@@ -368,7 +368,7 @@
         <!-- Section Seven Start -->
         <div class="text-center py-8 px-4">
             <h2 class="text-[#2d7ab8] text-lg font-semibold">Take a peek at our services below to learn more about how
-                Searchbloom<br>can help you achieve your digital marketing goals.</h2>
+                Khalid IT<br>can help you achieve your digital marketing goals.</h2>
         </div>
         <!-- Section Egiht Start -->
         <section class="border-t-2">
@@ -389,20 +389,20 @@
                                 class="bg-[#bceaf7]">A.R.T of Local SEO:</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your local SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
@@ -419,7 +419,7 @@
                             website.</p>
                     </div>
                     <div class="w-full lg:w-2/5 order-1 lg:order-2">
-                        <img src="https://www.searchbloom.com/wp-content/uploads/2020/04/local-seo-image.jpg"
+                        <img src="https://www.Searchbloom.com/wp-content/uploads/2020/04/local-seo-image.jpg"
                             alt="#" class="w-full">
                     </div>
                 </div>
@@ -451,7 +451,7 @@
                             than 60% of users research product information online before buying, and over 90% of clicks
                             go
                             to organic (rather than paid) listings.</p>
-                        <p class="text-[#8b939b] text-lg font-medium">Searchbloom’s Award-Winning National SEO services
+                        <p class="text-[#8b939b] text-lg font-medium">Khalid IT Award-Winning National SEO services
                             will help you ‘crack the code’ and harness high-converting organic traffic. By optimizing
                             your
                             E.A.T. <span class="text-[#29435a]">(expertise, authoritativeness, and
@@ -462,20 +462,20 @@
                                 class="bg-[#bceaf7]">A.R.T of National SEO:</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your national SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
@@ -483,7 +483,7 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2 order-1">
-                        <img src="https://www.searchbloom.com/wp-content/uploads/2020/04/natioanl-seo-image.jpg"
+                        <img src="https://www.Searchbloom.com/wp-content/uploads/2020/04/natioanl-seo-image.jpg"
                             alt="#" class="w-full">
                     </div>
                 </div>
@@ -519,20 +519,20 @@
                         </p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your local SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
@@ -544,7 +544,7 @@
                             your overall sales and revenue.</p>
                     </div>
                     <div class="w-full lg:w-2/5 order-1 lg:order-2">
-                        <img src="https://www.searchbloom.com/wp-content/uploads/2020/04/ecommerce-seo-image.jpg"
+                        <img src="https://www.Searchbloom.com/wp-content/uploads/2020/04/ecommerce-seo-image.jpg"
                             alt="#" class="w-full">
                     </div>
                 </div>
@@ -572,7 +572,7 @@
                             waste on unsuccessful PPC campaigns? Let us get you clear-cut results! Our custom PPC
                             strategy
                             can create a winning plan for your brand and marketing goals.</p>
-                        <p class="text-[#8b939b] text-lg font-medium">Searchbloom is setting a new standard for PPC
+                        <p class="text-[#8b939b] text-lg font-medium">Khalid IT is setting a new standard for PPC
                             management because we treat your campaigns and ad dollars as if they were our own. We are
                             constantly watching your marketplace and making realtime adjustments just as a day trader
                             would
@@ -580,29 +580,29 @@
                                 class="bg-[#bceaf7]">A.C.E. PPC methodology.</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Assets <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Strategic,
                                     data-driven designed ad creatives and landing pages foster high conversion
                                     rates.</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Control <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Control of an ad
                                     campaign is paramount. This is not set-and-forget marketing.</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/checkmark.svg"
+                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
                                     alt="logo">
                                 Experimentation <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Whether
                                     it’s
-                                    ad creative or landing page design, Searchbloom is always testing.</span>
+                                    ad creative or landing page design, Khalid IT is always testing.</span>
                             </li>
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2 lg:pr-16 order-1">
-                        <img src="https://www.searchbloom.com/wp-content/uploads/2020/04/ppc-management-image.jpg"
+                        <img src="https://www.Searchbloom.com/wp-content/uploads/2020/04/ppc-management-image.jpg"
                             alt="#" class="w-full">
                     </div>
                 </div>
@@ -618,42 +618,42 @@
             <div class="max-w-screen-xl mx-auto py-8 px-3">
                 <div class="text-center">
                     <h1 class="text-[#2ca8d9] text-3xl lg:text-5xl font-semibold">You Are Much More Than a Client.</h1>
-                    <p class="text-[#5d7183] text-2xl py-8 lg:px-20">Searchbloom creates lasting relationships. We want
+                    <p class="text-[#5d7183] text-2xl py-8 lg:px-20">Khalid IT creates lasting relationships. We want
                         you
                         to be our<br><span class="bg-[#bceaf7] font-bold">Partner, not our client.</span></p>
                 </div>
                 <div>
                     <ul class="grid grid-cols-3 md:grid-cols-5 items-center">
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2022/04/bdc_color_1x.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2022/04/bdc_color_1x.png"
                                 alt="logo"></li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/12/divvy.png" alt="logo">
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/12/divvy.png" alt="logo">
                         </li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/09/SUSE.jpg" alt="logo">
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/SUSE.jpg" alt="logo">
                         </li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/09/Rancher.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/Rancher.jpg"
                                 alt="logo">
                         </li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/09/NUVI.jpg" alt="logo">
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/NUVI.jpg" alt="logo">
                         </li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2023/10/idera-inc-logo-gray.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2023/10/idera-inc-logo-gray.png"
                                 alt="logo"></li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/12/jitterbug-e1640632749154.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/12/jitterbug-e1640632749154.png"
                                 alt="logo"></li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2023/10/NORDSTROM-gray-logo.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2023/10/NORDSTROM-gray-logo.png"
                                 alt="logo"></li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/09/1800-small.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/1800-small.png"
                                 alt="logo"></li>
                         <li class="p-5"><img class="w-[200px]"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/09/shirtspace.png"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/shirtspace.png"
                                 alt="logo"></li>
                     </ul>
                 </div>
@@ -670,20 +670,20 @@
                 </div>
                 <ul class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <li><a href="#"><img class="w-80 mx-auto lg:w-full"
-                                src="https://www.searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Cody-Jensen.jpg"
                                 alt="image"></a></li>
                     <li><a href="#"><img class="w-80 mx-auto lg:w-full"
-                                src="https://www.searchbloom.com/wp-content/uploads/2019/08/Jordan-Connor-1.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Jordan-Connor-1.jpg"
                                 alt="image"></a></li>
                     <li><a href="#"><img class="w-80 mx-auto lg:w-full"
-                                src="https://www.searchbloom.com/wp-content/uploads/2019/09/ryan.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2019/09/ryan.jpg"
                                 alt="image"></a>
                     </li>
                     <li><a href="#"><img class="w-80 mx-auto lg:w-full"
-                                src="https://www.searchbloom.com/wp-content/uploads/2021/10/jonathan-Blue-BG-scaled-e1634238046719.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/10/jonathan-Blue-BG-scaled-e1634238046719.jpg"
                                 alt="image"></a></li>
                     <li><a href="#"><img class="w-80 mx-auto lg:w-full"
-                                src="https://www.searchbloom.com/wp-content/uploads/2019/08/Tyson-Hymas.jpg"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2019/08/Tyson-Hymas.jpg"
                                 alt="image"></a></li>
                 </ul>
                 <p class="lg:px-40 text-center pt-7 pb-8 text-[#5d7183] text-md">Whether you’re a small business owner,
@@ -700,7 +700,7 @@
         </section>
         <!-- Drive New Leads -->
         <section
-            class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center px-3">
+            class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center px-3">
             <h1
                 class="w-full lg:w-[880px] mx-auto text-center text-white font-semibold text-3xl lg:text-4xl py-8 tracking-wide leading-[1.3] lg:leading-[1.8]">
                 Drive New Leads & Sales by Partnering With an <span
@@ -723,7 +723,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Schema Markup Generator Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/Schema-Markup-Generator-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Schema-Markup-Generator-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Use our Schema.org structured data generators to create
                             JSON-LD & MIcrodata markups to help Google understand your site.</p>
@@ -734,7 +734,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Snippet Preview Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/Snippet-preview-tool-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Snippet-preview-tool-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Use Use this tool to replicate the appearance of a
                             snippet
@@ -747,7 +747,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Local SERP Checker</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/Local-Search-Results-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Local-Search-Results-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Check local search results from any location in a bunch
                             of
@@ -759,7 +759,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">PPC Keyword Wrapper Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/ppc-keyword-wrapper-tool-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/ppc-keyword-wrapper-tool-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Enter a list of keyword phrases and use this tool to
                             convert
@@ -771,7 +771,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Campaign URL Builder Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/campaign-url-builder-tool-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/campaign-url-builder-tool-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">With our Campaign URL Builder Tool, you can easily tag
                             URLs
@@ -783,7 +783,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Keyword Mixer Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/keyword-mixer-tool-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/keyword-mixer-tool-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Increase your team’s efficiency and stop wasting time
                             writing repetitive combinations of keywords with our Keyword Mixer Tool.</p>
@@ -794,7 +794,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Bulk Word Count Checker</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2020/05/bulk-word-cout-checker-1.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2020/05/bulk-word-cout-checker-1.svg"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Use our Free tool to check webpage word count in bulk
                         </p>
@@ -805,7 +805,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Anchor Text Generator Tool</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2021/09/New-Project.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2021/09/New-Project.png"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Building relevant backlinks is critical for any website.
                             Use
@@ -817,7 +817,7 @@
                     <a href="#">
                         <h2 class="text-2xl font-semibold py-6">Conversion Rate ROI Calculator</h2>
                         <img class="w-[250px] mx-auto"
-                            src="https://www.searchbloom.com/wp-content/uploads/2023/03/Conversion-Rate-ROI-Calculator-A.png"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2023/03/Conversion-Rate-ROI-Calculator-A.png"
                             alt="image">
                         <p class="text-[#828e99] py-6 text-lg">Use our free conversion rate ROI calculator to determine
                             if
@@ -858,7 +858,7 @@
                                 To</h2>
                             <div class="flex items-center gap-3 py-3">
                                 <div
-                                    class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
+                                    class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
                                 </div>
                                 <div>
                                     <p class="text-[#43b1de] text-lg font-bold">Matthew Woodward</p>
@@ -883,7 +883,7 @@
                                 Seeking</h2>
                             <div class="flex items-center gap-3 py-3">
                                 <div
-                                    class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
+                                    class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
                                 </div>
                                 <div>
                                     <p class="text-[#43b1de] text-lg font-bold">Cody Jensen</p>
@@ -909,7 +909,7 @@
                             <h2 class="text-3xl py-3 font-semibold">The Five Business Factors to SEO Services</h2>
                             <div class="flex items-center gap-3 py-3">
                                 <div
-                                    class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
+                                    class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
                                 </div>
                                 <div>
                                     <p class="text-[#43b1de] text-lg font-bold">Grayson Kemper</p>
@@ -939,7 +939,7 @@
         </section>
         {{-- <!-- The Search Engine Marketing Agency -->
         <section
-            class="bg-[url('https://www.searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
+            class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
             <div class="max-w-screen-xl flex flex-col lg:flex-row items-center py-8 mx-auto px-3">
                 <div class="w-full lg:w-3/2 text-center lg:text-left">
                     <h1 class="text-white font-semibold text-4xl">The Search Engine Marketing Agency that Checks Every
@@ -983,7 +983,7 @@
                     </div>
 
                     <div class="py-10 flex border-b lg:border-x items-center justify-center order-1 lg:order-2">
-                        <img class="w-[120px]" src="https://www.searchbloom.com/wp-content/uploads/2019/07/logo-1.png"
+                        <img class="w-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/07/logo-1.png"
                             alt="image">
                     </div>
 
@@ -1021,31 +1021,31 @@
                     <div class="lg:ml-auto w-full lg:w-[500px] lg:px-10">
                         <ul>
                             <li class="flex"><img class="w-[15px] h-[20px] mt-1 mr-4"
-                                    src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/pin.png"
+                                    src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/pin.png"
                                     alt="image"><a class="hover:text-[#3db8da] duration-300"
                                     href="https://maps.google.com/?cid=11105605054832802961">12884 Frontrunner Blvd
                                     #140,
                                     Draper, UT 84020</a></li>
                             <li class="flex py-6"><img class="w-[20px] h-[15px] mt-1 mr-3"
-                                    src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/envelope.png"
+                                    src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/envelope.png"
                                     alt="image"><a class="hover:text-[#3db8da] duration-300"
-                                    href="#">hello@searchbloom.com</a></li>
+                                    href="#">hello@Searchbloom.com</a></li>
                             <li class="flex"><img class="w-[18px] h-[20px] mt-1 mr-4"
-                                    src="https://www.searchbloom.com/wp-content/themes/searchbloom_optimized/assets/img/phone.svg"
+                                    src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/phone.svg"
                                     alt="image"><a href="#">801.590.4051</a></li>
                         </ul>
                         <ul class="flex gap-3 pt-5 justify-center lg:justify-start">
                             <li><a href="#"><img class="w-[30px]"
-                                        src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg"
+                                        src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg"
                                         alt="image"></a></li>
                             <li><a href="#"><img class="w-[30px]"
-                                        src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg"
+                                        src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg"
                                         alt="image"></a></li>
                             <li><a href="#"><img class="w-[30px]"
-                                        src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg"
+                                        src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg"
                                         alt="image"></a></li>
                             <li><a href="#"><img class="w-[30px]"
-                                        src="https://www.searchbloom.com/wp-content/uploads/2019/12/SB-social-twitter.svg"
+                                        src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-twitter.svg"
                                         alt="image"></a></li>
                         </ul>
                     </div>
@@ -1057,25 +1057,25 @@
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row justify-between px-3 gap-3">
                 <div class="flex items-center gap-8 py-4">
                     <div><img class="w-[185px] h-[185px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2022/07/Google-partner.svg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2022/07/Google-partner.svg"
                             alt="Image"></div>
                     <div>
                         <img class="lg:w-[230px] h-[50px] lg:h-[65px] mb-4"
-                            src="https://www.searchbloom.com/wp-content/uploads/2018/09/bing-ads.png" alt="Image">
+                            src="https://www.Searchbloom.com/wp-content/uploads/2018/09/bing-ads.png" alt="Image">
                         <img class="lg:w-[230px] h-[50px] lg:h-[65px]"
-                            src="https://www.searchbloom.com/wp-content/uploads/2018/09/Facebook_Marketing_Partner_badge.jpg"
+                            src="https://www.Searchbloom.com/wp-content/uploads/2018/09/Facebook_Marketing_Partner_badge.jpg"
                             alt="Image">
                     </div>
                 </div>
                 <div class="flex items-center gap-5 pb-5 lg:pb-0">
                     <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
-                        src="https://www.searchbloom.com/wp-content/uploads/2019/10/2-1_3e22b681da3d988514485b573402dbc9.png"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2019/10/2-1_3e22b681da3d988514485b573402dbc9.png"
                         alt="Image">
                     <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
-                        src="https://www.searchbloom.com/wp-content/uploads/2019/10/3-1_2516d10f66bbb22b474d12b66803a57f.png"
+                        src="https://www.Searchbloom.com/wp-content/uploads/2019/10/3-1_2516d10f66bbb22b474d12b66803a57f.png"
                         alt="Image">
                     <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
-                        src="https://www.searchbloom.com/wp-content/uploads/2019/10/1-1.png" alt="Image">
+                        src="https://www.Searchbloom.com/wp-content/uploads/2019/10/1-1.png" alt="Image">
                 </div>
             </div>
         </section>
