@@ -14,12 +14,19 @@ use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\ReadingSettingController;
 use App\Http\Controllers\Admin\WritingSettingController;
 use App\Http\Controllers\Admin\DiscussionSettingController;
+use App\Http\Controllers\PageFileController;
 
 
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::prefix('admin/pages')->middleware('auth')->group(function () {
+    Route::get('{slug}/edit', [PageFileController::class, 'edit'])->name('admin.pages.edit');
+    Route::post('{slug}/edit', [PageFileController::class, 'update'])->name('admin.pages.update');
+    Route::get('/', [PageFileController::class, 'index'])->name('admin.pages.index');
+});
 
 
 Route::get('/', function () {

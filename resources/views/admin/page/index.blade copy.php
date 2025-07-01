@@ -35,52 +35,6 @@
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-
-                    {{-- Static Pages --}}
-                    @php
-                        $staticPages = [
-                            ['title' => 'Home', 'slug' => '/', 'editable' => true],
-                            ['title' => 'Contact', 'slug' => '/contact', 'editable' => true],
-                            ['title' => 'Awards', 'slug' => '/awards', 'editable' => true],
-                            ['title' => 'Blog', 'slug' => '/blog', 'editable' => false],
-                            ['title' => 'Blog Backlink', 'slug' => '/blogbacklink', 'editable' => true],
-                            ['title' => 'Careers', 'slug' => '/careers', 'editable' => true],
-                            ['title' => 'Member Info', 'slug' => '/member-info', 'editable' => true],
-                            ['title' => 'Reviews', 'slug' => '/reviews', 'editable' => true],
-                            ['title' => 'Team', 'slug' => '/team', 'editable' => true],
-                        ];
-                    @endphp
-
-                    @foreach ($staticPages as $page)
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                            <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                                {{ $page['title'] }}
-                            </td>
-                            <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
-                                {{ $page['slug'] }}
-                            </td>
-                            <td class="px-6 py-4">
-                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-200">
-                                    Static
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                @if ($page['editable'])
-                                    <a href="{{ route('admin.pages.edit', ['slug' => $page['slug']]) }}"
-                                        class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400"
-                                        data-editable="true">
-                                        ✏️ Edit
-                                    </a>
-                                @else
-                                    <span class="text-sm text-gray-400 dark:text-gray-500 italic" data-editable="false">
-                                        🔒 Not Editable
-                                    </span>
-                                @endif
-                            </td>
-                        </tr>
-                    @endforeach
-
-                    {{-- Dynamic Pages from DB --}}
                     @forelse($pages as $page)
                         <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                             <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
@@ -99,7 +53,7 @@
                                 </span>
                             </td>
                             <td class="px-6 py-4 text-right space-x-2">
-                                <a href="{{ route('admin.pages.edit', $page->slug) }}"
+                                <a href="{{ route('pages.edit', $page) }}"
                                     class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400">
                                     ✏️ Edit
                                 </a>

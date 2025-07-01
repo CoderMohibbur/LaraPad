@@ -12,7 +12,7 @@
                                 clip-rule="evenodd"></path>
                         </svg></button><a class="flex items-center" href="/"><img alt=""
                             src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-8"><span
-                            class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Flowbite</span></a>
+                            class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Khalid IT</span></a>
                     <form class="ml-16 hidden md:block"><label
                             class="text-sm font-medium text-gray-900 dark:text-gray-300 sr-only"
                             for="search">Search</label>
