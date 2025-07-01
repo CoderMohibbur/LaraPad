@@ -39,15 +39,15 @@
                     {{-- Static Pages --}}
                     @php
                         $staticPages = [
-                            ['title' => 'Home', 'slug' => '/', 'editable' => true],
-                            ['title' => 'Contact', 'slug' => '/contact', 'editable' => true],
-                            ['title' => 'Awards', 'slug' => '/awards', 'editable' => true],
-                            ['title' => 'Blog', 'slug' => '/blog', 'editable' => false],
-                            ['title' => 'Blog Backlink', 'slug' => '/blogbacklink', 'editable' => true],
-                            ['title' => 'Careers', 'slug' => '/careers', 'editable' => true],
-                            ['title' => 'Member Info', 'slug' => '/member-info', 'editable' => true],
-                            ['title' => 'Reviews', 'slug' => '/reviews', 'editable' => true],
-                            ['title' => 'Team', 'slug' => '/team', 'editable' => true],
+                            ['title' => 'Home', 'slug' => 'home', 'editable' => true],
+                            ['title' => 'Contact', 'slug' => 'contact', 'editable' => true],
+                            ['title' => 'Awards', 'slug' => 'awards', 'editable' => true],
+                            ['title' => 'Blog', 'slug' => 'blog', 'editable' => false],
+                            ['title' => 'Blog Backlink', 'slug' => 'blogbacklink', 'editable' => true],
+                            ['title' => 'Careers', 'slug' => 'careers', 'editable' => true],
+                            ['title' => 'Member Info', 'slug' => 'member-info', 'editable' => true],
+                            ['title' => 'Reviews', 'slug' => 'reviews', 'editable' => true],
+                            ['title' => 'Team', 'slug' => 'team', 'editable' => true],
                         ];
                     @endphp
 

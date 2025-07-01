@@ -2,7 +2,7 @@
     <section class="border-b">
         <div class="flex flex-col md:flex-row justify-evenly items-center gap-8 max-w-screen-xl mx-auto mt-28 px-3">
             <div class="lg:w-3/5 text-center md:text-left md:ml-5">
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">Contact US</h1>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">Contact Us</h1>
                 <h2 class="text-[#5d7183] text-2xl pt-3 lg:pr-8">Are you ready to get more out of your Search Engine
                     Marketing company?</h2>
             </div>

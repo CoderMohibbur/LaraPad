@@ -74,12 +74,6 @@ Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('categ
 
 
 
-
-
-
-
-
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
