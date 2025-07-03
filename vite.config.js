@@ -4,11 +4,14 @@ import tailwindcss from '@tailwindcss/vite'
 
 
 export default defineConfig({
+    server: {
+        host: '127.0.0.1',   // ✅ Force IPv4
+        port: 8181,          // ✅ Avoid default IPv6 port binding
+    },
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
-        
     ],
 });

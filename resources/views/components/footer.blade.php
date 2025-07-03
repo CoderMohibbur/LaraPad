@@ -82,15 +82,12 @@
                     <div class="lg:ml-auto w-full lg:w-[500px] lg:px-10">
                         <ul>
                             <li class="flex"><img class="w-[15px] h-[20px] mt-1 mr-4"
-                                    src="https://www.
-
-
-                                    .com/wp-content/themes/Searchbloom_optimized/assets/img/pin.png"
+                                    src="/icon/pin.webp"
                                     alt="image"><a class="hover:text-[#3db8da] duration-300"
                                     href="https://maps.google.com/?cid=11105605054832802961">997, Bashtola, Mollapara, Barandi, Jashore 7400</a></li>
                             <li class="flex py-6">
     <img class="w-[20px] h-[15px] mt-1 mr-3"
-        src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/envelope.png"
+        src="/icon/envelope.webp"
         alt="email icon">
     <a class="hover:text-[#3db8da] duration-300"
         href="mailto:khalid@khalidit.com">khalid@khalidit.com</a>
@@ -98,7 +95,7 @@
 
 <li class="flex">
     <img class="w-[18px] h-[20px] mt-1 mr-4"
-        src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/phone.svg"
+        src="/icon/phone.svg"
         alt="phone icon">
     <a class="hover:text-[#3db8da] duration-300"
         href="tel:+8801927802206">+880 1927-802206</a>

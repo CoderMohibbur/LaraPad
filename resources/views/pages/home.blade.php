@@ -11,18 +11,15 @@
                 </h1>
                 <ul class="text-l md:text-3xl text-[#29435a] w-80 mx-auto md:w-full pt-4">
                     <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                            alt="logo">
+                        <img src="/icon/checkmark.png" alt="logo">
                         ROI-Driven Strategies
                     </li>
                     <li class="flex gap-4 py-2 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                            alt="logo">
+                        <img src="/icon/checkmark.png" alt="logo">
                         Proven Methodologies
                     </li>
                     <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                            alt="logo">
+                        <img src="/icon/checkmark.png" alt="logo">
                         Trusted, Transparent, Results-Driven
                     </li>
                 </ul>
@@ -101,19 +98,24 @@
 
         <section class="relative overflow-hidden w-full border border-y bg-gray-50 dark:bg-gray-900">
             <!-- Slider Container -->
-            <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out" style="width: 200%;">
+            <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out"
+                style="width: 200%;">
                 <!-- Slide 1 -->
-                <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
+                <div
+                    class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
                     <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
-                        <img src="uploads/2025/04/mahamudul.png" alt="Image" class="w-[360px] h-[420px] object-cover">
+                        <img src="uploads/2025/04/mahamudul.png" alt="Image"
+                            class="w-[360px] h-[420px] object-cover">
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
                         <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
-                            “The way they <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">pitch</span> their services is
+                            “The way they <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">pitch</span> their
+                            services is
                             <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">exactly what you get</span>.”
                         </h1>
                         <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
-                            Unlike most SEO companies, they set clear expectations and deliver on them. It’s rare to find such transparency and commitment.
+                            Unlike most SEO companies, they set clear expectations and deliver on them. It’s rare to
+                            find such transparency and commitment.
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mohibbur Rohman</p>
                         <p class="text-sm text-gray-500 dark:text-gray-400 italic">CEO & CTO, Japan Bangladesh IT</p>
@@ -121,17 +123,22 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
+                <div
+                    class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-evenly gap-8 px-3">
                     <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
-                        <img src="uploads/2025/04/mahamudull.png" alt="Image" class="w-[360px] h-[420px] object-cover">
+                        <img src="uploads/2025/04/mahamudull.png" alt="Image"
+                            class="w-[360px] h-[420px] object-cover">
                     </div>
                     <div class="w-full md:w-2/3 lg:w-2/3 text-center md:text-left">
                         <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
-                            “Their SEO approach <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">delivers results</span> and their
-                            communication is <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">transparent</span>.”
+                            “Their SEO approach <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">delivers
+                                results</span> and their
+                            communication is <span
+                                class="bg-blue-100 dark:bg-blue-800 px-1 rounded">transparent</span>.”
                         </h1>
                         <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
-                            We saw results within weeks. The clarity, communication, and effectiveness of their work were top-notch.
+                            We saw results within weeks. The clarity, communication, and effectiveness of their work
+                            were top-notch.
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mahamudul Islam</p>
                         <p class="text-sm text-gray-500 dark:text-gray-400 italic">Developers, Khalid IT</p>
@@ -141,12 +148,14 @@
 
             <!-- Controls -->
             <div class="absolute inset-y-0 left-0 flex items-center">
-                <button onclick="prevSlide()" class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-r shadow">
+                <button onclick="prevSlide()"
+                    class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-r shadow">
                     ❮
                 </button>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center">
-                <button onclick="nextSlide()" class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-l shadow">
+                <button onclick="nextSlide()"
+                    class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-l shadow">
                     ❯
                 </button>
             </div>
@@ -389,21 +398,18 @@
                                 class="bg-[#bceaf7]">A.R.T of Local SEO:</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your local SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
                             </li>
@@ -462,21 +468,18 @@
                                 class="bg-[#bceaf7]">A.R.T of National SEO:</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your national SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
                             </li>
@@ -519,21 +522,18 @@
                         </p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Authority <span>-</span> <span class="text-[#5d7183]">Link acquisition from high
                                     authority
                                     sites to help improve your local SEO rankings</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Relevancy <span>-</span> <span class="text-[#5d7183]">Optimizing your content so that
                                     search engines can better understand your business offering</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Technology <span>-</span> <span class="text-[#5d7183]">Search engines reward optimized,
                                     secure, sites with a great user experience</span>
                             </li>
@@ -580,21 +580,18 @@
                                 class="bg-[#bceaf7]">A.C.E. PPC methodology.</span></p>
                         <ul class="text-lg md:text-xl font-semibold text-[#29435a] leading-[2] w-full pt-4">
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Assets <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Strategic,
                                     data-driven designed ad creatives and landing pages foster high conversion
                                     rates.</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Control <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Control of an ad
                                     campaign is paramount. This is not set-and-forget marketing.</span>
                             </li>
                             <li class="flex gap-4 items-center justify-start md:justify-start pb-6">
-                                <img src="https://www.Searchbloom.com/wp-content/themes/Searchbloom_optimized/assets/img/checkmark.svg"
-                                    alt="logo">
+                                <img src="/icon/checkmark.png" alt="logo">
                                 Experimentation <span>-</span> <span class="text-[#5d7183] text-sm lg:text-lg">Whether
                                     it’s
                                     ad creative or landing page design, Khalid IT is always testing.</span>
@@ -1106,7 +1103,7 @@
 
 </x-guest-layout>
 <!-- script start -->
-<script src="nav.js"></script>
+{{-- <script src="nav.js"></script> --}}
 <!-- script end -->
 
 
