@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<section class="shadow fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900">
+<section class="shadow fixed top-0 left-0 right-0 z-50 border-b-2 dark:border-gray-500 bg-white dark:bg-gray-900">
     <header class="max-w-screen-xl mx-auto">
         <div class="px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-900">
             <!-- Logo -->

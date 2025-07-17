@@ -3,34 +3,39 @@
     <section class="">
 
         <!-- Section One / SEARCH ENGINE Part -->
-        <section class="flex flex-col md:flex-row justify-evenly items-center gap-8 max-w-screen-xl mx-auto mt-28">
+        <section
+            class="flex flex-col md:flex-row justify-evenly items-center gap-8 max-w-screen-xl mx-auto mt-28 px-4 bg-white dark:bg-gray-900">
+            <!-- Left Content -->
             <div class="lg:w-2/3 text-center md:text-left md:ml-5">
-                <h1 class="text-4xl md:text-5xl lg:text-8xl font-bold">
-                    <span class="text-[#5d7183] text-xl md:text-2xl lg:text-5xl font-semibold">SEARCH ENGINE</span><br>
+                <h1 class="text-4xl md:text-5xl lg:text-8xl font-bold text-gray-800 dark:text-white">
+                    <span class="text-[#5d7183] dark:text-gray-400 text-xl md:text-2xl lg:text-5xl font-semibold">
+                        SEARCH ENGINE
+                    </span><br>
                     MARKETING DONE RIGHT
                 </h1>
-                <ul class="text-l md:text-3xl text-[#29435a] w-80 mx-auto md:w-full pt-4">
-                    <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="/icon/checkmark.png" alt="logo">
+
+                <ul class="text-l md:text-3xl text-[#29435a] dark:text-gray-300 w-80 mx-auto md:w-full pt-4">
+                    <li class="flex gap-4 items-center md:text-xl">
+                        <img src="/icon/checkmark.png" alt="logo" class="w-5 h-5">
                         ROI-Driven Strategies
                     </li>
-                    <li class="flex gap-4 py-2 items-center justify-start md:justify-start md:text-xl">
-                        <img src="/icon/checkmark.png" alt="logo">
+                    <li class="flex gap-4 py-2 items-center md:text-xl">
+                        <img src="/icon/checkmark.png" alt="logo" class="w-5 h-5">
                         Proven Methodologies
                     </li>
-                    <li class="flex gap-4 items-center justify-start md:justify-start md:text-xl">
-                        <img src="/icon/checkmark.png" alt="logo">
+                    <li class="flex gap-4 items-center md:text-xl">
+                        <img src="/icon/checkmark.png" alt="logo" class="w-5 h-5">
                         Trusted, Transparent, Results-Driven
                     </li>
                 </ul>
+
                 <ul class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mt-6 lg:my-6">
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
                             src="https://www.Searchbloom.com/wp-content/uploads/2024/11/Searchbloom-Best-SEO-Services-Of-2024-2024-PNG.png"
                             alt="Image"></li>
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
                             src="https://www.Searchbloom.com/wp-content/uploads/2024/12/SEO-Singular.png"
-                            alt="Image">
-                    </li>
+                            alt="Image"></li>
                     <li><img class="w-[80px] h-[120px] md:w-[70px] md:h-[100px] lg:w-[160px] lg:h-[200px]"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/07/top-seo-companies.svg"
                             alt="Image"></li>
@@ -39,38 +44,48 @@
                             alt="Image"></li>
                 </ul>
             </div>
+
+            <!-- Right Form -->
             <div class="lg:w-1/3 md:mr-5 my-5">
                 <div class="w-full px-3">
-                    <div class="bg-[#2ca8d9] p-6 md:p-4 lg:p-8 rounded-md">
+                    <div
+                        class="bg-[#2ca8d9] dark:bg-[#1b4e6c] p-6 md:p-4 lg:p-8 rounded-md transition-colors duration-300">
                         <h1 class="italic text-white font-semibold text-xl md:text-2xl text-center pb-2">GET YOUR FREE
-                            PLAN
-                        </h1>
+                            PLAN</h1>
+
                         <div>
                             <label for="username" class="text-white text-sm font-semibold">What's Your Name?</label><br>
                             <input type="text" id="username" placeholder="Enter your name"
-                                class="w-full md:w-full lg:w-full border border-gray-300 rounded-sm mt-1 mb-6 px-4 py-2 focus:outline-none focus:ring-0 focus:border-gray-300" />
+                                class="w-full border border-gray-300 dark:border-gray-600 rounded-sm mt-1 mb-6 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
+
                         <div>
                             <label for="Email" class="text-white text-sm font-semibold">What's your
                                 Email?</label><br>
                             <input type="email" id="Email" placeholder="Johnmiller@mydomain.com"
-                                class="w-full md:w-full lg:w-full border border-gray-300 rounded-sm mt-1 mb-6 px-4 py-2 focus:outline-none focus:ring-0 focus:border-gray-300">
+                                class="w-full border border-gray-300 dark:border-gray-600 rounded-sm mt-1 mb-6 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
+
                         <div>
                             <label for="weblink" class="text-white text-sm font-semibold">Your Website?</label><br>
                             <input type="text" id="weblink" placeholder="Your Website"
-                                class="w-full md:w-full lg:w-full border border-gray-300 rounded-sm mt-1 mb-6 px-4 py-2 focus:outline-none focus:ring-0 focus:border-gray-300" />
+                                class="w-full border border-gray-300 dark:border-gray-600 rounded-sm mt-1 mb-6 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400" />
                         </div>
-                        <button class="w-full md:w-full lg:w-full text-white bg-[#ff5056] rounded-sm p-3 font-bold">GET
-                            YOUR
-                            FREE ACTION PLAN</button>
+
+                        <button
+                            class="w-full text-white bg-[#ff5056] hover:bg-red-600 rounded-sm p-3 font-bold transition">
+                            GET YOUR FREE ACTION PLAN
+                        </button>
                     </div>
-                    <p class="text-[#5d7183] font-bold text-xl md:text-2xl text-center leading-[2] mt-4 px-3">Don't
-                        worry,
-                        we hate spam too.<br>At Khalid IT, we respect your inbox.</p>
+
+                    <p
+                        class="text-[#5d7183] dark:text-gray-300 font-bold text-xl md:text-2xl text-center leading-[2] mt-4 px-3">
+                        Don't worry, we hate spam too.<br>At Khalid IT, we respect your inbox.
+                    </p>
                 </div>
             </div>
         </section>
+
         <!-- Section Two Start -->
 
 
@@ -96,7 +111,8 @@
             </div>
         </section> --}}
 
-        <section class="relative overflow-hidden w-full border border-y bg-gray-50 dark:bg-gray-900">
+        <section
+            class="relative overflow-hidden w-full border border-y dark:border-gray-500 bg-gray-50 dark:bg-gray-900">
             <!-- Slider Container -->
             <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out"
                 style="width: 200%;">
@@ -164,30 +180,37 @@
 
         <!-- Section Three Start -->
         <section class="max-w-screen-xl mx-auto py-6">
-            <h1 class="text-center text-[#5d7183] text-xl lg:text-2xl font-semibold pb-8 px-5">Our results have been
-                talked
-                about by:</h1>
-            <ul class="grid grid-cols-3 md:grid-cols-6 items-center justify-center">
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/fobes.png" alt="#"
-                        class="w-[160px] p-2"></li>
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/usa-today.png" alt="#"
-                        class="w-[160px] p-2"></li>
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/the-wall-street-journal.png"
-                        alt="#" class="w-[160px] p-2"></li>
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/inc.png" alt="#"
-                        class="w-[160px] p-2"></li>
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/entrepreneur.png" alt="#"
-                        class="w-[160px] p-2"></li>
-                <li class="border md:border-none"><img
-                        src="https://www.Searchbloom.com/wp-content/uploads/2018/07/yahoo.png" alt="#"
-                        class="w-[160px] p-2"></li>
+            <h1 class="text-center text-[#5d7183] dark:text-gray-300 text-xl lg:text-2xl font-semibold pb-8 px-5">
+                Our results have been talked about by:
+            </h1>
+            <ul class="grid grid-cols-3 md:grid-cols-6 items-center justify-center gap-4 px-2">
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/fobes.png" alt="Forbes"
+                        class="w-[160px]">
+                </li>
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/usa-today.png" alt="USA Today"
+                        class="w-[160px]">
+                </li>
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/the-wall-street-journal.png"
+                        alt="WSJ" class="w-[160px]">
+                </li>
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/inc.png" alt="Inc"
+                        class="w-[160px]">
+                </li>
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/entrepreneur.png"
+                        alt="Entrepreneur" class="w-[160px]">
+                </li>
+                <li class="bg-white p-3 flex items-center justify-center shadow-sm rounded">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2018/07/yahoo.png" alt="Yahoo"
+                        class="w-[160px]">
+                </li>
             </ul>
         </section>
+
         <!-- Section Four Start -->
         <section
             class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
@@ -195,35 +218,49 @@
                 Strategies -
                 No Lengthy Contracts</h1>
         </section>
+
+        
         <!-- Section Five Start -->
         <section class="border-y-2">
             <div class="max-w-screen-xl mx-auto py-6">
                 <div class="text-center">
-                    <h1 class="text-[#2ca8d9] text-4xl lg:text-5xl font-semibold">Our Unique Approach</h1>
-                    <p class="text-[#5d7183] text-2xl px-5 md:px-5 lg:px-48 py-8">Khalid IT collaborates with our
-                        partners
-                        to develop comprehensive digital marketing strategies that are predictable, repeatable, and,
-                        most
-                        importantly, yield strong returns.</p>
+                    <h1 class="text-[#2ca8d9] text-4xl lg:text-5xl font-semibold dark:text-[#2ca8d9]">Our Unique
+                        Approach</h1>
+                    <p class="text-[#5d7183] dark:text-gray-300 text-2xl px-5 md:px-5 lg:px-48 py-8">
+                        Khalid IT collaborates with our partners to develop comprehensive digital marketing strategies
+                        that are predictable, repeatable, and, most importantly, yield strong returns.
+                    </p>
                 </div>
+
                 <div class="flex flex-col lg:flex-row px-3">
+                    <!-- Left Section -->
                     <div class="w-full md:w-full lg:w-1/3 order-2 lg:order-1">
-                        <img class="border border-[#ebebeb] shadow-inner shadow-[rgba(0,0,0,0.1)] w-full h-vh md:w-[320px] md:h-[100px] lg:w-[320px] lg:h-[100px] p-4 mt-4 rounded-lg mx-auto"
-                            src="https://www.Searchbloom.com/wp-content/uploads/2021/11/sel_awards_winner_2021.png"
-                            alt="#">
-                        <p class="text-[#5d7183] font-semibold text-center pt-4 pb-2">Best Retail Ecommerce SEO
-                            Initiative
-                            2021</p>
-                        <img class="w-[200px] h-[260px] mx-auto"
-                            src="https://www.Searchbloom.com/wp-content/uploads/2022/04/award_sec_img02-e1648835385507.png"
-                            alt="#">
+                        <!-- First Image -->
+                        <div class=" mt-4">
+                            <img class="bg-white p-2 rounded-lg shadow-sm w-full h-auto md:w-[320px] md:h-[100px] lg:w-[320px] lg:h-[100px] mx-auto"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2021/11/sel_awards_winner_2021.png"
+                                alt="Award">
+                        </div>
+
+                        <p class="text-[#5d7183] dark:text-gray-300 font-semibold text-center pt-4 pb-2">
+                            Best Retail Ecommerce SEO Initiative 2021
+                        </p>
+
+                        <!-- Second Image -->
+                        <div class="">
+                            <img class="shadow-sm w-[200px] h-[260px] mx-auto"
+                                src="https://www.Searchbloom.com/wp-content/uploads/2022/04/award_sec_img02-e1648835385507.png"
+                                alt="Award">
+                        </div>
                     </div>
 
+                    <!-- Right Accordion Section -->
                     <div class="w-full md:w-full lg:w-2/3 order-1 lg:order-2">
                         <div id="accordion-collapse" data-accordion="collapse">
+                            <!-- Item 1 -->
                             <h2 id="accordion-collapse-heading-1">
                                 <button type="button"
-                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 dark:focus:white dark:border-gray-700 dark:text-gray-400 gap-3"
+                                    class="flex items-center justify-between w-full p-5 font-medium text-gray-700 dark:text-gray-200 border border-b-0 border-gray-200 dark:border-gray-700 gap-3"
                                     data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                                     aria-controls="accordion-collapse-body-1">
                                     <span>Partners, Not Clients</span>
@@ -236,18 +273,18 @@
                             </h2>
                             <div id="accordion-collapse-body-1" class="hidden"
                                 aria-labelledby="accordion-collapse-heading-1">
-                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-white">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">You're not just another client or
-                                        another number to us. Our partners know how much we care about the success of
-                                        their
-                                        campaigns. As an extension of your team, we regularly work closely together and
-                                        strive to build lasting relationships.</p>
+                                <div
+                                    class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                                    <p class="mb-2 text-gray-600 dark:text-gray-400">
+                                        You're not just another client or another number to us...
+                                    </p>
                                 </div>
                             </div>
 
+                            <!-- Item 2 -->
                             <h2 id="accordion-collapse-heading-2">
                                 <button type="button"
-                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 dark:focus:white dark:border-gray-700 dark:text-gray-400 gap-3"
+                                    class="flex items-center justify-between w-full p-5 font-medium text-gray-700 dark:text-gray-200 border border-b-0 border-gray-200 dark:border-gray-700 gap-3"
                                     data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
                                     aria-controls="accordion-collapse-body-2">
                                     <span>White-Glove Service</span>
@@ -260,21 +297,19 @@
                             </h2>
                             <div id="accordion-collapse-body-2" class="hidden"
                                 aria-labelledby="accordion-collapse-heading-2">
-                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Unlike other agencies, as a
-                                        Khalid IT partner, you work directly with your dedicated analyst and not an
-                                        account manager, which allows for less back and forth and more direct
-                                        accountability
-                                        and transparency. No more waiting on hold just to find out the person you're
-                                        speaking with doesn't have a clue. Get what you need with a quick email or call
-                                        directly to your analyst. We guarantee a 24 hour response time, but our average
-                                        partner response time is less than 2 hours.</p>
+                                <div
+                                    class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                                    <p class="mb-2 text-gray-600 dark:text-gray-400">
+                                        Unlike other agencies, as a Khalid IT partner, you work directly with your
+                                        dedicated analyst...
+                                    </p>
                                 </div>
                             </div>
 
+                            <!-- Item 3 -->
                             <h2 id="accordion-collapse-heading-3">
                                 <button type="button"
-                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-1 border-gray-200 dark:focus:white dark:border-gray-700 dark:text-gray-400 gap-3"
+                                    class="flex items-center justify-between w-full p-5 font-medium text-gray-700 dark:text-gray-200 border border-b border-gray-200 dark:border-gray-700 gap-3"
                                     data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                                     aria-controls="accordion-collapse-body-3">
                                     <span>The Khalid IT Promise</span>
@@ -287,15 +322,11 @@
                             </h2>
                             <div id="accordion-collapse-body-3" class="hidden"
                                 aria-labelledby="accordion-collapse-heading-3">
-                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Our promise is centralized on our
-                                        partners' bottom line. Before providing a proposal, the Khalid IT leadership
-                                        team
-                                        ensures that our promise will be upheld. We stack the deck and only partner with
-                                        businesses for whom we absolutely KNOW we can generate an ROI. Our promise
-                                        provides
-                                        reassurance and also means if you get a proposal from our team, we have already
-                                        determined we can make you money backed by data and comprehensive research.</p>
+                                <div
+                                    class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                                    <p class="mb-2 text-gray-600 dark:text-gray-400">
+                                        Our promise is centralized on our partners' bottom line...
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -303,6 +334,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Section Six Start -->
         <section class="py-8 border border-b-1">
             <div class="max-w-screen-xl mx-auto py-6">
@@ -316,10 +348,13 @@
                 <div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-2">
                         <div
-                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
+                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 dark:hover:bg-sky-800 duration-200 ease-in-out">
                             <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/Local-SEO.png"
                                 alt="#" class="w-300px mx-auto">
-                            <h2 class="text-3xl py-3 font-semibold">Local SEO<br>Services</h2>
+                            <h2 class="text-3xl py-3 font-semibold text-gray-800 dark:text-white">
+                                Local SEO<br>Services
+                            </h2>
+
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">Increasing online visibility in your
                                 local
                                 marketplace is the key to growth. We can help you stand out from the competition with a
@@ -329,10 +364,11 @@
                                 More</button>
                         </div>
                         <div
-                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
+                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 dark:hover:bg-sky-800 duration-200 ease-in-out">
                             <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/National-SEO.png"
                                 alt="#" class="w-300px mx-auto">
-                            <h2 class="text-3xl py-3 font-semibold">National SEO<br>Services</h2>
+                            <h2 class="text-3xl py-3 font-semibold text-gray-800 dark:text-white">National
+                                SEO<br>Services</h2>
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">Winning in National SEO is how we built
                                 our
                                 business. If we can dominate in an industry as competitive as SEO... imagine what we can
@@ -343,10 +379,11 @@
                                 More</button>
                         </div>
                         <div
-                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
+                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 dark:hover:bg-sky-800 duration-200 ease-in-out">
                             <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/ECommerce-SEO.png"
                                 alt="#" class="w-300px mx-auto">
-                            <h2 class="text-3xl py-3 font-semibold">ECommerce SEO<br>Services</h2>
+                            <h2 class="text-3xl py-3 font-semibold text-gray-800 dark:text-white">ECommerce
+                                SEO<br>Services</h2>
                             <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">E-Commerce SEO takes a 'super nerd'
                                 that
                                 has serious technical SEO chops. Luckily for you, that's exactly who we are.</p>
@@ -355,11 +392,12 @@
                                 More</button>
                         </div>
                         <div
-                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
+                            class="text-center px-6 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 dark:hover:bg-sky-800 duration-200 ease-in-out">
                             <a href="">
                                 <img src="https://www.Searchbloom.com/wp-content/uploads/2020/02/PPC-Management.png"
                                     alt="#" class="w-300px mx-auto">
-                                <h2 class="text-3xl py-3 font-semibold">PPC Management<br>Services</h2>
+                                <h2 class="text-3xl py-3 font-semibold text-gray-800 dark:text-white">PPC
+                                    Management<br>Services</h2>
                                 <p class="text-[#5d7183] text-lg pb-4 lg:h-[180px]">We have geeks in our lab with
                                     headsets
                                     tracking your campaigns in real time, managing burn rates, conversions, and
@@ -374,11 +412,14 @@
                 </div>
             </div>
         </section>
+
         <!-- Section Seven Start -->
         <div class="text-center py-8 px-4">
             <h2 class="text-[#2d7ab8] text-lg font-semibold">Take a peek at our services below to learn more about how
                 Khalid IT<br>can help you achieve your digital marketing goals.</h2>
         </div>
+
+
         <!-- Section Egiht Start -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
@@ -436,6 +477,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Section Nine Part -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
@@ -487,7 +530,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 order-1">
                         <img src="https://www.Searchbloom.com/wp-content/uploads/2020/04/natioanl-seo-image.jpg"
-                            alt="#" class="w-full">
+                            alt="#" class="w-full px-4">
                     </div>
                 </div>
                 <div class="text-center pt-4">
@@ -497,6 +540,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Section Ten Part -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
@@ -555,6 +600,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Section 11 Part -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
@@ -610,52 +657,98 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Partner, not our client. -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
                 <div class="text-center">
-                    <h1 class="text-[#2ca8d9] text-3xl lg:text-5xl font-semibold">You Are Much More Than a Client.</h1>
-                    <p class="text-[#5d7183] text-2xl py-8 lg:px-20">Khalid IT creates lasting relationships. We want
-                        you
-                        to be our<br><span class="bg-[#bceaf7] font-bold">Partner, not our client.</span></p>
+                    <h1 class="text-[#2ca8d9] dark:text-[#2ca8d9] text-3xl lg:text-5xl font-semibold">You Are Much More
+                        Than a Client.</h1>
+                    <p class="text-[#5d7183] dark:text-gray-300 text-2xl py-8 lg:px-20">
+                        Khalid IT creates lasting relationships. We want you to be our<br>
+                        <span class="bg-[#bceaf7] dark:bg-[#1b3e4a] font-bold px-2 rounded">
+                            Partner, not our client.
+                        </span>
+                    </p>
                 </div>
                 <div>
-                    <ul class="grid grid-cols-3 md:grid-cols-5 items-center">
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2022/04/bdc_color_1x.png"
-                                alt="logo"></li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/12/divvy.png" alt="logo">
+                    <ul class="grid grid-cols-3 md:grid-cols-5 items-center gap-4">
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2022/04/bdc_color_1x.png"
+                                    alt="logo">
+                            </div>
                         </li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/SUSE.jpg" alt="logo">
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/12/divvy.png"
+                                    alt="logo">
+                            </div>
                         </li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/Rancher.jpg"
-                                alt="logo">
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/09/SUSE.jpg"
+                                    alt="logo">
+                            </div>
                         </li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/NUVI.jpg" alt="logo">
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/09/Rancher.jpg"
+                                    alt="logo">
+                            </div>
                         </li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2023/10/idera-inc-logo-gray.png"
-                                alt="logo"></li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/12/jitterbug-e1640632749154.png"
-                                alt="logo"></li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2023/10/NORDSTROM-gray-logo.png"
-                                alt="logo"></li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/1800-small.png"
-                                alt="logo"></li>
-                        <li class="p-5"><img class="w-[200px]"
-                                src="https://www.Searchbloom.com/wp-content/uploads/2021/09/shirtspace.png"
-                                alt="logo"></li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/09/NUVI.jpg"
+                                    alt="logo">
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2023/10/idera-inc-logo-gray.png"
+                                    alt="logo">
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/12/jitterbug-e1640632749154.png"
+                                    alt="logo">
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2023/10/NORDSTROM-gray-logo.png"
+                                    alt="logo">
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/09/1800-small.png"
+                                    alt="logo">
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div class="bg-white dark:bg-white rounded shadow p-4">
+                                <img class="w-[200px] mx-auto"
+                                    src="https://www.Searchbloom.com/wp-content/uploads/2021/09/shirtspace.png"
+                                    alt="logo">
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
+
         <!-- Our Team -->
         <section class="border-t-2">
             <div class="max-w-screen-xl mx-auto py-8 px-3">
@@ -695,6 +788,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Drive New Leads -->
         <section
             class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center px-3">
@@ -704,6 +799,8 @@
                     class="font-bold text-3xl lg:text-5xl">Award-winning
                     SEO & PPC Company</span></h1>
         </section>
+
+
         <!-- Use the Tools Our Experts Use-->
         <section class="max-w-screen-xl mx-auto py-14 px-3">
             <div class="text-center">
@@ -718,7 +815,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Schema Markup Generator Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Schema Markup
+                            Generator Tool</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Schema-Markup-Generator-1.svg"
                             alt="image">
@@ -729,7 +827,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Snippet Preview Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Snippet Preview Tool
+                        </h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Snippet-preview-tool-1.svg"
                             alt="image">
@@ -742,7 +841,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Local SERP Checker</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Local SERP Checker
+                        </h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/Local-Search-Results-1.svg"
                             alt="image">
@@ -754,7 +854,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">PPC Keyword Wrapper Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">PPC Keyword Wrapper
+                            Tool</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/ppc-keyword-wrapper-tool-1.svg"
                             alt="image">
@@ -766,7 +867,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Campaign URL Builder Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Campaign URL Builder
+                            Tool</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/campaign-url-builder-tool-1.svg"
                             alt="image">
@@ -778,7 +880,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Keyword Mixer Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Keyword Mixer Tool
+                        </h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/keyword-mixer-tool-1.svg"
                             alt="image">
@@ -789,7 +892,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Bulk Word Count Checker</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Bulk Word Count
+                            Checker</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2020/05/bulk-word-cout-checker-1.svg"
                             alt="image">
@@ -800,7 +904,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Anchor Text Generator Tool</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Anchor Text
+                            Generator Tool</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2021/09/New-Project.png"
                             alt="image">
@@ -812,7 +917,8 @@
                 <div
                     class="border border-1 text-center px-6 rounded hover:shadow-[0_2px_12px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                     <a href="#">
-                        <h2 class="text-2xl font-semibold py-6">Conversion Rate ROI Calculator</h2>
+                        <h2 class="text-2xl text-[#2ca8d9] dark:text-[#2ca8d9] font-semibold py-6">Conversion Rate ROI
+                            Calculator</h2>
                         <img class="w-[250px] mx-auto"
                             src="https://www.Searchbloom.com/wp-content/uploads/2023/03/Conversion-Rate-ROI-Calculator-A.png"
                             alt="image">
@@ -823,7 +929,8 @@
                 </div>
             </div>
             <div class="text-center px-3">
-                <h2 class="py-6 text-[#5d7183] text-3xl lg:text-4xl font-bold">Looking for more tools to optimize
+                <h2 class="py-6 text-[#2ca8d9] dark:text-[#2ca8d9] text-3xl lg:text-4xl font-bold">Looking for more
+                    tools to optimize
                     marketing
                     for your business?</h2>
                 <p class="text-[#828e99] pb-2">We developed these tools for our own team of experts and now they are
@@ -835,6 +942,8 @@
                     Tools</button>
             </div>
         </section>
+
+
         <!-- Latest Blog Posts -->
         <section class="py-8 border border-t-2">
             <div class="max-w-screen-xl mx-auto py-6 px-3">
@@ -850,7 +959,8 @@
                     <div
                         class="px-8 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                         <a href="#">
-                            <h2 class="text-3xl py-3 font-semibold">Ecommerce On-Page SEO Tactics You Need To Pay
+                            <h2 class="text-3xl text-gray-900 dark:text-[#2ca8d9] py-3 font-semibold">Ecommerce On-Page
+                                SEO Tactics You Need To Pay
                                 Attention
                                 To</h2>
                             <div class="flex items-center gap-3 py-3">
@@ -876,7 +986,8 @@
                     <div
                         class="px-8 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                         <a href="#">
-                            <h2 class="text-3xl py-3 font-semibold">How to Make Sure Your SEO Delivers the ROI You Are
+                            <h2 class="text-3xl py-3 text-gray-900 dark:text-[#2ca8d9] font-semibold">How to Make Sure
+                                Your SEO Delivers the ROI You Are
                                 Seeking</h2>
                             <div class="flex items-center gap-3 py-3">
                                 <div
@@ -903,7 +1014,8 @@
                     <div
                         class="px-8 py-6 border rounded-md shadow-[0_1px_6px_rgba(6,182,212,0.5)] hover:bg-sky-100 duration-200 ease-in-out">
                         <a href="#">
-                            <h2 class="text-3xl py-3 font-semibold">The Five Business Factors to SEO Services</h2>
+                            <h2 class="text-3xl py-3 text-gray-900 dark:text-[#2ca8d9] font-semibold">The Five Business
+                                Factors to SEO Services</h2>
                             <div class="flex items-center gap-3 py-3">
                                 <div
                                     class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/07/matthew-woodward.png')] w-[50px] bg-cover bg-top p-6 rounded-full border">
@@ -934,6 +1046,8 @@
                 </div>
             </div>
         </section>
+
+
         {{-- <!-- The Search Engine Marketing Agency -->
         <section
             class="bg-[url('https://www.Searchbloom.com/wp-content/uploads/2020/04/nextstep-bg.png')] w-full bg-cover bg-center">
@@ -952,6 +1066,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Sevices and Tools -->
         <section class="border-b">
             <div class="max-w-screen-xl mx-auto px-3">
@@ -1000,6 +1116,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Social Links -->
         <section class="border-b">
             <div class="max-w-screen-xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-2">
@@ -1049,6 +1167,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Partners -->
         <section class="border-b">
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row justify-between px-3 gap-3">
@@ -1076,6 +1196,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Footer -->
         <section class="max-w-screen-xl mx-auto py-4 flex flex-col lg:flex-row items-center justify-between">
             <div class="order-2 lg:order-1 pt-5 lg:pt-0">
