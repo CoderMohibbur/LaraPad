@@ -96,6 +96,13 @@
 
         });
     </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801927802206"
+        class="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition duration-300"
+        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" class="w-6 h-6">
+
+    </a>
 
 </body>
 
