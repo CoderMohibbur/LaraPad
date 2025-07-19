@@ -1,12 +1,15 @@
 <?php
 
+
+
+
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\BlogController;
-
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\CategoryController;
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PageFileController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
@@ -14,7 +17,6 @@ use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\ReadingSettingController;
 use App\Http\Controllers\Admin\WritingSettingController;
 use App\Http\Controllers\Admin\DiscussionSettingController;
-use App\Http\Controllers\PageFileController;
 
 
 
@@ -103,6 +105,8 @@ Route::group(['middleware' => ['role:Admin']], function () {
 Route::group(['middleware' => ['role:admin']], function () {
 
     Route::get('/admin/dashboard', fn() => view('admin.dashboard'));
+       Route::resource('sliders', \App\Http\Controllers\Admin\SliderController::class);
+
 });
 
 
@@ -129,6 +133,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('discussion-settings/edit', [DiscussionSettingController::class, 'edit'])->name('discussion-settings.edit');
     Route::post('discussion-settings/update', [DiscussionSettingController::class, 'update'])->name('discussion-settings.update');
 });
+
+
+
 
 
 
