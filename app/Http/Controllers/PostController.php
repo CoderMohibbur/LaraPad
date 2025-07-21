@@ -63,6 +63,21 @@ class PostController extends Controller
         return redirect()->route('blog.posts.index')->with('success', 'Post created and published successfully.');
     }
 
+    public function frontendIndex()
+{
+    $posts = Post::with('category', 'author')->latest()->paginate(6);
+    $topics = Category::latest()->get(); // Sidebar এর জন্য
+    return view('pages.blog', compact('posts', 'topics'));
+}
+
+
+    public function show($slug)
+    {
+        $post = Post::with(['category', 'author'])->where('slug', $slug)->firstOrFail();
+        return view('pages.blog-details', compact('post'));
+    }
+
+
     public function edit(Post $post)
     {
         return view('admin.posts.edit', [

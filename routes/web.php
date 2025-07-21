@@ -43,9 +43,7 @@ Route::get('/awards', function () {
     return view('pages.awards');
 });
 
-Route::get('/blog', function () {
-    return view('pages.blog');
-});
+
 
 Route::get('/blogbacklink', function () {
     return view('pages.blogbacklink');
@@ -68,10 +66,18 @@ Route::get('/team', function () {
     return view('pages.team');
 });
 
+
+
+
+
+
+
 // ✅ FRONTEND BLOG
-Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
-Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+
+
+Route::get('/blog', [PostController::class, 'frontendIndex'])->name('blog.index'); // 🔥 all blog page
+Route::get('/blog/{slug}', [PostController::class, 'show'])->name('blog.show');    // 🔥 blog details page
+
 
 // ✅ ADMIN BLOG POSTS (CRUD)
 Route::prefix('admin')->middleware('auth')->name('blog.')->group(function () {
