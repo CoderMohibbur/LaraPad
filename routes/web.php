@@ -68,12 +68,15 @@ Route::get('/team', function () {
     return view('pages.team');
 });
 
-
+// ✅ FRONTEND BLOG
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
+// ✅ ADMIN BLOG POSTS (CRUD)
+Route::prefix('admin')->middleware('auth')->name('blog.')->group(function () {
+    Route::resource('posts', PostController::class)->except(['show']);
+});
 
 
 Route::middleware([
@@ -86,7 +89,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::resource('posts', PostController::class);
+
 Route::resource('categories', CategoryController::class);
 Route::resource('tags', TagController::class);
 Route::resource('pages', PageController::class);

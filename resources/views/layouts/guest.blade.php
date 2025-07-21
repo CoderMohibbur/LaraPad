@@ -47,6 +47,7 @@
     <!-- ✅ Prevent content from hiding under navbar -->
     <div class="pt-[100px] font-sans text-gray-900 bg-white dark:bg-gray-900 antialiased">
         {{ $slot }}
+        
     </div>
 
     <!-- ✅ Include Footer from components -->

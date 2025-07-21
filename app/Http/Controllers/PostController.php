@@ -4,118 +4,116 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
-use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-    // 🟢 Show all posts
     public function index()
     {
-        $posts = Post::with(['categories', 'tags'])->latest()->paginate(10);
-        return view('admin.post.index', compact('posts'));
+        $posts = Post::with(['category', 'author'])->latest()->paginate(10);
+        return view('admin.posts.index', compact('posts'));
     }
 
-    // 🟢 Show create form
     public function create()
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('admin.post.create', compact('categories', 'tags'));
+        return view('admin.posts.create', [
+            'categories' => Category::all(),
+        ]);
     }
 
-    // 🟢 Show edit form
-    public function edit(Post $post)
-    {
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('admin.post.edit', compact('post', 'categories', 'tags'));
-    }
-
-    // ✅ Store new post
     public function store(Request $request)
-{
-    $data = $request->validate([
-        'title' => 'required|string|max:255',
-        'slug' => 'nullable|unique:posts,slug',
-        'excerpt' => 'nullable|string',
-        'content' => 'nullable|string',
-        'featured_image' => 'nullable|file|image|mimes:jpg,jpeg,png,webp|max:2048',
-        'status' => 'required|in:draft,published',
-        'meta_title' => 'nullable|string',
-        'meta_description' => 'nullable|string',
-        'categories' => 'nullable|array',
-        'tags' => 'nullable|array',
-    ]);
-
-    // Slug auto-generate
-    $data['slug'] = $data['slug'] ?? Str::slug($data['title']);
-    $data['user_id'] = 1;
-
-    // ✅ Upload image if exists
-    if ($request->hasFile('featured_image')) {
-        $data['featured_image'] = $request->file('featured_image')->store('posts', 'public');
-    }
-
-    // Meta
-    $data['meta'] = [
-        'title' => $data['meta_title'] ?? null,
-        'description' => $data['meta_description'] ?? null,
-    ];
-    unset($data['meta_title'], $data['meta_description']);
-
-    // Save post
-    $post = Post::create($data);
-
-    // Categories & Tags
-    $post->categories()->sync($request->input('categories', []));
-    $post->tags()->sync($request->input('tags', []));
-
-    return redirect()->route('posts.index')->with('success', 'Post created successfully!');
-}
-    // ✅ Update post
-    public function update(Request $request, Post $post)
     {
-        $data = $request->validate([
-            'title' => 'required|string|max:255',
-            'slug' => 'nullable|unique:posts,slug,' . $post->id,
-            'excerpt' => 'nullable|string',
-            'content' => 'nullable|string',
-            'featured_image' => 'nullable|string',
-            'status' => 'required|in:draft,published',
-            'meta_title' => 'nullable|string',
-            'meta_description' => 'nullable|string',
-            'categories' => 'nullable|array',
-            'tags' => 'nullable|array',
+        $validated = $request->validate([
+            'title'             => 'required|string|max:255',
+            'category_id'       => 'nullable|exists:categories,id',
+            'short_description' => 'nullable|string',
+            'description'       => 'nullable|string',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        $data['slug'] = $data['slug'] ?? Str::slug($data['title']);
+        // 🔥 Auto-generate unique slug
+        $slug = Str::slug($validated['title']);
+        $original = $slug;
+        $count = 1;
+        while (Post::where('slug', $slug)->exists()) {
+            $slug = $original . '-' . $count++;
+        }
 
-        $data['meta'] = [
-            'title' => $data['meta_title'] ?? null,
-            'description' => $data['meta_description'] ?? null,
-        ];
-        unset($data['meta_title'], $data['meta_description']);
+        // ✅ Upload image if present
+        $imageUrl = null;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('uploads/posts', 'public');
+            $imageUrl = Storage::url($path);
+        }
 
-        $post->update($data);
+        // ✅ Create post and mark as published
+        Post::create([
+            'title'             => $validated['title'],
+            'slug'              => $slug,
+            'category_id'       => $validated['category_id'] ?? null,
+            'author_id'         => auth()->id(),
+            'short_description' => $validated['short_description'],
+            'description'       => $validated['description'],
+            'image_url'         => $imageUrl,
+            'published_at'      => now(),
+        ]);
 
-        $post->categories()->sync($request->input('categories', []));
-        $post->tags()->sync($request->input('tags', []));
-
-        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+        return redirect()->route('blog.posts.index')->with('success', 'Post created and published successfully.');
     }
 
-    // ✅ Delete post
+    public function edit(Post $post)
+    {
+        return view('admin.posts.edit', [
+            'post' => $post,
+            'categories' => Category::all(),
+        ]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $validated = $request->validate([
+            'title'             => 'required|string|max:255',
+            'category_id'       => 'nullable|exists:categories,id',
+            'short_description' => 'nullable|string',
+            'description'       => 'nullable|string',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        ]);
+
+        // 🔄 Update slug if title changed
+        $slug = $post->slug;
+        if ($post->title !== $validated['title']) {
+            $slug = Str::slug($validated['title']);
+            $original = $slug;
+            $count = 1;
+            while (Post::where('slug', $slug)->where('id', '!=', $post->id)->exists()) {
+                $slug = $original . '-' . $count++;
+            }
+        }
+
+        // ✅ Handle image update
+        $imageUrl = $post->image_url;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('uploads/posts', 'public');
+            $imageUrl = Storage::url($path);
+        }
+
+        $post->update([
+            'title'             => $validated['title'],
+            'slug'              => $slug,
+            'category_id'       => $validated['category_id'] ?? null,
+            'short_description' => $validated['short_description'],
+            'description'       => $validated['description'],
+            'image_url'         => $imageUrl,
+        ]);
+
+        return redirect()->route('blog.posts.index')->with('success', 'Post updated successfully.');
+    }
+
     public function destroy(Post $post)
     {
         $post->delete();
-        return back()->with('success', 'Post deleted successfully!');
-    }
-
-    // ✅ Show details
-    public function show(Post $post)
-    {
-        return view('admin.post.show', compact('post'));
+        return back()->with('success', 'Post deleted successfully.');
     }
 }

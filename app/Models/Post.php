@@ -11,66 +11,51 @@ class Post extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'title', 'slug', 'excerpt', 'content', 'featured_image',
-        'status', 'post_type', 'user_id', 'meta', 'meta_keywords',
-        'canonical_url', 'og_title', 'og_description', 'og_image'
+        'title',
+        'slug',
+        'category_id',
+        'author_id',
+        'short_description',
+        'description',
+        'image_url',
+        'meta',
+        'published_at',
     ];
 
     protected $casts = [
         'meta' => 'array',
+        'published_at' => 'datetime',
     ];
-    public function scopePages($query)
-{
-    return $query->where('post_type', 'page');
-}
 
-public function scopePosts($query)
-{
-    return $query->where('post_type', 'post');
-}
-public function categories()
-{
-    return $this->belongsToMany(Category::class, 'category_post');
-}
-
-public function tags()
-{
-    return $this->belongsToMany(\App\Models\Tag::class, 'post_tag');
-}
-// Post.php
-public function category()
-{
-    return $this->belongsTo(Category::class);
-}
-
-public function author()
-{
-    return $this->belongsTo(User::class, 'author_id');
-}
-
-
-
-// app/Models/Post.php
-// public function getImageUrlAttribute()
-// {
-//     if ($this->featured_image && file_exists(public_path($this->featured_image))) {
-//         return asset($this->featured_image);
-//     }
-//     return asset('images/no-image.png');
-// }
-
-// app/Models/Post.php
-
-public function getImageUrlAttribute()
-{
-    if (!$this->featured_image) {
-        return null;
+    // Relationships
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 
-    return asset('storage/' . $this->featured_image);
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    // Accessors for SEO Meta (optional)
+    public function getMetaTitleAttribute()
+    {
+        return $this->meta['meta_title'] ?? $this->title;
+    }
+
+    public function getMetaDescriptionAttribute()
+    {
+        return $this->meta['meta_description'] ?? str($this->short_description)->limit(150);
+    }
+
+    public function getMetaKeywordsAttribute()
+    {
+        return $this->meta['meta_keywords'] ?? '';
+    }
 }
-
-
-}
-
-

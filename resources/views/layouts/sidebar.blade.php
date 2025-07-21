@@ -57,12 +57,12 @@
                             </button>
                             <ul id="Post-dropdown" class="space-y-2 py-2 hidden">
                                 <li>
-                                    <a href="/posts"
+                                    <a href="/admin/posts/"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
                                         Post</a>
                                 </li>
                                 <li>
-                                    <a href="/posts/create"
+                                    <a href="/admin/posts/create"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
                                         New Post</a>
                                 </li>
