@@ -38,10 +38,6 @@ class Post extends Model
         return $this->belongsTo(User::class, 'author_id');
     }
 
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
-    }
 
     // Accessors for SEO Meta (optional)
     public function getMetaTitleAttribute()
@@ -58,4 +54,20 @@ class Post extends Model
     {
         return $this->meta['meta_keywords'] ?? '';
     }
+
+
+    public function tags()
+{
+    return $this->belongsToMany(Tag::class);
+}
+
+public function categories()
+{
+    return $this->belongsToMany(Category::class);
+}
+
+
+
+
+
 }

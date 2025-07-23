@@ -3,56 +3,59 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Tag;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TagController extends Controller
 {
     public function index()
     {
         $tags = Tag::latest()->paginate(10);
-        return view('admin.tag.index', compact('tags'));
+        return view('admin.tags.index', compact('tags'));
     }
 
     public function create()
     {
-        return view('admin.tag.create');
+        return view('admin.tags.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:tags,name',
-            'slug' => 'required|unique:tags,slug',
+            'name' => 'required|string|unique:tags,name|max:255',
         ]);
 
-        Tag::create($request->only('name', 'slug'));
+        Tag::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+        ]);
 
-        return redirect()->route('tags.index')->with('success', 'Tag created.');
+        return redirect()->route('tags.index')->with('success', '✅ Tag created successfully.');
     }
 
     public function edit(Tag $tag)
     {
-        return view('admin.tag.edit', compact('tag'));
+        return view('admin.tags.edit', compact('tag'));
     }
 
     public function update(Request $request, Tag $tag)
     {
         $request->validate([
-            'name' => 'required|unique:tags,name,' . $tag->id,
-            'slug' => 'required|unique:tags,slug,' . $tag->id,
+            'name' => 'required|string|unique:tags,name,' . $tag->id,
         ]);
 
-        $tag->update($request->only('name', 'slug'));
+        $tag->update([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+        ]);
 
-        return redirect()->route('tags.index')->with('success', 'Tag updated.');
+        return redirect()->route('tags.index')->with('success', '✅ Tag updated.');
     }
 
     public function destroy(Tag $tag)
     {
         $tag->delete();
-        return back()->with('success', 'Tag deleted.');
+        return back()->with('success', '❌ Tag deleted.');
     }
 }
-
-

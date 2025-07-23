@@ -13,13 +13,6 @@ return new class extends Migration {
             $table->string('title');
             $table->string('slug')->unique()->index();
 
-            // Category foreign key with custom constraint name
-            $table->unsignedBigInteger('category_id')->nullable()->index();
-            $table->foreign('category_id', 'fk_posts_category')
-                  ->references('id')
-                  ->on('categories')
-                  ->nullOnDelete();
-
             // Author foreign key with custom constraint name
             $table->unsignedBigInteger('author_id')->nullable()->index();
             $table->foreign('author_id', 'fk_posts_author')

@@ -40,19 +40,19 @@
                         class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white" />
                 </div>
 
-                {{-- Category --}}
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Category</label>
-                    <select name="category_id"
-                        class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white">
-                        <option value="">-- Select Category --</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}" @selected(old('category_id') == $category->id)>
-                                {{ $category->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
+<div>
+    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Categories</label>
+    <div class="grid grid-cols-2 gap-2">
+        @foreach ($categories as $category)
+            <label class="inline-flex items-center space-x-2">
+                <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                    class="text-blue-600 rounded focus:ring-0 dark:bg-gray-800 dark:border-gray-700">
+                <span class="text-sm text-gray-800 dark:text-gray-200">{{ $category->name }}</span>
+            </label>
+        @endforeach
+    </div>
+</div>
+
 
                 {{-- Short Description --}}
                 <div class="lg:col-span-2">
@@ -67,6 +67,22 @@
                     <textarea id="content-editor" name="description" rows="12"
                         class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white">{{ old('description') }}</textarea>
                 </div>
+
+                {{-- Tags --}}
+<div class="lg:col-span-2">
+    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Tags</label>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+        @foreach ($tags as $tag)
+            <label class="inline-flex items-center">
+                <input type="checkbox" name="tags[]" value="{{ $tag->id }}"
+                    class="text-blue-600 rounded border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    {{ in_array($tag->id, old('tags', [])) ? 'checked' : '' }}>
+                <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">{{ $tag->name }}</span>
+            </label>
+        @endforeach
+    </div>
+</div>
+
 
 
                 {{-- Image --}}
