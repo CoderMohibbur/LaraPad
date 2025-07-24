@@ -1,137 +1,117 @@
 <x-app-layout>
-    <div class="max-w-7xl mx-auto px-6 py-8">
-        {{-- Header --}}
-        <div class="flex justify-between items-center mb-6">
-            <div>
-                <h1 class="text-3xl font-bold text-gray-800 dark:text-white">✏️ Edit Post</h1>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Update and manage your blog post.</p>
-            </div>
-            <a href="{{ route('blog.posts.index') }}" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">←
-                All Posts</a>
-        </div>
+    <div class="max-w-7xl mx-auto p-6">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">✏️ Edit Post</h2>
 
-        {{-- Success Message --}}
-        @if (session('success'))
-            <div class="mb-6 p-4 rounded-lg bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300">
-                ✅ {{ session('success') }}
-            </div>
-        @endif
+        <x-success-message />
 
-        {{-- Error Messages --}}
-        @if ($errors->any())
-            <div class="mb-6 p-4 rounded-lg bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-300">
-                <ul class="list-disc list-inside space-y-1">
-                    @foreach ($errors->all() as $error)
-                        <li>❗ {{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-        {{-- Form --}}
-        <form action="{{ route('blog.posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {{-- Title --}}
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Title -->
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Title <span
-                            class="text-red-500">*</span></label>
-                    <input type="text" name="title" value="{{ old('title', $post->title) }}" required
-                        class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white" />
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Title</label>
+                    <input type="text" name="title" value="{{ old('title', $post->title) }}"
+                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                    @error('title') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
 
-{{-- Category Checkboxes --}}
-<div class="lg:col-span-2">
-    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Categories</label>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-        @foreach ($categories as $category)
-            <label class="inline-flex items-center">
-                <input type="checkbox" name="categories[]" value="{{ $category->id }}"
-                    class="text-blue-600 rounded border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-                    {{ in_array($category->id, old('categories', $post->categories->pluck('id')->toArray())) ? 'checked' : '' }}>
-                <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">{{ $category->name }}</span>
-            </label>
-        @endforeach
-    </div>
-</div>
-
-
-                {{-- Short Description --}}
-                <div class="lg:col-span-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Short Description</label>
-                    <textarea name="short_description" rows="3"
-                        class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white">{{ old('short_description', $post->short_description) }}</textarea>
-                </div>
-
-                {{-- Content --}}
-                <div class="lg:col-span-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Content</label>
-                    <textarea id="content-editor" name="description" rows="12"
-                        class="mt-1 rounded-lg w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white">{{ old('description', $post->description) }}</textarea>
-                </div>
-
-
-                {{-- Tags --}}
-<div class="lg:col-span-2">
-    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Tags</label>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-        @foreach ($tags as $tag)
-            <label class="inline-flex items-center">
-                <input type="checkbox" name="tags[]" value="{{ $tag->id }}"
-                    class="text-blue-600 rounded border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-                    {{ in_array($tag->id, old('tags', $post->tags->pluck('id')->toArray())) ? 'checked' : '' }}>
-                <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">{{ $tag->name }}</span>
-            </label>
-        @endforeach
-    </div>
-</div>
-
-
-                {{-- Image --}}
+                <!-- Published At -->
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Image</label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Published At</label>
+                    <input type="datetime-local" name="published_at"
+                           value="{{ old('published_at', optional($post->published_at)->format('Y-m-d\TH:i')) }}"
+                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                </div>
 
-                    @if ($post->image_url)
-                        <div class="mb-3">
-                            <img src="{{ asset($post->image_url) }}" alt="Current Image"
-                                class="w-40 h-32 object-cover rounded-lg border dark:border-gray-700">
-                        </div>
+                <!-- Categories -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Categories</label>
+                    <select name="category_ids[]" multiple
+                            class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                        @foreach($categories as $cat)
+                            <option value="{{ $cat->id }}"
+                                {{ in_array($cat->id, old('category_ids', $post->categories->pluck('id')->toArray())) ? 'selected' : '' }}>
+                                {{ $cat->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Tags -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tags</label>
+                    <select name="tags[]" multiple
+                            class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                        @foreach($tags as $tag)
+                            <option value="{{ $tag->id }}"
+                                {{ in_array($tag->id, old('tags', $post->tags->pluck('id')->toArray())) ? 'selected' : '' }}>
+                                {{ $tag->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Image Upload -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Image</label>
+                    <input type="file" name="image"
+                           class="mt-1 block w-full text-sm text-gray-900 dark:text-white dark:bg-gray-800 dark:border-gray-600 border border-gray-300 rounded-lg cursor-pointer">
+                    @if($post->image_url)
+                        <img src="{{ asset('storage/' . $post->image_url) }}" alt="Post Image" class="w-32 mt-2 rounded shadow">
                     @endif
-
-                    <input type="file" name="image" accept="image/*"
-                        class="mt-1 block w-full text-sm text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg cursor-pointer bg-white dark:bg-gray-800" />
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Leave empty to keep the current image.</p>
                 </div>
 
+                <!-- Meta Title -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Title</label>
+                    <input type="text" name="meta_title"
+                           value="{{ old('meta_title', $post->meta_title) }}"
+                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                </div>
+
+                <!-- Meta Description -->
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Description</label>
+                    <textarea name="meta_description" rows="2"
+                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('meta_description', $post->meta_description) }}</textarea>
+                </div>
+
+                <!-- Meta Keywords -->
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Keywords</label>
+                    <input type="text" name="meta_keywords"
+                           value="{{ old('meta_keywords', $post->meta_keywords) }}"
+                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                </div>
+
+                <!-- Short Description -->
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Short Description</label>
+                    <textarea name="short_description" rows="3"
+                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('short_description', $post->short_description) }}</textarea>
+                </div>
+
+                <!-- Full Description -->
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Content</label>
+                    <textarea name="description" rows="6"
+                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('description', $post->description) }}</textarea>
+                </div>
             </div>
 
-            <div class="flex justify-end mt-8">
+            <!-- Buttons -->
+            <div class="mt-6 flex justify-end gap-4">
+                <a href="{{ route('posts.index') }}"
+                   class="inline-flex items-center px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm font-medium rounded-md">
+                    Cancel
+                </a>
                 <button type="submit"
-                    class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
+                        class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">
                     Update Post
                 </button>
             </div>
         </form>
     </div>
-
-    {{-- TinyMCE --}}
-    @push('scripts')
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>
-            tinymce.init({
-                selector: '#content-editor',
-                height: 400,
-                plugins: 'link image code lists table',
-                toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image | code',
-                skin: document.documentElement.classList.contains('dark') ? 'oxide-dark' : 'oxide',
-                content_css: document.documentElement.classList.contains('dark') ? 'dark' : 'default'
-            });
-        </script>
-    @endpush
 </x-app-layout>

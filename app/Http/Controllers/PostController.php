@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tag;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\Category;
-use Illuminate\Support\Str;
+use App\Models\PostRevision;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
     public function index()
     {
-        // Category is many-to-many, so 'categories'
-        $posts = Post::with(['categories', 'author'])->latest()->paginate(10);
+        $posts = Post::with(['categories', 'tags', 'author'])->latest()->paginate(10);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -30,48 +29,51 @@ class PostController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'nullable|string|unique:posts,slug',
+            'category_ids' => 'nullable|array',
+            'category_ids.*' => 'exists:categories,id',
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
-            'tags' => 'nullable|array',
-            'tags.*' => 'exists:tags,id',
-            'categories' => 'nullable|array',
-            'categories.*' => 'exists:categories,id',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:255',
+            'meta_keywords' => 'nullable|string|max:255',
+            'published_at' => 'nullable|date',
         ]);
 
-        $slug = Str::slug($request->title) . '-' . uniqid();
-        $uploadedImagePath = null;
+        $post = new Post();
+        $post->title = $validated['title'];
+        $post->slug = $validated['slug'] ?? Str::slug($validated['title']) . '-' . uniqid();
+        $post->author_id = auth()->id();
+        $post->short_description = $validated['short_description'] ?? null;
+        $post->description = $validated['description'] ?? null;
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('uploads/posts', 'public');
-            $uploadedImagePath = '/storage/' . $path;
+            $post->image_url = $request->file('image')->store('uploads/posts', 'public');
         }
 
-        $post = Post::create([
-            'title' => $request->title,
-            'slug' => $slug,
-            'short_description' => $request->short_description,
-            'description' => $request->description,
-            'image_url' => $uploadedImagePath,
-            'author_id' => auth()->id(),
-            'published_at' => now(),
-        ]);
+        $post->meta = [
+            'meta_title' => $validated['meta_title'] ?? null,
+            'meta_description' => $validated['meta_description'] ?? null,
+            'meta_keywords' => $validated['meta_keywords'] ?? null,
+        ];
 
-        if ($request->has('tags')) {
-            $post->tags()->attach($request->tags);
-        }
+        $post->published_at = $validated['published_at'] ?? null;
+        $post->save();
 
-        if ($request->has('categories')) {
-            $post->categories()->attach($request->categories);
-        }
+        // Attach categories and tags
+        $post->categories()->sync($validated['category_ids'] ?? []);
+        $post->tags()->sync($validated['tags'] ?? []);
 
-        return redirect()->route('blog.posts.index')->with('success', 'Post created successfully.');
+        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 
     public function edit(Post $post)
     {
         return view('admin.posts.edit', [
-            'post' => $post,
+            'post' => $post->load(['tags', 'categories']),
             'categories' => Category::all(),
             'tags' => Tag::all(),
         ]);
@@ -81,49 +83,57 @@ class PostController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'nullable|string|unique:posts,slug,' . $post->id,
+            'category_ids' => 'nullable|array',
+            'category_ids.*' => 'exists:categories,id',
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
-            'tags' => 'nullable|array',
-            'tags.*' => 'exists:tags,id',
-            'categories' => 'nullable|array',
-            'categories.*' => 'exists:categories,id',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:255',
+            'meta_keywords' => 'nullable|string|max:255',
+            'published_at' => 'nullable|date',
         ]);
+
+        // Save revision
+        PostRevision::create([
+            'post_id' => $post->id,
+            'edited_by' => auth()->id(),
+            'title' => $post->title,
+            'short_description' => $post->short_description,
+            'description' => $post->description,
+            'meta' => $post->meta,
+        ]);
+
+        $post->title = $validated['title'];
+        $post->slug = $validated['slug'] ?? $post->slug;
+        $post->short_description = $validated['short_description'] ?? null;
+        $post->description = $validated['description'] ?? null;
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('uploads/posts', 'public');
-            $validated['image_url'] = '/storage/' . $path;
+            $post->image_url = $request->file('image')->store('uploads/posts', 'public');
         }
 
-        $post->update([
-            'title' => $validated['title'],
-            'short_description' => $validated['short_description'],
-            'description' => $validated['description'],
-            'image_url' => $validated['image_url'] ?? $post->image_url,
-        ]);
+        $post->meta = [
+            'meta_title' => $validated['meta_title'] ?? null,
+            'meta_description' => $validated['meta_description'] ?? null,
+            'meta_keywords' => $validated['meta_keywords'] ?? null,
+        ];
 
-        $post->tags()->sync($request->tags ?? []);
-        $post->categories()->sync($request->categories ?? []);
+        $post->published_at = $validated['published_at'] ?? null;
+        $post->save();
 
-        return redirect()->route('blog.posts.index')->with('success', 'Post updated successfully.');
+        $post->categories()->sync($validated['category_ids'] ?? []);
+        $post->tags()->sync($validated['tags'] ?? []);
+
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
-        return back()->with('success', 'Post deleted successfully.');
-    }
-
-    public function frontendIndex()
-    {
-        $posts = Post::with(['categories', 'author'])->latest()->paginate(6);
-        $topics = Category::latest()->get();
-        return view('pages.blog', compact('posts', 'topics'));
-    }
-
-    public function show($slug)
-    {
-        $post = Post::with(['categories', 'author', 'tags'])->where('slug', $slug)->firstOrFail();
-        return view('pages.blog-details', compact('post'));
+        return redirect()->route('posts.index')->with('success', 'Post deleted.');
     }
 }

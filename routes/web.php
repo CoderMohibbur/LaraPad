@@ -5,15 +5,18 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\PostController;
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageFileController;
-use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\PostRevisionController;
 use App\Http\Controllers\Admin\ReadingSettingController;
 use App\Http\Controllers\Admin\WritingSettingController;
 use App\Http\Controllers\Admin\DiscussionSettingController;
@@ -42,6 +45,44 @@ Route::get('/contact', function () {
 Route::get('/awards', function () {
     return view('pages.awards');
 });
+
+
+
+
+// -------------------------------
+// 🔓 Frontend Public Routes
+// -------------------------------
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::middleware('auth')->post('/posts/{post}/like', [PostLikeController::class, 'toggle'])->name('posts.like');
+
+// -------------------------------
+// 🔐 Admin Routes (grouped)
+// -------------------------------
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+
+    // 📝 Post CRUD
+    Route::resource('posts', PostController::class);
+
+    // 📁 Category CRUD
+    Route::resource('categories', CategoryController::class)->except(['show']);
+
+    // 🏷️ Tag CRUD
+    Route::resource('tags', TagController::class)->except(['show']);
+
+    // 💬 Comment Management
+    Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
+    Route::post('/comments/{comment}/approve', [CommentController::class, 'approve'])->name('comments.approve');
+    Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+
+    // 📜 Post Revision Management
+    Route::prefix('posts/{post}/revisions')->name('posts.revisions.')->group(function () {
+        Route::get('/', [PostRevisionController::class, 'index'])->name('index');
+        Route::get('/{revision}', [PostRevisionController::class, 'show'])->name('show');
+        Route::post('/{revision}/restore', [PostRevisionController::class, 'restore'])->name('restore');
+    });
+});
+
+
 
 
 
@@ -74,13 +115,17 @@ Route::get('/team', function () {
 
 // ✅ FRONTEND BLOG
 
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+// Blog category route
+Route::get('/blog/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
-Route::get('/blog', [PostController::class, 'frontendIndex'])->name('blog.index'); // 🔥 all blog page
-Route::get('/blog/{slug}', [PostController::class, 'show'])->name('blog.show');    // 🔥 blog details page
+
 
 
 // ✅ ADMIN BLOG POSTS (CRUD)
-Route::prefix('admin')->middleware('auth')->name('blog.')->group(function () {
+// updated (remove blog. prefix):
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('posts', PostController::class)->except(['show']);
 });
 

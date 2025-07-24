@@ -20,6 +20,13 @@ return new class extends Migration {
                   ->on('users')
                   ->nullOnDelete();
 
+            // ✅ Category foreign key (new)
+            $table->unsignedBigInteger('category_id')->nullable()->index();
+            $table->foreign('category_id', 'fk_posts_category')
+                  ->references('id')
+                  ->on('categories')
+                  ->nullOnDelete();
+
             $table->text('short_description')->nullable();
             $table->longText('description')->nullable();
 

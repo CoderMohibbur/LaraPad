@@ -2,58 +2,79 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $categories = Category::latest()->paginate(10);
-        return view('admin.category.index', compact('categories'));
+        return view('admin.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.category.create');
+        return view('admin.categories.create');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|unique:categories,name',
-            'slug' => 'required|unique:categories,slug',
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name',
         ]);
 
-        Category::create($request->only('name', 'slug'));
+        $slug = Str::slug($validated['name']);
 
-        return redirect()->route('categories.index')->with('success', 'Category created.');
+        Category::create([
+            'name' => $validated['name'],
+            'slug' => $slug,
+        ]);
+
+        return redirect()->route('categories.index')->with('success', 'Category created successfully.');
     }
 
     public function edit(Category $category)
     {
-        return view('admin.category.edit', compact('category'));
+        return view('admin.categories.edit', compact('category'));
     }
 
     public function update(Request $request, Category $category)
     {
-        $request->validate([
-            'name' => 'required|unique:categories,name,' . $category->id,
-            'slug' => 'required|unique:categories,slug,' . $category->id,
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name,' . $category->id,
         ]);
 
-        $category->update($request->only('name', 'slug'));
+        $category->update([
+            'name' => $validated['name'],
+            'slug' => Str::slug($validated['name']),
+        ]);
 
-        return redirect()->route('categories.index')->with('success', 'Category updated.');
+        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
-        return back()->with('success', 'Category deleted.');
+        return redirect()->route('categories.index')->with('success', 'Category deleted.');
     }
+
+
+public function show($slug)
+{
+    $category = Category::where('slug', $slug)->firstOrFail();
+
+    $posts = Post::where('category_id', $category->id)
+        ->whereNotNull('published_at')
+        ->where('published_at', '<=', now())
+        ->latest()
+        ->paginate(9);
+
+    return view('pages.category-posts', compact('category', 'posts'));
+}
+
+
 
 }

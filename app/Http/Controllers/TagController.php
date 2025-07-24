@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -22,16 +21,18 @@ class TagController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|unique:tags,name|max:255',
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:tags,name',
         ]);
+
+        $slug = Str::slug($validated['name']);
 
         Tag::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
+            'name' => $validated['name'],
+            'slug' => $slug,
         ]);
 
-        return redirect()->route('tags.index')->with('success', '✅ Tag created successfully.');
+        return redirect()->route('tags.index')->with('success', 'Tag created successfully.');
     }
 
     public function edit(Tag $tag)
@@ -41,21 +42,21 @@ class TagController extends Controller
 
     public function update(Request $request, Tag $tag)
     {
-        $request->validate([
-            'name' => 'required|string|unique:tags,name,' . $tag->id,
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:tags,name,' . $tag->id,
         ]);
 
         $tag->update([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
+            'name' => $validated['name'],
+            'slug' => Str::slug($validated['name']),
         ]);
 
-        return redirect()->route('tags.index')->with('success', '✅ Tag updated.');
+        return redirect()->route('tags.index')->with('success', 'Tag updated successfully.');
     }
 
     public function destroy(Tag $tag)
     {
         $tag->delete();
-        return back()->with('success', '❌ Tag deleted.');
+        return redirect()->route('tags.index')->with('success', 'Tag deleted.');
     }
 }

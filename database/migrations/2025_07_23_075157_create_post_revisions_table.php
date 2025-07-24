@@ -8,8 +8,8 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('post_revisions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('post_id')->constrained()->onDelete('cascade')->index();
-            $table->foreignId('edited_by')->nullable()->constrained('users')->onDelete('set null')->index();
+            $table->foreignId('post_id')->constrained()->onDelete('cascade');
+            $table->foreignId('edited_by')->nullable()->constrained('users')->onDelete('set null');
             $table->string('title');
             $table->text('short_description')->nullable();
             $table->longText('description');
