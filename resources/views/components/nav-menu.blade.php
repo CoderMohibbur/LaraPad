@@ -4,7 +4,7 @@
         <div class="px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-900">
             <!-- Logo -->
             <a href="/">
-                <img src="uploads/2025/04/khalidit-logo-removebg-preview.png" alt="Logo"
+                <img src="{{ asset('/uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="Logo"
                     class="w-[250px] h-[70px] object-contain">
             </a>
 

@@ -15,7 +15,7 @@
 
         <!-- Logo Center -->
         <div class="flex items-center justify-center">
-            <img class="w-[320px]" src="uploads/2025/04/khalidit-logo-removebg-preview.png" alt="KhalidIT Logo">
+            <img class="w-[320px]" src="{{ asset('uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="KhalidIT Logo">
         </div>
 
         <!-- Free Tools -->

@@ -30,8 +30,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'nullable|string|unique:posts,slug',
-            'category_ids' => 'nullable|array',
-            'category_ids.*' => 'exists:categories,id',
+            'category_id' => 'required|exists:categories,id',
             'tags' => 'nullable|array',
             'tags.*' => 'exists:tags,id',
             'short_description' => 'nullable|string',
@@ -60,15 +59,17 @@ class PostController extends Controller
             'meta_keywords' => $validated['meta_keywords'] ?? null,
         ];
 
+        $post->category_id = $validated['category_id']; // ✅ এটা অবশ্যই থাকতে হবে
         $post->published_at = $validated['published_at'] ?? null;
+
         $post->save();
 
-        // Attach categories and tags
-        $post->categories()->sync($validated['category_ids'] ?? []);
+        // Attach tags
         $post->tags()->sync($validated['tags'] ?? []);
 
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
+
 
     public function edit(Post $post)
     {
@@ -84,8 +85,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'nullable|string|unique:posts,slug,' . $post->id,
-            'category_ids' => 'nullable|array',
-            'category_ids.*' => 'exists:categories,id',
+            'category_id' => 'required|exists:categories,id',
             'tags' => 'nullable|array',
             'tags.*' => 'exists:tags,id',
             'short_description' => 'nullable|string',
@@ -125,7 +125,7 @@ class PostController extends Controller
         $post->published_at = $validated['published_at'] ?? null;
         $post->save();
 
-        $post->categories()->sync($validated['category_ids'] ?? []);
+        $post->category_id = $validated['category_id'];
         $post->tags()->sync($validated['tags'] ?? []);
 
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');

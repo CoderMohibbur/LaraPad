@@ -25,18 +25,20 @@
                            class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
                 </div>
 
-                <!-- Categories -->
+                <!-- ✅ Category (Fixed) -->
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Categories</label>
-                    <select name="category_ids[]" multiple
-                            class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
-                        @foreach($categories as $cat)
-                            <option value="{{ $cat->id }}"
-                                {{ in_array($cat->id, old('category_ids', $post->categories->pluck('id')->toArray())) ? 'selected' : '' }}>
-                                {{ $cat->name }}
+                    <label for="category_id" class="block font-medium text-gray-700 dark:text-gray-300">Category</label>
+                    <select name="category_id" id="category_id" required
+                            class="w-full border rounded px-3 py-2 dark:bg-gray-800 dark:text-white">
+                        <option value="">Select Category</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}"
+                                {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>
+                                {{ $category->name }}
                             </option>
                         @endforeach
                     </select>
+                    @error('category_id') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
 
                 <!-- Tags -->

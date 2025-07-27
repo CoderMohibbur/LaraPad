@@ -121,7 +121,7 @@
                         @foreach ($posts as $index => $post)
                             <div class="relative bg-white dark:bg-gray-800 rounded shadow hover:shadow-md transition">
                                 <a href="{{ route('blog.show', $post->slug) }}">
-                                    <img src="{{ $post->image_url }}" alt="{{ $post->title }}"
+                                    <img src="{{ asset('storage/' . $post->image_url) }}" alt="{{ $post->title }}"
                                         class="w-full h-[250px] object-cover rounded-t">
                                     @if ($post->category)
                                         <p

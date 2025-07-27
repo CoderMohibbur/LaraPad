@@ -5,6 +5,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($posts as $post)
                 <a href="{{ route('blog.show', $post->slug) }}" class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                    <img src="{{ $post->image_url }}" alt="{{ $post->title }}" class="w-full h-48 object-cover rounded mb-4">
                     <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">{{ $post->title }}</h2>
                     <p class="text-gray-600 dark:text-gray-300">{{ $post->short_description }}</p>
                 </a>
