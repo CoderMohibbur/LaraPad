@@ -111,7 +111,7 @@
             </div>
         </section> --}}
 
-        <section
+        {{-- <section
             class="relative overflow-hidden w-full border border-y dark:border-gray-500 bg-gray-50 dark:bg-gray-900">
             <!-- Slider Container -->
             <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out"
@@ -175,7 +175,50 @@
                     ❯
                 </button>
             </div>
-        </section>
+        </section> --}}
+
+       
+    <section class="relative overflow-hidden w-full border border-y dark:border-gray-500 bg-gray-50 dark:bg-gray-900">
+        <!-- Slider Container -->
+        <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out" style="width: 200%;">
+            @foreach ($testimonials as $testimonial)
+                <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-8 px-3">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="{{ asset($testimonial->image) }}" alt="{{ $testimonial->name }}"
+                            class="w-[360px] h-[420px] object-cover">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
+                            {!! $testimonial->quote !!}
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+                            {{ $testimonial->description }}
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            {!! str_repeat('⭐', $testimonial->rating) !!} – {{ $testimonial->name }}
+                        </p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                            {{ $testimonial->designation }}{{ $testimonial->company ? ', ' . $testimonial->company : '' }}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        <!-- Controls -->
+        <div class="absolute inset-y-0 left-0 flex items-center">
+            <button onclick="prevSlide()"
+                class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-r shadow">
+                ❮
+            </button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center">
+            <button onclick="nextSlide()"
+                class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-l shadow">
+                ❯
+            </button>
+        </div>
+    </section>
 
 
         <!-- Section Three Start -->

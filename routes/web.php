@@ -16,6 +16,7 @@ use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\PostRevisionController;
 use App\Http\Controllers\Admin\ReadingSettingController;
 use App\Http\Controllers\Admin\WritingSettingController;
@@ -34,9 +35,7 @@ Route::prefix('admin/pages')->middleware('auth')->group(function () {
 });
 
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', [TestimonialController::class, 'show'])->name('home');
 
 Route::get('/contact', function () {
     return view('pages.contact');
@@ -108,9 +107,12 @@ Route::get('/team', function () {
 });
 
 
+// routes/web.php
 
+Route::resource('testimonials', TestimonialController::class);
 
-
+// Route for displaying testimonials in a slider
+Route::get('/testimonials/slider', [TestimonialController::class, 'show'])->name('testimonials.slider');
 
 
 // ✅ FRONTEND BLOG

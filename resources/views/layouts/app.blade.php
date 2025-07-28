@@ -32,54 +32,11 @@
     <!-- ✅ drag and drop CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
-    <!-- ✅ TinyMCE Script -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-    </script>
+    
 
-    {{-- tinymce dark mood light mode --}}
-    <style>
-        /* ✅ Remove TinyMCE Border */
-        .tox .tox-editor-container,
-        .tox .tox-tinymce {
-            border: #374151 !important;
-            box-shadow: none !important;
-            background: transparent !important;
-        }
+<!-- Add TinyMCE CDN -->
+<script src="https://cdn.tiny.cloud/1/uqurlqg2nd5f6hzvyzse6jjdhs564baqictaegbhm0wf6b49/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-        /* ✅ Remove Extra Padding */
-        .tox .tox-tinymce {
-            padding: 0 !important;
-        }
-
-        /* ✅ Fix TinyMCE Toolbar & Statusbar Background in Dark Mode */
-        .tox .tox-toolbar,
-        .tox .tox-statusbar,
-        .tox .tox-toolbar-overlord {
-
-            border: none !important;
-        }
-
-        /* ✅ Fix TinyMCE Editor Background in Dark Mode */
-        .tox .tox-edit-area__iframe {
-            background-color: #374151 !important;
-            /* Dark Mode Background */
-            color: white !important;
-            /* Dark Mode Text */
-        }
-
-        /* ✅ Remove "Upgrade" Button & Premium Alerts */
-        .tox .tox-notification,
-        .tox .tox-statusbar__branding,
-        .tox .tox-promotion {
-            display: none !important;
-        }
-    </style>
 
 
 </head>
@@ -110,6 +67,35 @@
 </body>
 
 </html>
+
+
+{{-- tyncme intrigade all blade --}}
+<script>
+    tinymce.init({
+        selector: 'textarea[name=content]',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | \
+                  alignleft aligncenter alignright alignjustify | \
+                  bullist numlist outdent indent | removeformat | help',
+
+        // 👉 এই দুইটি লাইন dark mode সাপোর্টের জন্য
+        skin: 'oxide-dark',
+        content_css: 'dark',
+
+        content_style: 'body { font-family:Inter,sans-serif; font-size:14px }'
+    });
+</script>
+
+
+
+
+
 
 {{-- Dark Mode light mode --}}
 <script>
@@ -196,39 +182,6 @@
     });
 </script>
 
-{{-- tinymce er image intrigate js --}}
-<script>
-    function openModal(url) {
-        const modal = document.getElementById('orderModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('modalContent').innerHTML = data;
-
-                // টিনিমসি রি-ইনিশিয়ালাইজ যদি দরকার হয়
-                setTimeout(() => {
-                    if (document.getElementById("description")) {
-                        tinymce.remove();
-                        initTinyMCE();
-                    }
-                }, 100);
-            });
-    }
-
-
-    function insertImageToEditor(url) {
-        if (typeof tinymce !== 'undefined' && tinymce.activeEditor) {
-            tinymce.activeEditor.execCommand('mceInsertContent', false, `<img src="${url}" alt="" />`);
-            document.getElementById('orderModal').classList.add('hidden'); // মডাল বন্ধ
-        } else {
-            console.error("TinyMCE not initialized!");
-        }
-    }
-</script>
-{{-- tinymce er image intrigate js end --}}
 
 
 {{-- upload progress bar in media Library --}}
