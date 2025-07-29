@@ -32,37 +32,101 @@
     <!-- ✅ drag and drop CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
-    
-
-<!-- Add TinyMCE CDN -->
-<script src="https://cdn.tiny.cloud/1/uqurlqg2nd5f6hzvyzse6jjdhs564baqictaegbhm0wf6b49/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 
+    <!-- Add TinyMCE CDN -->
+    <script src="https://cdn.tiny.cloud/1/uqurlqg2nd5f6hzvyzse6jjdhs564baqictaegbhm0wf6b49/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    {{-- Style for mobile nav --}}
+    <style>
+        /* Ensure the sidebar transition */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+            z-index: 40;
+            /* Ensure the sidebar is on top of other content */
+        }
+
+        /* Hide sidebar by default */
+        #sidebar.hidden {
+            transform: translateX(-100%);
+        }
+
+        /* Hide sidebar on small devices */
+        @media (max-width: 640px) {
+            #sidebar {
+                position: fixed;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+                /* ✅ Smooth Animation */
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #content {
+                margin-left: 0 !important;
+            }
+        }
+
+        /* ✅ Smooth Overlay Animation */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 30;
+            /* Ensure the overlay is below the sidebar but above other content */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+
+    {{-- Dropdown rotate 180deg --}}
+    <style>
+        .rotate-180 {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+    </style>
 
 </head>
 @stack('scripts')
 
 <body class="font-sans antialiased">
-    @include('layouts.header')
-    <div class="flex items-start pt-16">
-        <div class="lg:!block hidden">
-            @include('layouts.sidebar')
 
-            {{-- <!-- Page Heading -->
-                @if (isset($header))
-                    <header class="bg-white shadow">
-                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                            {{ $header }}
-                        </div>
-                    </header>
-                @endif --}}
+    <div
+        class="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-lg shadow">
+        @include('layouts.admin-nav')
+        <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+            @include('layouts.admin-sidebar')
         </div>
-        <main class="overflow-y-auto relative w-full h-full bg-gray-50 dark:bg-gray-900 lg:ml-64">
-            <div class="px-4 pt-6">
-                {{ $slot }}
-            </div>
 
-        </main>
+        <!-- Page Heading -->
+        <div id="content" class="mx-auto px-8 pt-6 transition-all duration-300 dark:border-gray-900">
+            <div class="p-4 border-2  border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+                @if (isset($header))
+                    <header>
+                        {{ $header }}
+                    </header>
+                @endif
+
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
@@ -91,9 +155,6 @@
         content_style: 'body { font-family:Inter,sans-serif; font-size:14px }'
     });
 </script>
-
-
-
 
 
 
@@ -260,5 +321,116 @@
 
             xhr.send(formData);
         }
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const menuText = document.querySelectorAll(".menu-text");
+        const toggleButton = document.getElementById("toggle-button");
+        const content = document.getElementById("content");
+
+        // ✅ লোকালস্টোরেজ থেকে স্টেট লোড
+        let isSidebarOpen = localStorage.getItem("isSidebarOpen") === "true";
+        updateSidebar();
+
+        // ✅ টগল বাটনে ক্লিক ইভেন্ট
+        toggleButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+            isSidebarOpen = !isSidebarOpen;
+            localStorage.setItem("isSidebarOpen", isSidebarOpen);
+            updateSidebar();
+
+            if (window.innerWidth <= 640) {
+                sidebar.classList.toggle("open");
+            }
+        });
+
+        // ✅ ছোট ডিভাইসে বাইরে ক্লিক করলে সাইডবার বন্ধ
+        document.addEventListener("click", function(event) {
+            if (
+                window.innerWidth <= 640 &&
+                isSidebarOpen &&
+                !sidebar.contains(event.target) &&
+                event.target !== toggleButton
+            ) {
+                sidebar.style.transition = "transform 0.3s ease-in-out";
+                sidebar.classList.remove("open");
+                isSidebarOpen = false;
+                localStorage.setItem("isSidebarOpen", isSidebarOpen);
+                updateSidebar();
+            }
+        });
+
+        // ✅ হোভার করলে সাইডবার এক্সপ্যান্ড (শুধু যদি ম্যানুয়ালি ওপেন না করা হয়)
+        sidebar.addEventListener("mouseenter", function() {
+            if (!isSidebarOpen && localStorage.getItem("isSidebarOpen") !== "true") {
+                sidebar.classList.add("w-64");
+                sidebar.classList.remove("w-20");
+                content.classList.add("sm:ml-64");
+                content.classList.remove("sm:ml-20");
+                menuText.forEach(text => text.classList.remove("hidden"));
+            }
+        });
+
+        // ✅ হোভার ছাড়লে সাইডবার কোল্যাপস (শুধু যদি ম্যানুয়ালি ওপেন না করা হয়)
+        sidebar.addEventListener("mouseleave", function() {
+            if (!isSidebarOpen && localStorage.getItem("isSidebarOpen") !== "true") {
+                sidebar.classList.add("w-20");
+                sidebar.classList.remove("w-64");
+                content.classList.add("sm:ml-20");
+                content.classList.remove("sm:ml-64");
+                menuText.forEach(text => text.classList.add("hidden"));
+            }
+        });
+
+        // ✅ আপডেট ফাংশন
+        function updateSidebar() {
+            if (isSidebarOpen) {
+                sidebar.classList.add("w-64");
+                sidebar.classList.remove("w-20");
+                if (window.innerWidth > 640) {
+                    content.classList.add("sm:ml-64");
+                    content.classList.remove("sm:ml-20");
+                }
+                menuText.forEach(text => text.classList.remove("hidden"));
+            } else {
+                sidebar.classList.add("w-20");
+                sidebar.classList.remove("w-64");
+                if (window.innerWidth > 640) {
+                    content.classList.add("sm:ml-20");
+                    content.classList.remove("sm:ml-64");
+                }
+                menuText.forEach(text => text.classList.add("hidden"));
+            }
+        }
+    });
+</script>
+
+
+{{-- Drop Down menu --}}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleButtons = document.querySelectorAll("[data-collapse-toggle]");
+
+        toggleButtons.forEach(function(btn) {
+            const targetId = btn.getAttribute("data-collapse-toggle");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                btn.addEventListener("click", function() {
+                    // Toggle hidden class
+                    targetElement.classList.toggle("hidden");
+
+                    // Optionally: toggle rotate class on arrow icon (if any)
+                    const arrowIcon = btn.querySelector("svg:last-child");
+                    if (arrowIcon) {
+                        arrowIcon.classList.toggle("rotate-180");
+                    }
+                });
+            }
+        });
     });
 </script>

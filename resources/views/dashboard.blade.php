@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
+    {{-- <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
             {{ __('Dashboard') }}
         </h2>
-    </x-slot>
+    </x-slot> --}}
 
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -16,11 +16,15 @@
                             <p class="text-2xl font-bold text-gray-800 dark:text-white">1,234</p>
                         </div>
                         <div class="text-blue-500 dark:text-blue-400">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Card 2 -->
                 <div class="p-5 bg-white dark:bg-gray-800 shadow rounded-lg">
                     <div class="flex items-center justify-between">
@@ -29,7 +33,10 @@
                             <p class="text-2xl font-bold text-gray-800 dark:text-white">$3,580</p>
                         </div>
                         <div class="text-green-500 dark:text-green-400">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -41,7 +48,10 @@
                             <p class="text-2xl font-bold text-gray-800 dark:text-white">57</p>
                         </div>
                         <div class="text-yellow-500 dark:text-yellow-400">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3V3z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3V3z"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -54,7 +64,10 @@
                             <p class="text-2xl font-bold text-gray-800 dark:text-white">12,345</p>
                         </div>
                         <div class="text-red-500 dark:text-red-400">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -77,10 +90,16 @@
                 <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                     <h4 class="text-lg font-semibold text-gray-700 dark:text-white mb-4">Quick Actions</h4>
                     <div class="grid grid-cols-2 gap-4">
-                        <a href="#" class="text-center p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">➕ New User</a>
-                        <a href="#" class="text-center p-4 bg-green-500 text-white rounded-lg hover:bg-green-600">📦 New Order</a>
-                        <a href="#" class="text-center p-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">📝 New Post</a>
-                        <a href="#" class="text-center p-4 bg-red-500 text-white rounded-lg hover:bg-red-600">⚙️ Settings</a>
+                        <a href="#" class="text-center p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">➕
+                            New User</a>
+                        <a href="#"
+                            class="text-center p-4 bg-green-500 text-white rounded-lg hover:bg-green-600">📦 New
+                            Order</a>
+                        <a href="#"
+                            class="text-center p-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">📝 New
+                            Post</a>
+                        <a href="#" class="text-center p-4 bg-red-500 text-white rounded-lg hover:bg-red-600">⚙️
+                            Settings</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +193,10 @@
                 }]
             },
         });
+    </script>
+
+    
+    @include('layouts.admin-footer')
 
 
-        
 </x-app-layout>

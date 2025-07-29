@@ -46,13 +46,12 @@
                 <input type="number" name="rating" value="{{ old('rating', 5) }}" min="1" max="5"
                     class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-sm focus:ring-blue-500 focus:border-blue-500" />
             </div>
-
             <!-- Image -->
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Image URL</label>
                 <input type="text" name="image" value="{{ old('image') }}" required
                     placeholder="uploads/2025/04/example.jpg"
-                    class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                    class="mt-1 py-2 block w-full rounded-md border border-gray-400 dark:border-gray-500 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-sm focus:ring-blue-500 focus:border-blue-500 focus:border-blue-500" />
             </div>
 
             <!-- Buttons -->
