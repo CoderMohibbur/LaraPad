@@ -55,32 +55,60 @@
 
 
                 {{-- 💬 Comments (Disqus or custom) --}}
-                {{-- <div class="mt-14">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">💬 Comments</h3>
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function() {
-                            this.page.url = "{{ request()->fullUrl() }}";
-                            this.page.identifier = "post-{{ $post->id }}";
-                        };
-                        (function() {
-                            var d = document,
-                                s = d.createElement('script');
-                            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the comments.</noscript>
-                </div> --}}
+                <!-- 💬 Comment Form -->
+                <div class="mt-10">
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Leave a Comment</h3>
 
-                {{-- 🔙 Back to Blog --}}
-                {{-- <div class="mt-10">
-                    <a href="{{ route('blog.index') }}"
-                        class="inline-block text-sm text-blue-600 hover:underline dark:text-blue-400">
-                        ← Back to Blog
-                    </a>
-                </div> --}}
+                    @if (session('success'))
+                        <div class="mb-4 text-green-600 font-semibold">{{ session('success') }}</div>
+                    @endif
+
+                    <form method="POST" action="{{ route('comments.store') }}" class="space-y-4">
+                        @csrf
+                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+
+                        <div>
+                            <label for="comment"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300">Your Comment</label>
+                            <textarea name="comment" rows="4" required
+                                class="mt-1 block w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm text-sm text-gray-900 dark:text-white focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            @error('comment')
+                                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow text-sm">
+                                Submit Comment
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Comments Section -->
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mt-10 mb-4">
+                        💬 Comments ({{ $comments->count() }})
+                    </h3>
+                    @forelse ($comments as $comment)
+                        <div class="mb-4 p-4 rounded-md bg-gray-100 dark:bg-gray-800">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                    {{ $comment->user->name ?? 'Guest' }}
+                                </span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">
+                                    {{ $comment->created_at->format('d M Y, h:i A') }}
+                                </span>
+                            </div>
+                            <p class="text-gray-800 dark:text-gray-100 text-sm">
+                                {{ $comment->comment }}
+                            </p>
+                        </div>
+                    @empty
+                        <p class="text-gray-500 dark:text-gray-400">No comments yet.</p>
+                    @endforelse
+
+                </div>
+
             </div>
 
             <!-- 📚 Sidebar -->
@@ -94,8 +122,8 @@
                                 <a href="{{ route('blog.show', $related->slug) }}"
                                     class="flex gap-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition p-4">
                                     <div class="w-20 h-20 shrink-0 rounded overflow-hidden">
-                                        <img src="{{ asset('storage/' . $related->image_url) }}" alt="{{ $related->title }}"
-                                            class="w-full h-full object-cover">
+                                        <img src="{{ asset('storage/' . $related->image_url) }}"
+                                            alt="{{ $related->title }}" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="text-md font-semibold text-gray-800 dark:text-white">

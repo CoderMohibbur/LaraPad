@@ -36,4 +36,8 @@ class Comment extends Model
     {
         return $query->where('approved', true);
     }
+    public function comments()
+    {
+        return $this->hasMany(\App\Models\Comment::class)->approved(); // Only approved
+    }
 }

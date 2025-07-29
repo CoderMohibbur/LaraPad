@@ -50,8 +50,15 @@ Route::get('/awards', function () {
 
 // -------------------------------
 // 🔓 Frontend Public Routes
-// -------------------------------
+// -------------------------------// ✅ POST: Store comment from blog post page
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
+    Route::post('/comments/{comment}/approve', [CommentController::class, 'approve'])->name('comments.approve');
+    Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+});
+
 Route::middleware('auth')->post('/posts/{post}/like', [PostLikeController::class, 'toggle'])->name('posts.like');
 
 // -------------------------------
@@ -68,10 +75,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     // 🏷️ Tag CRUD
     Route::resource('tags', TagController::class)->except(['show']);
 
-    // 💬 Comment Management
-    Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
-    Route::post('/comments/{comment}/approve', [CommentController::class, 'approve'])->name('comments.approve');
-    Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+    // // 💬 Comment Management
+    // Route::get('/comments', [CommentController::class, 'index'])->name('comments.index');
+    // Route::post('/comments/{comment}/approve', [CommentController::class, 'approve'])->name('comments.approve');
+    // Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
     // 📜 Post Revision Management
     Route::prefix('posts/{post}/revisions')->name('posts.revisions.')->group(function () {
