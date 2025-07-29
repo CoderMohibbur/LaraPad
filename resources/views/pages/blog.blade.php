@@ -1,4 +1,3 @@
-
 <x-guest-layout>
     <!-- Blog Banner -->
     <section class="border-b dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
@@ -62,6 +61,12 @@
                             </div>
                         @endforeach
                     </div>
+
+                    <!-- ✅ Pagination -->
+                    <div class="mt-6">
+                        {{ $posts->links() }}
+                    </div>
+
                 </div>
 
                 <!-- Right Side: Sidebar -->

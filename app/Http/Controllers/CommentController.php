@@ -22,7 +22,7 @@ class CommentController extends Controller
             'approved' => false, // Default false
         ]);
 
-        return back()->with('success', 'Your comment has been submitted for review.');
+        return back()->with('success', 'Your comment has been submitted');
     }
 
     // ✅ Admin: list all comments (optional filter: unapproved)

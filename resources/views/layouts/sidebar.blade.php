@@ -76,7 +76,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                       
                         <li>
                             <button type="button"
                                 class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -125,7 +125,7 @@
                                         clip-rule="evenodd" />
                                 </svg>
                                 <span class="flex-1 ml-3 text-left whitespace-nowrap"
-                                    sidebar-toggle-item="">Pages</span>
+                                    sidebar-toggle-item="">Sliders</span>
                                 <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -134,15 +134,11 @@
                                 </svg>
                             </button>
                             <ul id="user-dropdown" class="space-y-2 py-2 hidden">
+    
                                 <li>
-                                    <a href="/pages"
-                                        class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 ">All
-                                        pages</a>
-                                </li>
-                                <li>
-                                    <a href="/pages/create"
+                                    <a href="/testimonials"
                                         class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700">Add
-                                        New page</a>
+                                        New Sliders</a>
                                 </li>
                             </ul>
                         </li>

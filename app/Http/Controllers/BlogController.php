@@ -27,29 +27,15 @@ class BlogController extends Controller
         $query->where('title', 'like', '%' . $request->search . '%');
     }
 
-    // ✅ Order latest posts
-    $allPosts = $query->latest('published_at')->get();
-
-    // 📌 Fallback: If no posts found and no filter applied, load all posts
-    if ($allPosts->isEmpty() && ! $request->filled('category') && ! $request->filled('search')) {
-        $allPosts = Post::with(['category', 'author', 'tags'])
-            ->whereNotNull('published_at')
-            ->where('published_at', '<=', now())
-            ->latest('published_at')
-            ->get();
-    }
-
-    // 🏅 Featured post = first
-    $featured = $allPosts->first();
-
-    // 📄 Remaining posts
-    $posts = $allPosts->skip(1)->take(6);
+    // ✅ Get all filtered or non-filtered posts
+    $posts = $query->latest('published_at')->paginate(12); // pagination added
 
     // 📂 Topics / Categories
-    $topics = Category::all();
+    $topics = Category::orderBy('name')->get();
 
-    return view('pages.blog', compact('featured', 'posts', 'topics'));
+    return view('pages.blog', compact('posts', 'topics'));
 }
+
 
 
     /**
