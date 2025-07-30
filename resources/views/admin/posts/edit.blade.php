@@ -98,7 +98,7 @@
                 <!-- Full Description -->
                 <div class="md:col-span-2">
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Content</label>
-                    <textarea name="description" rows="6"
+                    <textarea name="description" id="description" rows="6"
                               class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('description', $post->description) }}</textarea>
                 </div>
             </div>
@@ -117,3 +117,5 @@
         </form>
     </div>
 </x-app-layout>
+
+

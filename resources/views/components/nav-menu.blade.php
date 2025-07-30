@@ -4,9 +4,10 @@
         <div class="px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-900">
             <!-- Logo -->
             <a href="/">
-                <img src="{{ asset('/uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="Logo"
+                <img src="{{ \App\Http\Controllers\Admin\ReadingSettingController::getLogo() }}" alt="Logo"
                     class="w-[250px] h-[70px] object-contain">
             </a>
+
 
             <!-- Mobile Toggle -->
             <button id="mobile-toggle" class="md:hidden text-gray-800 dark:text-white focus:outline-none">

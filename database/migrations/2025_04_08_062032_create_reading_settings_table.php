@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('feed_limit')->default(10);
             $table->enum('post_feed_type', ['full_text', 'excerpt'])->default('full_text');
             $table->boolean('search_engine_visibility')->default(true); // true = discouraged
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
         

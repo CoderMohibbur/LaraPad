@@ -14,5 +14,6 @@ class ReadingSetting extends Model
         'feed_limit',
         'post_feed_type',
         'search_engine_visibility',
+        'logo',
     ];
 }

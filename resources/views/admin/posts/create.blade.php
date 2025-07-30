@@ -21,9 +21,15 @@
                 <!-- Published At -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Published At</label>
-                    <input type="datetime-local" name="published_at" value="{{ old('published_at') }}"
+                    @php
+                        $dt = old('published_at') 
+                            ? \Carbon\Carbon::parse(old('published_at'))->setTimezone('Asia/Dhaka') 
+                            : now()->setTimezone('Asia/Dhaka');
+                    @endphp
+                    <input type="datetime-local" name="published_at"
+                        value="{{ $dt->format('Y-m-d\TH:i') }}"
                         class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
-                </div>
+                    </div>
 
                 <!-- Category -->
                 <div>
@@ -90,7 +96,7 @@
                 <!-- Full Description -->
                 <div class="md:col-span-2">
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Content</label>
-                    <textarea name="description" rows="6"
+                    <textarea name="description" id="description" rows="6"
                         class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('description') }}</textarea>
                 </div>
             </div>

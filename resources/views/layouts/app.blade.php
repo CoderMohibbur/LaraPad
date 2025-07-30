@@ -34,69 +34,44 @@
 
 
 
-    <!-- Add TinyMCE CDN -->
-    <script src="https://cdn.tiny.cloud/1/uqurlqg2nd5f6hzvyzse6jjdhs564baqictaegbhm0wf6b49/tinymce/6/tinymce.min.js"
-        referrerpolicy="origin"></script>
+    <!-- ✅ TinyMCE Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js" referrerpolicy="origin"></script>
 
-    {{-- Style for mobile nav --}}
     <style>
-        /* Ensure the sidebar transition */
-        #sidebar {
-            transition: transform 0.3s ease-in-out;
-            z-index: 40;
-            /* Ensure the sidebar is on top of other content */
+        /* ✅ Remove TinyMCE Border */
+        .tox .tox-editor-container,
+        .tox .tox-tinymce {
+            border: #374151 !important;
+            box-shadow: none !important;
+            background: transparent !important;
         }
 
-        /* Hide sidebar by default */
-        #sidebar.hidden {
-            transform: translateX(-100%);
+        /* ✅ Remove Extra Padding */
+        .tox .tox-tinymce {
+            padding: 0 !important;
         }
 
-        /* Hide sidebar on small devices */
-        @media (max-width: 640px) {
-            #sidebar {
-                position: fixed;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-                /* ✅ Smooth Animation */
-            }
+        /* ✅ Fix TinyMCE Toolbar & Statusbar Background in Dark Mode */
+        .tox .tox-toolbar,
+        .tox .tox-statusbar,
+        .tox .tox-toolbar-overlord {
 
-            #sidebar.open {
-                transform: translateX(0);
-            }
-
-            #content {
-                margin-left: 0 !important;
-            }
+            border: none !important;
         }
 
-        /* ✅ Smooth Overlay Animation */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 30;
-            /* Ensure the overlay is below the sidebar but above other content */
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
+        /* ✅ Fix TinyMCE Editor Background in Dark Mode */
+        .tox .tox-edit-area__iframe {
+            background-color: #374151 !important;
+            /* Dark Mode Background */
+            color: white !important;
+            /* Dark Mode Text */
         }
 
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
-
-
-    {{-- Dropdown rotate 180deg --}}
-    <style>
-        .rotate-180 {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
+        /* ✅ Remove "Upgrade" Button & Premium Alerts */
+        .tox .tox-notification,
+        .tox .tox-statusbar__branding,
+        .tox .tox-promotion {
+            display: none !important;
         }
     </style>
 
@@ -128,13 +103,15 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+
 </body>
 
 </html>
 
 
 {{-- tyncme intrigade all blade --}}
-<script>
+{{-- <script>
     tinymce.init({
         selector: 'textarea[name=content]',
         height: 300,
@@ -154,9 +131,103 @@
 
         content_style: 'body { font-family:Inter,sans-serif; font-size:14px }'
     });
+</script> --}}
+
+<!-- ✅ Modal Load & TinyMCE Initialize করার জন্য JavaScript -->
+<script>
+    function openModal(url) {
+        document.getElementById('orderModal').classList.remove('hidden');
+        document.getElementById('orderModal').classList.add('flex');
+
+        // ✅ Modal Content লোড করা (Create / Edit Page)
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('modalContent').innerHTML = data;
+
+                // ✅ TinyMCE Reinitialize (পুরানো instance remove করে নতুন করে initialize করো)
+                setTimeout(() => {
+                    if (document.getElementById("description")) {
+                        tinymce.remove();
+                        initTinyMCE(); // ✅ Dark Mode সহ Initialize করো
+                    }
+                }, 100);
+            })
+            .catch(error => console.error("Error loading page:", error));
+    }
+
+    function closeModal() {
+        document.getElementById('orderModal').classList.add('hidden');
+
+        // ✅ Modal বন্ধ হলে TinyMCE Destroy করো
+        if (tinymce.get("description")) {
+            tinymce.remove("#description");
+        }
+    }
+
+    // ✅ Modal Click করলে Close হবে
+    document.addEventListener("click", function(event) {
+        let modal = document.getElementById("orderModal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // ✅ Escape Press করলে Modal বন্ধ হবে
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+    // ✅ TinyMCE Dark Mode Support সহ Initialization
+    function initTinyMCE() {
+        let isDarkMode = document.documentElement.classList.contains('dark'); // Dark Mode চেক করা
+
+        tinymce.init({
+            selector: '#description',
+            plugins: 'lists link image table code wordcount',
+            toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            height: 250,
+            menubar: true,
+            branding: false,
+            skin: isDarkMode ? 'oxide-dark' : 'oxide', // ✅ Dark Mode হলে Dark Theme
+            content_css: isDarkMode ? 'dark' : 'default', // ✅ Dark Mode হলে Custom CSS
+            content_style: `
+                body {
+                    background-color: ${isDarkMode ? '#374151' : 'white'};
+                    color: ${isDarkMode ? 'white' : 'black'};
+                    font-size: 16px;
+                    font-family: Arial, sans-serif;
+                }
+            `,
+            setup: function(editor) {
+                // ✅ Remove "Upgrade" Button & Premium Alerts
+                editor.on('init', function() {
+                    setTimeout(() => {
+                        document.querySelectorAll(
+                            '.tox-notification, .tox-statusbar__branding, .tox-promotion'
+                        ).forEach(el => el.style.display = 'none');
+                    }, 500);
+                });
+            }
+        });
+    }
+
+    // ✅ প্রথমবার চালানো
+    initTinyMCE();
+
+    // ✅ Dark Mode Change হলে TinyMCE Reinitialize করো
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            setTimeout(() => {
+                tinymce.remove();
+                initTinyMCE();
+            }, 100);
+        });
+    }
 </script>
-
-
 
 {{-- Dark Mode light mode --}}
 <script>
