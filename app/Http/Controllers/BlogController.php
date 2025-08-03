@@ -11,30 +11,30 @@ class BlogController extends Controller
     /**
      * Show blog listing page.
      */
-   public function index(Request $request)
-{
-    $query = Post::with(['category', 'author', 'tags'])
-        ->whereNotNull('published_at')
-        ->where('published_at', '<=', now());
+    public function index(Request $request)
+    {
+        $query = Post::with(['category', 'author', 'tags'])
+            ->whereNotNull('published_at')
+            ->where('published_at', '<=', now());
 
-    // 🔍 Optional: Filter by category
-    if ($request->filled('category')) {
-        $query->where('category_id', $request->category);
+        // 🔍 Optional: Filter by category
+        if ($request->filled('category')) {
+            $query->where('category_id', $request->category);
+        }
+
+        // 🔍 Optional: Search by title
+        if ($request->filled('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+
+        // ✅ Get all filtered or non-filtered posts
+        $posts = $query->latest('published_at')->paginate(12); // pagination added
+
+        // 📂 Topics / Categories
+        $topics = Category::orderBy('name')->get();
+
+        return view('pages.blog', compact('posts', 'topics'));
     }
-
-    // 🔍 Optional: Search by title
-    if ($request->filled('search')) {
-        $query->where('title', 'like', '%' . $request->search . '%');
-    }
-
-    // ✅ Get all filtered or non-filtered posts
-    $posts = $query->latest('published_at')->paginate(12); // pagination added
-
-    // 📂 Topics / Categories
-    $topics = Category::orderBy('name')->get();
-
-    return view('pages.blog', compact('posts', 'topics'));
-}
 
 
 

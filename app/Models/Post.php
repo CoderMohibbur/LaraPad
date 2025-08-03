@@ -86,6 +86,8 @@ class Post extends Model
 
 
 
+
+
     // 🔁 Scope
     public function scopePublished($query)
     {

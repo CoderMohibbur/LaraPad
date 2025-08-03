@@ -22,8 +22,7 @@
                         <label for="username" class="text-white text-sm font-semibold block mb-1">
                             What's Your Name?
                         </label>
-                        <input type="text" id="username" placeholder="Enter your name"
-                            class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]">
+                        <input type="text" id="username" placeholder="Enter your name" class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]" fdprocessedid="l09sg">
                     </div>
 
                     <!-- Email -->
@@ -31,8 +30,7 @@
                         <label for="Email" class="text-white text-sm font-semibold block mb-1">
                             What's your Email?
                         </label>
-                        <input type="email" id="Email" placeholder="john@example.com"
-                            class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]">
+                        <input type="email" id="Email" placeholder="john@example.com" class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]" fdprocessedid="9tgygc">
                     </div>
 
                     <!-- Website -->
@@ -40,13 +38,11 @@
                         <label for="weblink" class="text-white text-sm font-semibold block mb-1">
                             Your Website?
                         </label>
-                        <input type="text" id="weblink" placeholder="yourwebsite.com"
-                            class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]">
+                        <input type="text" id="weblink" placeholder="yourwebsite.com" class="w-full border border-gray-300 rounded-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff5056]" fdprocessedid="iho81">
                     </div>
 
                     <!-- Button -->
-                    <button
-                        class="w-full text-white bg-[#ff5056] hover:bg-[#e13b40] rounded-sm py-3 font-bold transition">
+                    <button class="w-full text-white bg-[#ff5056] hover:bg-[#e13b40] rounded-sm py-3 font-bold transition" fdprocessedid="725qtn">
                         GET YOUR FREE ACTION PLAN
                     </button>
                 </div>

@@ -38,10 +38,10 @@
                     @forelse($pages as $page)
                         <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                             <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                                {{ $page->title }}
+                                 [[$page->title]]
                             </td>
                             <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
-                                {{ $page->slug }}
+                                [[$page->slug]]
                             </td>
                             <td class="px-6 py-4">
                                 <span

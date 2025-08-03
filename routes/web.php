@@ -236,4 +236,4 @@ Route::prefix('admin/settings')->middleware(['auth', 'role:Admin'])->group(funct
     Route::get('/', [App\Http\Controllers\Admin\GeneralController::class, 'general'])->name('settings.index');
     Route::post('/', [App\Http\Controllers\Admin\GeneralController::class, 'store'])->name('settings.store');
 });
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+// Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');

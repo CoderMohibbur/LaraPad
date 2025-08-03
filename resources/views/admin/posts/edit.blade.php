@@ -4,7 +4,7 @@
 
         <x-success-message />
 
-        <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data" class="space-y-8">
             @csrf
             @method('PUT')
 
@@ -13,7 +13,7 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Title</label>
                     <input type="text" name="title" value="{{ old('title', $post->title) }}"
-                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                     @error('title') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
 
@@ -21,21 +21,18 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Published At</label>
                     <input type="datetime-local" name="published_at"
-                           value="{{ old('published_at', optional($post->published_at)->format('Y-m-d\TH:i')) }}"
-                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                        value="{{ old('published_at', optional($post->published_at)->format('Y-m-d\\TH:i')) }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                 </div>
 
-                <!-- ✅ Category (Fixed) -->
+                <!-- Category -->
                 <div>
-                    <label for="category_id" class="block font-medium text-gray-700 dark:text-gray-300">Category</label>
-                    <select name="category_id" id="category_id" required
-                            class="w-full border rounded px-3 py-2 dark:bg-gray-800 dark:text-white">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Category</label>
+                    <select name="category_id" required
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                         <option value="">Select Category</option>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}"
-                                {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>
-                                {{ $category->name }}
-                            </option>
+                            <option value="{{ $category->id }}" {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                         @endforeach
                     </select>
                     @error('category_id') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
@@ -45,77 +42,71 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tags</label>
                     <select name="tags[]" multiple
-                            class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                         @foreach($tags as $tag)
-                            <option value="{{ $tag->id }}"
-                                {{ in_array($tag->id, old('tags', $post->tags->pluck('id')->toArray())) ? 'selected' : '' }}>
-                                {{ $tag->name }}
-                            </option>
+                            <option value="{{ $tag->id }}" {{ in_array($tag->id, old('tags', $post->tags->pluck('id')->toArray())) ? 'selected' : '' }}>{{ $tag->name }}</option>
                         @endforeach
                     </select>
                 </div>
+            </div>
 
+            <div class="md:flex md:items-start md:justify-between md:gap-6">
                 <!-- Image Upload -->
-                <div>
+                <div class="md:w-1/2">
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Image</label>
                     <input type="file" name="image"
-                           class="mt-1 block w-full text-sm text-gray-900 dark:text-white dark:bg-gray-800 dark:border-gray-600 border border-gray-300 rounded-lg cursor-pointer">
+                        class="mt-1 block w-full text-sm rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm cursor-pointer focus:ring focus:ring-blue-300">
                     @if($post->image_url)
                         <img src="{{ asset('storage/' . $post->image_url) }}" alt="Post Image" class="w-32 mt-2 rounded shadow">
                     @endif
                 </div>
 
+                <!-- Short Description -->
+                <div class="md:w-1/2 mt-6 md:mt-0">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Short Description</label>
+                    <textarea name="short_description" rows="3"
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">{{ old('short_description', $post->short_description) }}</textarea>
+                </div>
+            </div>
+
+            <!-- Full Description -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Content</label>
+                <textarea name="description" id="description" rows="6"
+                    class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">{{ old('description', $post->description) }}</textarea>
+            </div>
+
+            <!-- Meta Section -->
+            <div class="grid md:grid-cols-2 gap-6">
                 <!-- Meta Title -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Title</label>
-                    <input type="text" name="meta_title"
-                           value="{{ old('meta_title', $post->meta_title) }}"
-                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
-                </div>
-
-                <!-- Meta Description -->
-                <div class="md:col-span-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Description</label>
-                    <textarea name="meta_description" rows="2"
-                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('meta_description', $post->meta_description) }}</textarea>
+                    <input type="text" name="meta_title" value="{{ old('meta_title', $post->meta_title) }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                 </div>
 
                 <!-- Meta Keywords -->
-                <div class="md:col-span-2">
+                <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Keywords</label>
-                    <input type="text" name="meta_keywords"
-                           value="{{ old('meta_keywords', $post->meta_keywords) }}"
-                           class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+                    <input type="text" name="meta_keywords" value="{{ old('meta_keywords', $post->meta_keywords) }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">
                 </div>
 
-                <!-- Short Description -->
-                <div class="md:col-span-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Short Description</label>
-                    <textarea name="short_description" rows="3"
-                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('short_description', $post->short_description) }}</textarea>
-                </div>
-
-                <!-- Full Description -->
-                <div class="md:col-span-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Content</label>
-                    <textarea name="description" id="description" rows="6"
-                              class="mt-1 block w-full rounded-md shadow-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white">{{ old('description', $post->description) }}</textarea>
+                <!-- Meta Description -->
+                <div class="md:col-span-2 mt-6 md:mt-0">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Meta Description</label>
+                    <textarea name="meta_description" rows="2"
+                        class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:ring focus:ring-blue-300">{{ old('meta_description', $post->meta_description) }}</textarea>
                 </div>
             </div>
 
             <!-- Buttons -->
-            <div class="mt-6 flex justify-end gap-4">
+            <div class="flex justify-end gap-4 pt-6">
                 <a href="{{ route('posts.index') }}"
-                   class="inline-flex items-center px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm font-medium rounded-md">
-                    Cancel
-                </a>
+                    class="inline-flex items-center px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm font-medium rounded-md shadow-sm">Cancel</a>
                 <button type="submit"
-                        class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">
-                    Update Post
-                </button>
+                    class="inline-flex items-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md shadow-sm">Update Post</button>
             </div>
         </form>
     </div>
 </x-app-layout>
-
-

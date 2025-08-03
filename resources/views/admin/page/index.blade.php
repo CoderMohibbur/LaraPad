@@ -51,81 +51,87 @@
                         ];
                     @endphp
 
-                    @foreach ($staticPages as $page)
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                            <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                                {{ $page['title'] }}
-                            </td>
-                            <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
-                                {{ $page['slug'] }}
-                            </td>
-                            <td class="px-6 py-4">
-                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-200">
-                                    Static
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                @if ($page['editable'])
-                                    <a href="{{ route('admin.pages.edit', ['slug' => $page['slug']]) }}"
-                                        class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400"
-                                        data-editable="true">
-                                        ✏️ Edit
-                                    </a>
-                                @else
-                                    <span class="text-sm text-gray-400 dark:text-gray-500 italic" data-editable="false">
-                                        🔒 Not Editable
-                                    </span>
-                                @endif
-                            </td>
-                        </tr>
-                    @endforeach
+                   {{-- Static Pages --}}
+@foreach ($staticPages as $page)
+    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+            {{ $page['title'] }}
+        </td>
+        <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+            {{ $page['slug'] }}
+        </td>
+        <td class="px-6 py-4">
+            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-200">
+                Static
+            </span>
+        </td>
+        <td class="px-6 py-4 text-right">
+            @if ($page['editable'])
+                <a href="{{ route('admin.pages.edit', ['slug' => $page['slug']]) }}"
+                   class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400"
+                   data-editable="true">
+                    ✏️ Edit
+                </a>
+            @else
+                <span class="text-sm text-gray-400 dark:text-gray-500 italic" data-editable="false">
+                    🔒 Not Editable
+                </span>
+            @endif
+        </td>
+    </tr>
+@endforeach
 
-                    {{-- Dynamic Pages from DB --}}
-                    @forelse($pages as $page)
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                            <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                                {{ $page->title }}
-                            </td>
-                            <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
-                                {{ $page->slug }}
-                            </td>
-                            <td class="px-6 py-4">
-                                <span
-                                    class="inline-flex items-center px-2 py-1 rounded text-xs font-medium
-                                    {{ $page->status === 'published'
-                                        ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-200'
-                                        : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200' }}">
-                                    {{ ucfirst($page->status) }}
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 text-right space-x-2">
-                                <a href="{{ route('admin.pages.edit', $page->slug) }}"
-                                    class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400">
-                                    ✏️ Edit
-                                </a>
-                                <form action="{{ route('pages.destroy', $page) }}" method="POST" class="inline-block">
-                                    @csrf @method('DELETE')
-                                    <button onclick="return confirm('Are you sure?')"
-                                        class="text-sm text-red-600 hover:underline dark:text-red-400">
-                                        🗑️ Delete
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    @empty
-                        <tr>
-                            <td colspan="4" class="px-6 py-6 text-center text-gray-500 dark:text-gray-400">
-                                No pages found.
-                            </td>
-                        </tr>
-                    @endforelse
+{{-- Dynamic Pages from DB --}}
+@forelse($pages as $page)
+    <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+            {{ is_array($page) ? $page['title'] : $page->title }}
+        </td>
+        <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+            {{ is_array($page) ? $page['slug'] : $page->slug }}
+        </td>
+<td class="px-6 py-4">
+    @php
+        $status = is_array($page) ? ($page['status'] ?? 'draft') : ($page->status ?? 'draft');
+    @endphp
+
+    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium
+        {{ $status === 'published'
+            ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-200'
+            : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200' }}">
+        {{ ucfirst($status) }}
+    </span>
+</td>
+
+        <td class="px-6 py-4 text-right space-x-2">
+            <a href="{{ route('admin.pages.edit', is_array($page) ? $page['slug'] : $page->slug) }}"
+               class="inline-flex items-center text-sm text-blue-600 hover:underline dark:text-blue-400">
+                ✏️ Edit
+            </a>
+            <form action="{{ route('pages.destroy', is_array($page) ? $page['slug'] : $page) }}" method="POST" class="inline-block">
+                @csrf @method('DELETE')
+                <button onclick="return confirm('Are you sure?')"
+                        class="text-sm text-red-600 hover:underline dark:text-red-400">
+                    🗑️ Delete
+                </button>
+            </form>
+        </td>
+    </tr>
+@empty
+    <tr>
+        <td colspan="4" class="px-6 py-6 text-center text-gray-500 dark:text-gray-400">
+            No pages found.
+        </td>
+    </tr>
+@endforelse
+
                 </tbody>
             </table>
         </div>
 
-        {{-- Pagination --}}
+        {{-- Pagination
         <div class="mt-6">
             {{ $pages->links() }}
-        </div>
+        </div> --}}
     </div>
 </x-app-layout>

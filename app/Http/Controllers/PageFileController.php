@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class PageFileController extends Controller
 {
-    public function index()
+       public function index()
     {
         // Static blade pages
         $files = File::files(resource_path('views/pages'));
@@ -23,6 +24,8 @@ class PageFileController extends Controller
 
         return view('admin.page.index', compact('pages'));
     }
+
+
     public function edit($slug)
     {
         $path = resource_path("views/pages/{$slug}.blade.php");
@@ -34,17 +37,21 @@ class PageFileController extends Controller
         return view('admin.page.edit', compact('slug', 'content'));
     }
 
-    public function update(Request $request, $slug)
-    {
-        $content = $request->input('content');
+public function update(Request $request, $slug)
+{
+    $content = $request->input('content');
 
-        if (str_contains($content, '<?php')) {
-            return response()->json(['error' => 'PHP not allowed'], 422);
-        }
-
-        $path = resource_path("views/pages/{$slug}.blade.php");
-        File::put($path, $content);
-
-        return response()->json(['success' => true]);
+    if (str_contains($content, '<?php')) {
+        return response()->json(['error' => 'PHP not allowed'], 422);
     }
+
+    // Decode HTML Entities before saving
+    $content = html_entity_decode($content);
+
+    $path = resource_path("views/pages/{$slug}.blade.php");
+    File::put($path, $content);
+
+    return response()->json(['success' => true]);
+}
+
 }
