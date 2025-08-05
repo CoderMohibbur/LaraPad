@@ -72,4 +72,11 @@ class UserController extends Controller
         $user->delete();
         return back()->with('success', 'User deleted.');
     }
+
+
+    public function show(User $user)
+{
+    return redirect()->route('users.edit', $user);
+}
+
 }
