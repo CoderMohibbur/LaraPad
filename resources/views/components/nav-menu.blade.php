@@ -2,10 +2,19 @@
 <section class="shadow fixed top-0 left-0 right-0 z-50 border-b-2 dark:border-gray-500 bg-white dark:bg-gray-900">
     <header class="max-w-screen-xl mx-auto">
         <div class="px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-900">
+
             <!-- Logo -->
             <a href="/">
-                <img src="{{ \App\Http\Controllers\Admin\ReadingSettingController::getLogo() }}" alt="Logo"
-                    class="w-[250px] h-[70px] object-contain">
+                @php
+                    $dynamicLogo = \App\Http\Controllers\Admin\ReadingSettingController::getLogo();
+                @endphp
+
+                @if ($dynamicLogo && file_exists(public_path($dynamicLogo)))
+                    <img src="{{ asset($dynamicLogo) }}" alt="Logo" class="w-[250px] h-[70px] object-contain">
+                @else
+                    <img src="{{ asset('/uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="Logo"
+                        class="w-[250px] h-[70px] object-contain">
+                @endif
             </a>
 
 
@@ -104,7 +113,8 @@
                             <li><a href="/careers" class="hover:text-blue-600 dark:hover:text-blue-400">Careers</a></li>
                             <li><a href="/member-info" class="hover:text-blue-600 dark:hover:text-blue-400">Member
                                     Info</a></li>
-                            <li><a href="/reviews" class="hover:text-blue-600 dark:hover:text-blue-400">Reviews</a></li>
+                            <li><a href="/reviews" class="hover:text-blue-600 dark:hover:text-blue-400">Reviews</a>
+                            </li>
                             <li><a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact Us</a>
                             </li>
                         </ul>
