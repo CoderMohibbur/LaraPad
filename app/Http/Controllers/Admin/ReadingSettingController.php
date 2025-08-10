@@ -91,8 +91,99 @@ class ReadingSettingController extends Controller
     public static function getLogo()
     {
         $setting = ReadingSetting::first();
-        return $setting && $setting->logo
-            ? asset('storage/' . $setting->logo)
-            : asset('uploads/default-logo.png'); // fallback লোগো
+
+        // 1) DB-তে লোগো সেট না থাকলে সোজা fallback
+        if (!$setting || !$setting->logo) {
+            return asset('/uploads/2025/04/khalidit-logo-removebg-preview.png');
+        }
+
+        // 2) normalize: আগে যদি 'public/...' সেভ করা থাকে, সেটা সরিয়ে নিই
+        $path = ltrim($setting->logo, '/');
+        $path = preg_replace('#^public/#', '', $path); // "public/uploads/logo/..." -> "uploads/logo/..."
+
+        // 3) storage disk (public) এ ফাইল আছে?
+        if (\Illuminate\Support\Facades\Storage::disk('public')->exists($path)) {
+            // URL: /storage/uploads/logo/...
+            return asset('storage/' . $path);
+        }
+
+        // 4) নাহলে public root-এ আছে কিনা দেখো (কেউ যদি সরাসরি public/uploads/... এ কপি করে থাকে)
+        if (file_exists(public_path($path))) {
+            // URL: /uploads/logo/...
+            return asset($path);
+        }
+
+        // 5) কিছুই না পেলে fallback
+        return asset('/uploads/2025/04/khalidit-logo-removebg-preview.png');
     }
+
+
+    /**
+     * ✅ Header-এ দেখানোর জন্য লোগোর ফাইনাল URL
+     * - DB-তে না থাকলে fallback
+     * - absolute URL হলে 그대로 রিটার্ন
+     * - storage/public এ থাকলে `/storage/...` URL
+     * - public root-এ থাকলে `/uploads/...` URL
+     */
+    public static function headerLogoUrl(): string
+    {
+        $fallback = asset('/uploads/2025/04/khalidit-logo-removebg-preview.png');
+
+        $setting = ReadingSetting::query()->select('logo')->first();
+        if (!$setting || !$setting->logo) {
+            return $fallback;
+        }
+
+        $logo = trim($setting->logo);
+
+        // 1) External absolute URL?
+        if (preg_match('#^https?://#i', $logo)) {
+            return $logo;
+        }
+
+        // 2) Normalize path (যদি 'public/...' সেভ করা থাকে)
+        $path = ltrim($logo, '/');
+        $path = preg_replace('#^public/#', '', $path); // public/uploads/... -> uploads/...
+
+        // 3) Storage disk (public) এ ফাইল আছে?
+        if (Storage::disk('public')->exists($path)) {
+            return asset('storage/' . $path); // /storage/uploads/...
+        }
+
+        // 4) public root-এ ফাইল আছে?
+        if (file_exists(public_path($path))) {
+            return asset($path); // /uploads/...
+        }
+
+        // 5) কিছুই না পেলে fallback
+        return $fallback;
+    }
+
+    public function destroyLogo()
+{
+    $setting = ReadingSetting::first();
+
+    if (!$setting || !$setting->logo) {
+        return back()->with('error', 'No logo found to delete.');
+    }
+
+    // Normalize path
+    $path = ltrim($setting->logo, '/');
+    $path = preg_replace('#^public/#', '', $path);
+
+    // Delete from storage if exists
+    if (Storage::disk('public')->exists($path)) {
+        Storage::disk('public')->delete($path);
+    } elseif (file_exists(public_path($path))) {
+        @unlink(public_path($path));
+    }
+
+    // Remove from DB
+    $setting->logo = null;
+    $setting->save();
+
+    return back()->with('success', 'Logo deleted successfully!');
+}
+
+    
 }

@@ -13,6 +13,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageFileController;
 use App\Http\Controllers\PostLikeController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MediaController;
@@ -182,15 +183,6 @@ Route::group(['middleware' => ['role:Admin']], function () {
 
 
 
-    Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-        Route::get('reading-settings', [ReadingSettingController::class, 'index'])->name('reading-settings.index');
-        Route::get('reading-settings/edit', [ReadingSettingController::class, 'edit'])->name('reading-settings.edit');
-        Route::post('reading-settings/update', [ReadingSettingController::class, 'update'])->name('reading-settings.update');
-
-        // শুধু লোগো রিলেটেড রাউট
-        Route::get('/logo', [ReadingSettingController::class, 'logo'])->name('reading-settings.logo');
-        Route::post('/logo/update', [ReadingSettingController::class, 'updateLogo'])->name('reading-settings.update-logo');
-    });
 
 
 
@@ -199,8 +191,6 @@ Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('discussion-settings/edit', [DiscussionSettingController::class, 'edit'])->name('discussion-settings.edit');
         Route::post('discussion-settings/update', [DiscussionSettingController::class, 'update'])->name('discussion-settings.update');
     });
-
-
 
 
 
@@ -222,6 +212,32 @@ Route::group(['middleware' => ['role:Admin']], function () {
         Route::post('/media/sync', [MediaController::class, 'syncFromPublic'])->name('media.sync');
     });
 });
+// menus
+Route::middleware(['auth', 'role:Admin|admin|Editor'])
+    ->prefix('admin/menus')->name('admin.menus.')
+    ->group(function () {
+        Route::get('/', [MenuController::class, 'index'])->name('index');
+        Route::post('/', [MenuController::class, 'store'])->name('store');
+        Route::put('/{menu}', [MenuController::class, 'update'])->name('update');
+        Route::delete('/{menu}', [MenuController::class, 'destroy'])->name('destroy');
+        Route::post('/reorder', [MenuController::class, 'reorder'])->name('reorder');
+        Route::post('/toggle/{menu}', [MenuController::class, 'toggle'])->name('toggle');
+    });
+
+
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:Admin|admin'])->group(function () {
+    // Reading settings (others)
+    Route::get('reading-settings', [ReadingSettingController::class, 'index'])->name('reading-settings.index');
+    Route::get('reading-settings/edit', [ReadingSettingController::class, 'edit'])->name('reading-settings.edit');
+    Route::post('reading-settings/update', [ReadingSettingController::class, 'update'])->name('reading-settings.update');
+
+    // Logo — একটাই base path: /admin/logo
+    Route::get('logo',    [ReadingSettingController::class, 'logo'])->name('reading-settings.logo');
+    Route::post('logo',   [ReadingSettingController::class, 'updateLogo'])->name('reading-settings.update-logo');
+    Route::delete('logo', [ReadingSettingController::class, 'destroyLogo'])->name('reading-settings.destroy-logo');
+});
+
+
 // Route::prefix('admin')->middleware(['auth', 'role:Admin'])->group(function () {
 //     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 // });
