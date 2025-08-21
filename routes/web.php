@@ -29,6 +29,13 @@ use App\Http\Controllers\Admin\DiscussionSettingController;
 //     return view('welcome');
 // });
 
+
+
+Route::get('new-home', function () {
+    return view('pages.new-home');
+});
+
+
 Route::prefix('admin/pages')->middleware('auth')->group(function () {
     Route::get('{slug}/edit', [PageFileController::class, 'edit'])->name('admin.pages.edit');
     Route::post('{slug}/edit', [PageFileController::class, 'update'])->name('admin.pages.update');
