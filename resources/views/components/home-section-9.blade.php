@@ -13,17 +13,23 @@
         Lead Gen • Cold Email
       </span>
       <h1 class="mt-4 text-[#0e7490] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight animate-fadeIn delay-100">
-        Fill Your Pipeline with Qualified B2B Leads
+        Fill Your Pipeline With Qualified B2B Leads
       </h1>
       <p class="mt-5 text-[#5d7183] dark:text-gray-300 text-lg md:text-xl animate-fadeIn delay-200">
-        Data-backed prospecting, inbox-ready domains, and high-converting sequences—everything you need to book more meetings.
+        Research-driven prospecting, inbox-ready domains, and conversion-tested sequences—everything you need to book more meetings.
       </p>
 
       <!-- KPI badges -->
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3 animate-fadeIn delay-300">
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-sky-100 dark:border-gray-800 text-sm">Avg. <b>55–65% open</b> (with warm-up)</span>
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-teal-100 dark:border-gray-800 text-sm"><b>10–18%</b> reply on multi-step</span>
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-emerald-100 dark:border-gray-800 text-sm">CAN-SPAM/GDPR compliant</span>
+        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-sky-100 dark:border-gray-800 text-sm text-[#0e7490] dark:text-sky-200">
+          Avg. <b>55–65% open rate</b> (with warm-up)
+        </span>
+        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-teal-100 dark:border-gray-800 text-sm text-[#0e7490] dark:text-teal-200">
+          <b>10–18%</b> reply on multi-step
+        </span>
+        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-emerald-100 dark:border-gray-800 text-sm text-[#0e7490] dark:text-emerald-200">
+          CAN-SPAM / GDPR compliant
+        </span>
       </div>
     </div>
 
@@ -32,7 +38,7 @@
       <!-- Left Content -->
       <div class="w-full lg:w-1/2 animate-fadeInUp delay-100">
         <p class="text-[#8b939b] text-lg leading-relaxed mb-6">
-          আমরা আপনার ICP অনুযায়ী ভেরিফায়েড লিড সংগ্রহ, ডেলিভারেবিলিটি সেটআপ, এবং কনভার্সন-ফোকাসড সিকোয়েন্স চালাই—যাতে কোয়ালিটি মিটিং বুক হয় ধারাবাহিকভাবে।
+          We turn your ICP into a predictable flow of opportunities. Our team sources verified leads, sets up deliverability the right way, and runs multi-step, value-first campaigns that convert into booked calls.
         </p>
 
         <!-- Pillars -->
@@ -45,7 +51,9 @@
               </div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Prospect List Building</h3>
             </div>
-            <p class="mt-2 text-sm text-[#5d7183]">ICP-matched leads (title, industry, tech-stack) + multi-step email verification।</p>
+            <p class="mt-2 text-sm text-[#5d7183]">
+              ICP-matched accounts & buyers (title, industry, tech stack) with multi-step email verification and enrichment.
+            </p>
           </div>
 
           <!-- Copy & Personalization -->
@@ -56,7 +64,9 @@
               </div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Copy & Personalization</h3>
             </div>
-            <p class="mt-2 text-sm text-[#5d7183]">Role-based angles, first-line personalization, objection-aware templates।</p>
+            <p class="mt-2 text-sm text-[#5d7183]">
+              Role-specific angles, first-line personalization, objection-aware hooks, and clear, low-friction CTAs.
+            </p>
           </div>
 
           <!-- Deliverability -->
@@ -67,7 +77,9 @@
               </div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Deliverability & Warm-Up</h3>
             </div>
-            <p class="mt-2 text-sm text-[#5d7183]">SPF/DKIM/DMARC, inbox rotation, gradual ramp-up, reputation monitoring।</p>
+            <p class="mt-2 text-sm text-[#5d7183]">
+              SPF/DKIM/DMARC, sub-domains & tracking, inbox rotation, gradual ramp, seed tests and spam checks.
+            </p>
           </div>
 
           <!-- Sequencing -->
@@ -76,16 +88,18 @@
               <div class="h-10 w-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
                 <svg class="h-5 w-5 text-emerald-700 dark:text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 22v-7a4 4 0 0 1 4-4h7"/><path d="M7 14h.01"/><path d="M17 2v7a4 4 0 0 1-4 4H6"/></svg>
               </div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Sequencing & Follow-ups</h3>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Sequencing & Follow-Ups</h3>
             </div>
-            <p class="mt-2 text-sm text-[#5d7183]">4–6 step sequences, smart delays, auto-stop on reply, multichannel (LinkedIn/phone)।</p>
+            <p class="mt-2 text-sm text-[#5d7183]">
+              4–6 step cadences, smart delays, auto-pause on reply, and optional LinkedIn/phone touches.
+            </p>
           </div>
         </div>
 
         <!-- Compliance / CRM -->
         <ul class="mt-6 text-sm text-[#5d7183] space-y-2">
-          <li>• HubSpot/Pipedrive sync, deal stages, tasks</li>
-          <li>• Unsubscribe/suppression & consent logs (CAN-SPAM/GDPR)</li>
+          <li>• Native sync with HubSpot, Pipedrive, or Salesforce—stages, tasks, and notes.</li>
+          <li>• Consent management, easy unsubscribe, and global suppression lists.</li>
         </ul>
       </div>
 
@@ -120,7 +134,7 @@
     <!-- CTA Row -->
     <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeIn delay-300">
       <a href="#book-demo" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-[#2ca8d9] px-6 py-3 text-white font-semibold shadow hover:bg-sky-600 transition">
-        Book 15-min Strategy Call
+        Book a 15-Minute Strategy Call
       </a>
       <a href="#samples" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-6 py-3 text-gray-800 dark:text-gray-100 font-semibold hover:shadow-md transition">
         See Cold Email Samples

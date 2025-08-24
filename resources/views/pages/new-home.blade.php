@@ -5,7 +5,8 @@
 
     @include('components.hero')
 
-    @include('components.testimonials')
+    @include('components.testimonials', ['testimonials' => $testimonials ?? []])
+
 
 
     <!-- Section Three Start -->
@@ -14,14 +15,10 @@
     @include('components.home-section-4')
     @include('components.home-section-5')
     @include('components.home-section-6')
-    @include('components.home-section-7')
+
     @include('components.home-section-8')
     @include('components.home-section-9')
-    @include('components.home-section-10')
-    @include('components.home-section-11')
-    @include('components.home-section-12')
-    @include('components.home-section-13')
-    @include('components.home-section-14')
+
     @include('components.home-section-15')
     @include('components.home-section-16')
 

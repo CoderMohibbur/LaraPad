@@ -1,188 +1,247 @@
-<!-- Section Six: Lead Gen & Cold Email Marketing -->
-<section class="relative py-16 overflow-hidden">
-  <!-- full-bleed subtle bg -->
-  <div aria-hidden="true"
-       class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen
-              bg-gradient-to-b from-sky-50 via-white to-teal-50
-              dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"></div>
-
-  <div class="relative max-w-screen-xl mx-auto px-4">
-    <!-- Heading -->
-    <div class="text-center max-w-3xl mx-auto">
-      <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-700 border-sky-200 bg-white/70 dark:bg-gray-900/60 dark:text-sky-300 dark:border-sky-900 animate-fadeIn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12H2"/><path d="M7 17l-5-5 5-5"/></svg>
-        B2B Growth
-      </span>
-      <h1 class="mt-4 text-[#0e7490] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight animate-fadeIn delay-100">
-        Lead Generation & Cold Email Marketing—Built to Convert
-      </h1>
-      <p class="mt-5 text-[#5d7183] dark:text-gray-300 text-lg md:text-xl animate-fadeIn delay-200">
-        Verified prospect lists, high-deliverability cold emails, and data-driven follow-ups to fill your pipeline—without guesswork.
-      </p>
-
-      <!-- KPI badges -->
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 animate-fadeIn delay-300">
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-sky-100 dark:border-gray-800 text-sm">Avg. <b>58% open</b> with warm-up</span>
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-teal-100 dark:border-gray-800 text-sm"><b>12–18%</b> reply on multi-step</span>
-        <span class="px-3 py-1 rounded-lg bg-white dark:bg-gray-900 border border-emerald-100 dark:border-gray-800 text-sm">CAN-SPAM/GDPR compliant</span>
-      </div>
-    </div>
-
-    <!-- Services Grid -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- 1. Prospect List Building -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-sky-100 dark:bg-sky-900/40 flex items-center justify-center">
-            <!-- icon: users -->
-            <svg class="h-5 w-5 text-sky-700 dark:text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Prospect List Building</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          ICP-matched leads with firmographic & technographic filters. Email verification to cut hard bounces.
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• Title, industry, headcount, tool-stack filters</li>
-          <li>• Multi-step validation (SMTP, MX, catch-all)</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">
-          Learn More
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <!-- 2. Cold Email Copy & Personalization -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp delay-100">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
-            <!-- icon: edit -->
-            <svg class="h-5 w-5 text-emerald-700 dark:text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M11 4H4a2 2 0 0 0-2 2v14l4-4h9a2 2 0 0 0 2-2V9"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Cold Email Copy & Personalization</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          First-line personalization, value-first angles, and objection-aware templates to spark replies.
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• Variants for roles (Founder/RevOps/Marketing)</li>
-          <li>• Snippets from LinkedIn/website signals</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">See Samples
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <!-- 3. Deliverability & Warm-Up -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp delay-200">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
-            <!-- icon: inbox -->
-            <svg class="h-5 w-5 text-amber-700 dark:text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 13h-6l-2 3h-4l-2-3H2"/><path d="M5 7h14l3 6v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7l3-6z"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Deliverability & Warm-Up</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          Domain setup (SPF, DKIM, DMARC), inbox rotation, daily ramp-up & reputation monitoring.
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• Dedicated domains & custom tracking</li>
-          <li>• Bounce, spam-word & sender-score checks</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">Improve Inbox Rate
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <!-- 4. Sequencing & Follow-ups -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-fuchsia-100 dark:bg-fuchsia-900/40 flex items-center justify-center">
-            <!-- icon: steps -->
-            <svg class="h-5 w-5 text-fuchsia-700 dark:text-fuchsia-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 22v-7a4 4 0 0 1 4-4h7"/><path d="M7 14h.01"/><path d="M17 2v7a4 4 0 0 1-4 4H6"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Sequencing & Follow-ups</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          4–6 step sequences with smart delays, bump emails, and multichannel options (LinkedIn, phone).
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• Time-zone aware scheduling</li>
-          <li>• Auto-stop on reply/meeting</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">Design My Sequence
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <!-- 5. A/B Testing & Optimization -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp delay-100">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center">
-            <!-- icon: split -->
-            <svg class="h-5 w-5 text-indigo-700 dark:text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M3 3l7 7"/><path d="M21 3l-7 7"/><path d="M12 10v11"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">A/B Testing & Optimization</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          Subject lines, openers, CTAs, send times—continuous tests to lift opens, replies & booked calls.
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• Variant rotation & auto-winner</li>
-          <li>• UTM + tracking for ROI</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">Start Testing
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <!-- 6. CRM & Compliance -->
-      <div class="group bg-white/90 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-fadeInUp delay-200">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center">
-            <!-- icon: shield/check -->
-            <svg class="h-5 w-5 text-teal-700 dark:text-teal-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">CRM Sync & Compliance</h3>
-        </div>
-        <p class="mt-3 text-[#5d7183] dark:text-gray-300">
-          HubSpot/Pipedrive sync, deal stages & tasks. Unsubscribe handling, suppression lists & consent logs.
-        </p>
-        <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>• CAN-SPAM, GDPR, CCPA ready</li>
-          <li>• Data retention & DNC logic</li>
-        </ul>
-        <button class="mt-5 inline-flex items-center gap-2 rounded-md bg-[#2ca8d9] text-white px-4 py-2 text-sm font-semibold hover:bg-sky-600 transition">Connect My CRM
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- CTA Row -->
-    <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeIn delay-300">
-      <a href="#book-demo" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-[#2ca8d9] px-6 py-3 text-white font-semibold shadow hover:bg-sky-600 transition">
-        Book 15-min Strategy Call
-      </a>
-      <a href="#samples" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-6 py-3 text-gray-800 dark:text-gray-100 font-semibold hover:shadow-md transition">
-        See Email Samples
-      </a>
-    </div>
+<!-- Section Seven (Merged: Lead Gen + Cold Email) -->
+<section id="section-seven" class="relative isolate overflow-hidden">
+  <!-- soft bg accents -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute -top-24 left-[8%] h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl"></div>
+    <div class="absolute -bottom-24 right-[8%] h-96 w-96 rounded-full bg-indigo-400/15 blur-3xl"></div>
   </div>
 
-  <!-- Animations -->
-  <style>
-    @keyframes fadeInUp {
-      0% {opacity:0; transform: translateY(18px)}
-      100% {opacity:1; transform: translateY(0)}
-    }
-    @keyframes fadeIn {
-      0% {opacity:0; transform: translateY(8px)}
-      100% {opacity:1; transform: translateY(0)}
-    }
-    .animate-fadeInUp { animation: fadeInUp 0.9s ease forwards }
-    .animate-fadeIn   { animation: fadeIn   0.8s ease forwards }
-    .delay-100 { animation-delay: .1s }
-    .delay-200 { animation-delay: .2s }
-    .delay-300 { animation-delay: .3s }
-  </style>
+  <div class="relative text-center py-14 px-5 md:px-8 max-w-7xl mx-auto" data-animate>
+    <!-- Title -->
+    <h2 class="reveal-up title-hero mx-auto max-w-5xl text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+      <span class="title-grad">Lead Generation</span>
+      <span class="mx-1 md:mx-2 text-slate-900 dark:text-white">&</span>
+      <span class="title-grad-alt">Cold Email Marketing</span>
+      <span class="title-underline" aria-hidden="true"></span>
+    </h2>
+
+    <!-- subtitle (merged copy) -->
+    <p class="reveal-up mt-4 text-base sm:text-lg text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
+      Verified prospect lists, deliverability‑first emails, and data‑driven sequences to fill your pipeline—without long contracts.
+    </p>
+
+    <!-- quick process chips -->
+    <ol class="reveal-up mt-6 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-gray-300">
+      <li class="chip">ICP & Offer Mapping</li>
+      <li class="chip">List Building + Enrichment</li>
+      <li class="chip">Deliverability Setup</li>
+      <li class="chip">Personalized Sequencing</li>
+      <li class="chip">A/B Testing & Scale</li>
+    </ol>
+
+    <!-- services grid (merged cards) -->
+    <div class="stagger mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Card -->
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-cyan-500/15 text-cyan-600 dark:text-cyan-400">
+            <!-- search -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/></svg>
+          </div>
+          <h3>ICP Research & Offer</h3>
+        </div>
+        <p class="card-text">Define ideal customers, map objections & build irresistible offers before sending the first email.</p>
+        <ul class="bullet">
+          <li>• Niche & intent signals</li>
+          <li>• Messaging pillars</li>
+          <li>• Objection map</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-indigo-500/15 text-indigo-600 dark:text-indigo-400">
+            <!-- list -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5h18M3 10h18M3 15h18M3 20h18"/></svg>
+          </div>
+          <h3>List Building & Enrichment</h3>
+        </div>
+        <p class="card-text">Clean, verified contacts enriched with role, tech stack, revenue & trigger events.</p>
+        <ul class="bullet">
+          <li>• Multi‑source enrichment</li>
+          <li>• Real‑time verification</li>
+          <li>• GDPR‑friendly filters</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+            <!-- shield -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Deliverability Setup</h3>
+        </div>
+        <p class="card-text">SPF, DKIM, DMARC, warm‑up & reputation guard so emails land in inboxes.</p>
+        <ul class="bullet">
+          <li>• Dedicated sending domains</li>
+          <li>• Warm‑up & rotation</li>
+          <li>• Reputation monitoring</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-pink-500/15 text-pink-600 dark:text-pink-400">
+            <!-- heart -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20l-7-7a5 5 0 017-7l0 0a5 5 0 017 7l-7 7z"/></svg>
+          </div>
+          <h3>Smart Personalization</h3>
+        </div>
+        <p class="card-text">1:1 hooks & scalable body variants that read human, not templated.</p>
+        <ul class="bullet">
+          <li>• Dynamic snippets</li>
+          <li>• Offer‑based branching</li>
+          <li>• Compliance‑friendly copy</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-amber-500/15 text-amber-600 dark:text-amber-400">
+            <!-- rows -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M5 6h14M5 18h14"/></svg>
+          </div>
+          <h3>Sequencing & A/B Testing</h3>
+        </div>
+        <p class="card-text">Timezone‑aware cadences, multi‑branch flows, and constant testing.</p>
+        <ul class="bullet">
+          <li>• Subject/CTA experiments</li>
+          <li>• Auto‑pause on reply</li>
+          <li>• Scale good variants</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon bg-purple-500/15 text-purple-600 dark:text-purple-400">
+            <!-- chart -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 13l3 3 7-7"/></svg>
+          </div>
+          <h3>Reporting & CRM Handoff</h3>
+        </div>
+        <p class="card-text">Clear dashboards with HubSpot, Salesforce & Pipedrive ready sync.</p>
+        <ul class="bullet">
+          <li>• Reply & meeting tracking</li>
+          <li>• SQL/MQL + stage tagging</li>
+          <li>• Seamless pipeline updates</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal-up mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#contact" class="ripple inline-flex items-center justify-center rounded-2xl bg-cyan-600 px-7 py-3 text-white font-semibold shadow-xl shadow-cyan-900/20 ring-1 ring-white/10 transition-transform hover:-translate-y-0.5 hover:bg-cyan-500">
+        Get a Free Lead Plan
+      </a>
+      <a href="#cases" class="ripple inline-flex items-center justify-center rounded-2xl bg-white/10 px-7 py-3 text-cyan-700 dark:text-cyan-300 font-semibold backdrop-blur border border-white/20 hover:bg-white/20 ring-1 ring-white/10">
+        See Cold Email Wins
+      </a>
+    </div>
+
+    <p class="reveal-up mt-3 text-xs text-slate-600 dark:text-gray-400">
+      SPF/DKIM • Dedicated Domains • Warmup • Reply Detection • CRM Sync
+    </p>
+  </div>
+
+  <!-- wave separator -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]" aria-hidden="true">
+    <svg class="block w-[200%] motion-safe:animate-[drift_20s_linear_infinite]" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGrad7_s7" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="rgba(45,122,184,0.25)"/>
+          <stop offset="100%" stop-color="rgba(45,122,184,0.0)"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#waveGrad7_s7)" d="M0,60L60,55C120,50,240,40,360,36C480,32,600,36,720,46C840,56,960,72,1080,70C1200,68,1320,52,1380,44L1440,36L1440,100L0,100Z"></path>
+    </svg>
+  </div>
 </section>
+
+<style>
+  /* Title aesthetics */
+  #section-seven .title-hero{position:relative;letter-spacing:-0.015em}
+  #section-seven .title-grad{
+    background-image: linear-gradient(92deg,#06b6d4 0%,#60a5fa 45%,#818cf8 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    background-size:200% auto;animation:shimmer 8s linear infinite;
+  }
+  #section-seven .title-grad-alt{
+    background-image: linear-gradient(92deg,#a78bfa 0%,#60a5fa 50%,#22d3ee 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    background-size:200% auto;animation:shimmer 8s linear infinite reverse;
+  }
+  #section-seven .title-underline{
+    display:block;height:10px;margin:.35rem auto 0;max-width:520px;
+    background:radial-gradient(48% 120% at 50% 50%, rgba(14,165,233,.25), rgba(14,165,233,0));
+    mask-image:linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  }
+
+  /* Chips */
+  #section-seven .chip{
+    border:1px solid rgba(148,163,184,.35); /* slate-400/35 */
+    background:rgba(255,255,255,.6);
+    padding:.25rem .75rem;border-radius:9999px;
+  }
+  .dark #section-seven .chip{
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.06);
+  }
+
+  /* Card */
+  #section-seven .card{
+    border:1px solid rgba(148,163,184,.35);
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(8px);
+    border-radius:1rem;padding:1.25rem;
+    box-shadow:0 6px 16px rgba(2,6,23,.05);
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .dark #section-seven .card{
+    border:1px solid rgba(255,255,255,.08);
+    background:linear-gradient(135deg, rgba(17,24,39,.9), rgba(30,41,59,.85));
+    box-shadow:0 6px 16px rgba(0,0,0,.5), inset 0 0 .5px rgba(255,255,255,.15);
+  }
+  #section-seven .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(59,130,246,.18)}
+  #section-seven .card-head{display:flex;align-items:center;gap:.75rem}
+  #section-seven .card h3{font-weight:600;color:#0f172a} /* slate-900 */
+  .dark #section-seven .card h3{color:#fff}
+  #section-seven .card-text{margin-top:.75rem;font-size:.9rem;color:#475569} /* slate-600 */
+  .dark #section-seven .card-text{color:#cbd5e1} /* slate-300 */
+  #section-seven .bullet{margin-top:.75rem;display:grid;gap:.25rem;font-size:.9rem;color:#334155}
+  .dark #section-seven .bullet{color:#cbd5e1}
+
+  /* Reveal + Ripple */
+  .reveal-up{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;will-change:transform,opacity}
+  .is-visible .reveal-up{opacity:1;transform:none}
+  .ripple{position:relative;overflow:hidden}
+  .ripple:after{content:'';position:absolute;inset:auto;width:0;height:0;border-radius:9999px;background:rgba(255,255,255,.35);transform:translate(-50%,-50%);pointer-events:none;opacity:0}
+  .ripple:active:after{left:var(--x);top:var(--y);opacity:1;width:200px;height:200px;transition:width .4s ease,height .4s ease,opacity .8s ease;opacity:0}
+
+  @keyframes shimmer{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+  @keyframes drift{0%{transform:translateX(0)}50%{transform:translateX(-25%)}100%{transform:translateX(0)}}
+</style>
+
+<script>
+  (function(){
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const root = document.querySelector('#section-seven [data-animate]');
+    if(root){
+      if(!prefersReduced){
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){ root.classList.add('is-visible'); io.unobserve(root); }
+          })
+        },{threshold:0.18});
+        io.observe(root);
+      } else { root.classList.add('is-visible'); }
+    }
+    // ripple coords
+    document.addEventListener('pointerdown',(e)=>{
+      const btn=e.target.closest('.ripple'); if(!btn) return;
+      const r=btn.getBoundingClientRect();
+      btn.style.setProperty('--x',(e.clientX-r.left)+'px');
+      btn.style.setProperty('--y',(e.clientY-r.top)+'px');
+    });
+  })();
+</script>

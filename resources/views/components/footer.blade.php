@@ -1,115 +1,102 @@
-<!-- Footer Top (Services, Logo, Free Tools) -->
-<section class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border-t border-gray-200 dark:border-gray-700">
-    <div class="max-w-screen-xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-3 gap-6 py-10">
-        <!-- Services -->
-        <div class="text-center lg:text-left">
-            <h2 class="text-xl font-bold text-gray-800 dark:text-white pb-4">Services</h2>
-            <ul>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">National SEO Services</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">Local SEO Services</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">E-Commerce SEO Services</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">PPC Management Services</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">Technical SEO Agency</a></li>
-            </ul>
-        </div>
+{{-- resources/views/components/layout/footer.blade.php --}}
+<footer class="relative isolate overflow-hidden text-slate-700 dark:text-slate-300">
+  <!-- glowing bg -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-cyan-50 dark:from-[#0b1220] dark:via-[#0c1527] dark:to-[#0e1729]"></div>
+    <div class="absolute -top-40 -left-40 h-[26rem] w-[26rem] rounded-full blur-3xl bg-gradient-to-tr from-sky-400/25 to-cyan-400/25 dark:from-sky-600/20 dark:to-cyan-500/20 animate-pulse"></div>
+    <div class="absolute -bottom-44 -right-48 h-[28rem] w-[28rem] rounded-full blur-3xl bg-gradient-to-tr from-fuchsia-300/25 to-indigo-300/25 dark:from-fuchsia-500/15 dark:to-indigo-500/15 animate-pulse"></div>
+  </div>
 
-        <!-- Logo Center -->
-        <div class="flex items-center justify-center">
-            <img class="w-[320px]" src="{{ asset('uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="KhalidIT Logo">
+  <!-- CTA Banner -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="rounded-3xl p-10 text-center shadow-xl ring-1 ring-slate-200/70 dark:ring-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-xl">
+        <h2 class="font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight
+                   [text-wrap:balance] drop-shadow-sm"
+            style="font-size:clamp(2rem,4.5vw,3.2rem);">
+          🚀 Scale Faster with <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 via-cyan-500 to-indigo-500">Lead Generation</span> & <span class="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-pink-500">Cold Email Marketing</span>
+        </h2>
+        <p class="mt-5 text-lg md:text-xl text-slate-600 dark:text-slate-300/90 max-w-3xl mx-auto">
+          From verified lists to inbox-ready domains, copy that sparks replies, and sequences that book calls — all under one roof.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="#"
+             class="relative inline-flex items-center gap-3 rounded-full px-8 py-3 text-lg font-semibold text-white shadow-lg
+                    bg-gradient-to-r from-sky-600 via-cyan-600 to-indigo-600
+                    hover:from-sky-500 hover:to-indigo-500 active:scale-[.97] transition">
+            <span>💡 Get Free Audit</span>
+          </a>
+          <a href="#"
+             class="inline-flex items-center gap-2 rounded-full px-8 py-3 text-lg font-semibold
+                    ring-2 ring-sky-400/50 hover:bg-sky-50 dark:hover:bg-sky-900/20 transition">
+            📅 Book Strategy Call
+          </a>
         </div>
-
-        <!-- Free Tools -->
-        <div class="text-center lg:text-left">
-            <h2 class="text-xl font-bold text-gray-800 dark:text-white pb-4">Free Tools</h2>
-            <ul>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">Schema Markup Generator</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">Local Search Results</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">Keyword Mixer</a></li>
-                <li class="py-1"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da] duration-300">All Tools</a></li>
-            </ul>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Footer Middle (Case Studies + Contact Info + Socials) -->
-<section class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border-t border-gray-200 dark:border-gray-700 ">
-    <div class="max-w-screen-xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-2 gap-6 py-10">
-        <!-- Case Studies -->
-        <div class="text-center lg:text-left">
-            <ul>
-                <li class="font-semibold text-gray-800 dark:text-white pb-4"><a href="#" class="hover:text-[#3db8da] ">Case Studies</a></li>
-                <li class="text-gray-700 dark:text-gray-300">
-                    Crystal clear communication is a part of our core values. We believe in efficient, effective, and collaborative communication.
-                </li>
-            </ul>
+  <!-- Core grid -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Brand -->
+      <div>
+        <img src="{{ asset('uploads/2025/04/khalidit-logo-removebg-preview.png') }}" alt="Khalid IT" class="w-52 drop-shadow mb-4">
+        <p class="text-sm text-slate-600 dark:text-slate-400 max-w-sm">
+          Helping B2B brands generate qualified leads and close deals with <b>Lead Generation</b> & <b>Cold Email Marketing</b>.
+        </p>
+      </div>
+
+      <!-- Lead Gen -->
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Lead Generation</h3>
+        <ul class="space-y-2 text-[15px]">
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">ICP & Market Research</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">B2B List Building</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">Data Enrichment</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">CRM Setup</a></li>
+        </ul>
+      </div>
+
+      <!-- Cold Email -->
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Cold Email</h3>
+        <ul class="space-y-2 text-[15px]">
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">Domain Warmup</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">Personalized Copy</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">Sequencing & A/B Test</a></li>
+          <li><a href="#" class="hover:text-sky-600 dark:hover:text-sky-400">Reply Handling</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Contact</h3>
+        <ul class="space-y-2 text-[15px]">
+          <li>📍 Jashore 7400, Bangladesh</li>
+          <li>✉️ <a href="mailto:khalid@khalidit.com" class="hover:text-sky-600">khalid@khalidit.com</a></li>
+          <li>📞 <a href="tel:+8801927802206" class="hover:text-sky-600">+880 1927-802206</a></li>
+        </ul>
+        <div class="mt-4 flex gap-4">
+          <a href="https://facebook.com/khaliditGlobal" target="_blank"><img src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg" class="w-6 hover:scale-110 transition" alt="Facebook"></a>
+          <a href="https://linkedin.com/company/khaliditglobal" target="_blank"><img src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg" class="w-6 hover:scale-110 transition" alt="LinkedIn"></a>
+          <a href="https://instagram.com/khaliditglobal" target="_blank"><img src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg" class="w-6 hover:scale-110 transition" alt="Instagram"></a>
         </div>
-
-        <!-- Contact Info -->
-        <div class="lg:border-l border-gray-200 dark:border-gray-700 lg:pl-10">
-            <ul class="space-y-4">
-                <li class="font-semibold text-gray-800 dark:text-white"><a href="#" class="hover:text-[#3db8da] ">Contact</a></li>
-                <li class="flex items-start">
-                    <img class="w-5 h-5 mr-3 mt-1" src="/icon/pin.webp" alt="Location">
-                    <span class="text-gray-700 dark:text-gray-300">997, Bashtola, Mollapara, Barandi, Jashore 7400</span>
-                </li>
-                <li class="flex items-start">
-                    <img class="w-5 h-4 mr-3 mt-1" src="/icon/envelope.webp" alt="Email">
-                    <a href="mailto:khalid@khalidit.com" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da]">khalid@khalidit.com</a>
-                </li>
-                <li class="flex items-start">
-                    <img class="w-5 h-5 mr-3 mt-1" src="/icon/phone.svg" alt="Phone">
-                    <a href="tel:+8801927802206" class="text-gray-700 dark:text-gray-300 hover:text-[#3db8da]">+880 1927-802206</a>
-                </li>
-            </ul>
-
-            <!-- Social Icons -->
-            <ul class="flex gap-3 pt-5 justify-center lg:justify-start">
-                <li><a href="https://www.facebook.com/khaliditGlobal/"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-facebook.svg" alt="Facebook"></a></li>
-                <li><a href="https://www.linkedin.com/company/khaliditglobal/"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-linkedin.svg" alt="LinkedIn"></a></li>
-                <li><a href="https://www.instagram.com/khaliditglobal/"><img class="w-[30px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/12/SB-social-instagram.svg" alt="Instagram"></a></li>
-            </ul>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-     <!-- Partners Section -->
-<section class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 ">
-    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row lg:flex-row justify-between items-center px-3 py-8 gap-6">
-        <!-- Left Side Logos -->
-        <div class="flex items-center gap-8">
-            <img class="w-[185px] h-[185px]" src="https://www.Searchbloom.com/wp-content/uploads/2022/07/Google-partner.svg" alt="Google Partner">
-            <div>
-                <img class="lg:w-[230px] h-[50px] lg:h-[65px] mb-4" src="https://www.Searchbloom.com/wp-content/uploads/2018/09/bing-ads.png" alt="Bing Ads">
-                <img class="lg:w-[230px] h-[50px] lg:h-[65px]" src="https://www.Searchbloom.com/wp-content/uploads/2018/09/Facebook_Marketing_Partner_badge.jpg" alt="Facebook Partner">
-            </div>
-        </div>
-
-        <!-- Right Side Logos -->
-        <div class="flex items-center gap-5">
-            <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/2-1_3e22b681da3d988514485b573402dbc9.png" alt="Award 1">
-            <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/3-1_2516d10f66bbb22b474d12b66803a57f.png" alt="Award 2">
-            <img class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]" src="https://www.Searchbloom.com/wp-content/uploads/2019/10/1-1.png" alt="Award 3">
-        </div>
+  <!-- Bottom -->
+  <div class="border-t border-slate-200/70 dark:border-slate-700/50">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <p class="text-xs text-slate-500 dark:text-slate-400">© 2025 Khalid IT — Lead Generation & Cold Email Marketing</p>
+      <ul class="flex flex-wrap gap-4 text-xs">
+        <li><a href="#" class="hover:text-sky-600">Company</a></li>
+        <li><a href="#" class="hover:text-sky-600">Case Studies</a></li>
+        <li><a href="#" class="hover:text-sky-600">Sitemap</a></li>
+        <li><a href="#" class="hover:text-sky-600">Terms</a></li>
+        <li><a href="#" class="hover:text-sky-600">Privacy</a></li>
+      </ul>
     </div>
-</section>
-
-<!-- Footer Bottom -->
-<section class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 ">
-    <div class="max-w-screen-xl mx-auto py-4 px-4 flex flex-col lg:flex-row items-center justify-between">
-        <!-- Left -->
-        <div class="order-2 lg:order-1 pt-4 lg:pt-0 text-center lg:text-left">
-            <p class="text-xs text-gray-700 dark:text-gray-400">2025© Khalid IT<br>All Rights Reserved.</p>
-        </div>
-
-        <!-- Right -->
-        <div class="order-1 lg:order-2 text-center lg:text-left">
-            <ul class="flex flex-col lg:flex-row gap-3">
-                <li><a class="text-xs text-gray-700 dark:text-gray-300 hover:text-[#3db8da] transition" href="#">Company</a></li>
-                <li><a class="text-xs text-gray-700 dark:text-gray-300 hover:text-[#3db8da] transition" href="#">Careers</a></li>
-                <li><a class="text-xs text-gray-700 dark:text-gray-300 hover:text-[#3db8da] transition" href="#">Site Map</a></li>
-                <li><a class="text-xs text-gray-700 dark:text-gray-300 hover:text-[#3db8da] transition" href="#">Terms & Conditions</a></li>
-                <li><a class="text-xs text-gray-700 dark:text-gray-300 hover:text-[#3db8da] transition" href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
+  </div>
+</footer>

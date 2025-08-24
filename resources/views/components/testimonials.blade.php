@@ -1,85 +1,260 @@
-{{-- resources/views/components/sections/testimonials.blade.php --}}
-<section
-  id="testimonials"
-  class="relative overflow-hidden w-full border-y border-gray-200/70 dark:border-gray-700/70 bg-gray-50 dark:bg-gray-900">
+@props(['testimonials' => []])
 
-  <!-- Background orbs -->
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden select-none">
-    <div class="absolute -top-24 -right-20 h-72 w-72 rounded-full bg-gradient-to-tr from-amber-300/20 to-rose-300/20 blur-3xl dark:from-amber-400/10 dark:to-rose-400/10"></div>
-    <div class="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-tr from-indigo-300/20 to-fuchsia-300/20 blur-3xl dark:from-indigo-400/10 dark:to-fuchsia-400/10"></div>
-  </div>
+@php
+    $uid = uniqid('tst_');
+@endphp
 
-  <!-- Slider viewport -->
-  <div class="relative max-w-[1600px] mx-auto">
-    <div class="relative overflow-hidden" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
-      <ul id="t-slider-track" class="flex will-change-transform select-none" style="transform: translate3d(0,0,0);">
+<section id="testimonials-{{ $uid }}" class="relative overflow-hidden w-full border border-y dark:border-gray-500 bg-gray-50 dark:bg-gray-900" tabindex="0">
+    <!-- Slider Track -->
+    <div id="testimonial-slider" class="slider-track flex transition-transform duration-700 ease-in-out" style="width: 200%;">
 
-        {{-- Fake demo data --}}
-        @php
-          $testimonials = [
-            [
-              'image' => '/uploads/2025/04/demo1.png',
-              'name' => 'John Doe',
-              'quote' => '“This team is absolutely <span class="bg-blue-100 dark:bg-blue-900/60 px-1 rounded">amazing</span> to work with.”',
-              'description' => 'They delivered our lead generation campaign flawlessly and boosted our cold email marketing ROI within weeks.',
-              'designation' => 'Marketing Director',
-              'company' => 'Growthify Ltd.',
-              'rating' => 5,
-            ],
-            [
-              'image' => '/uploads/2025/04/demo2.png',
-              'name' => 'Sarah Smith',
-              'quote' => '“Their cold email marketing <span class="bg-blue-100 dark:bg-blue-900/60 px-1 rounded">outperformed</span> all our expectations.”',
-              'description' => 'From copywriting to delivery, every detail was handled with care. Our sales pipeline doubled in two months.',
-              'designation' => 'CEO',
-              'company' => 'EmailBoost Co.',
-              'rating' => 5,
-            ],
-            [
-              'image' => '/uploads/2025/04/demo3.png',
-              'name' => 'David Lee',
-              'quote' => '“If you want to scale <span class="bg-blue-100 dark:bg-blue-900/60 px-1 rounded">lead generation</span>, this is the agency.”',
-              'description' => 'Super responsive, creative and data-driven. They helped us close enterprise clients quickly.',
-              'designation' => 'Head of Sales',
-              'company' => 'B2B Hub',
-              'rating' => 4,
-            ],
-          ];
-        @endphp
+        @forelse ($testimonials as $testimonial)
+            <div class="slide max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-8 px-3">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    @php $dynamicTestimonialImage = $testimonial->image; @endphp
 
-        @foreach ($testimonials as $t)
-        <li class="slide shrink-0 w-full">
-          <article class="mx-auto max-w-screen-xl px-3 md:px-6 lg:px-10 py-12 md:py-16 flex flex-col md:flex-row items-center justify-evenly gap-8">
-            <div class="w-full md:w-1/3 flex justify-center">
-              <figure class="relative group">
-                <img src="{{ asset($t['image']) }}" alt="{{ $t['name'] }}" loading="lazy" decoding="async"
-                     class="w-[320px] sm:w-[360px] h-[400px] sm:h-[420px] object-cover rounded-2xl shadow-[0_10px_26px_rgba(2,10,28,.12)] ring-1 ring-black/5 dark:ring-white/5 transition-transform duration-700 ease-out group-hover:scale-[1.02]" />
-              </figure>
+                    @if ($dynamicTestimonialImage && file_exists(public_path($dynamicTestimonialImage)))
+                        <img src="{{ asset($dynamicTestimonialImage) }}" alt="{{ $testimonial->name }}" class="w-[360px] h-[420px] object-cover">
+                    @else
+                        <img src="{{ asset('/uploads/2025/04/default-testimonial.png') }}" alt="{{ $testimonial->name }}" class="w-[360px] h-[420px] object-cover">
+                    @endif
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">{!! $testimonial->quote !!}</h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">{{ $testimonial->description }}</p>
+                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">{!! str_repeat('⭐', $testimonial->rating) !!} – {{ $testimonial->name }}</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                        {{ $testimonial->designation }}{{ $testimonial->company ? ', ' . $testimonial->company : '' }}
+                    </p>
+                </div>
+            </div>
+        @empty
+            {{-- Static Fallback Testimonials --}}
+            <div class="slide max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-8 px-3">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="{{ asset('/uploads/2025/04/mahamudul.png') }}" alt="Mohibbur Rohman" class="w-[360px] h-[420px] object-cover">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
+                        “The way they <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">pitch</span> their
+                        services is <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">exactly what you get</span>.”
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+                        Unlike most SEO companies, they set clear expectations and deliver on them. It’s rare to
+                        find such transparency and commitment.
+                    </p>
+                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mohibbur Rohman</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 italic">CEO & CTO, Japan Bangladesh IT</p>
+                </div>
             </div>
 
-            <div class="md:w-2/3 text-center md:text-left">
-              <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white leading-snug">{!! $t['quote'] !!}</h2>
-              <p class="mt-4 text-base md:text-lg text-gray-700 dark:text-gray-300">{{ $t['description'] }}</p>
-
-              <div class="mt-6 flex flex-col sm:flex-row items-center sm:items-end gap-2">
-                <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">{!! str_repeat('⭐', $t['rating']) !!}</p>
-                <span class="text-gray-400">•</span>
-                <p class="text-base font-medium text-gray-700 dark:text-gray-300">{{ $t['name'] }}</p>
-                <span class="text-gray-500/80 dark:text-gray-400/80 text-sm italic">{{ $t['designation'] }}, {{ $t['company'] }}</span>
-              </div>
+            <div class="slide max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-8 px-3">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="{{ asset('/uploads/2025/04/mahamudull.png') }}" alt="Mahamudul Islam" class="w-[360px] h-[420px] object-cover">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white leading-snug mb-4">
+                        “Their SEO approach <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">delivers results</span>
+                        and their communication is <span class="bg-blue-100 dark:bg-blue-800 px-1 rounded">transparent</span>.”
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+                        We saw results within weeks. The clarity, communication, and effectiveness of their work were top-notch.
+                    </p>
+                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">⭐⭐⭐⭐⭐ – Mahamudul Islam</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 italic">Developer, Khalid IT</p>
+                </div>
             </div>
-          </article>
-        </li>
-        @endforeach
-      </ul>
+        @endforelse
 
-      <!-- Controls -->
-      <div class="absolute inset-y-0 left-0 flex items-center">
-        <button id="t-prev" class="text-2xl sm:text-3xl bg-white/70 dark:bg-gray-700/70 hover:bg-white/90 dark:hover:bg-gray-700/90 text-gray-800 dark:text-white px-3 sm:px-4 py-2 rounded-r-xl shadow">❮</button>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center">
-        <button id="t-next" class="text-2xl sm:text-3xl bg-white/70 dark:bg-gray-700/70 hover:bg-white/90 dark:hover:bg-gray-700/90 text-gray-800 dark:text-white px-3 sm:px-4 py-2 rounded-l-xl shadow">❯</button>
-      </div>
     </div>
-  </div>
+
+    <!-- Controls (ভিজ্যুয়াল একদম অপরিবর্তিত) -->
+    <div class="absolute inset-y-0 left-0 flex items-center">
+        <button onclick="prevSlide_{{ $uid }}()"
+            class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-r shadow">❮</button>
+    </div>
+    <div class="absolute inset-y-0 right-0 flex items-center">
+        <button onclick="nextSlide_{{ $uid }}()"
+            class="text-3xl bg-white dark:bg-gray-700 bg-opacity-70 hover:bg-opacity-90 text-gray-800 dark:text-white px-4 py-2 rounded-l shadow">❯</button>
+    </div>
 </section>
+
+{{-- Slider logic (স্কোপড, কনফ্লিক্ট-ফ্রি) --}}
+<script>
+(() => {
+    const root = document.getElementById('testimonials-{{ $uid }}');
+    if (!root) return;
+
+    const track  = root.querySelector('.slider-track');
+    const slides = Array.from(root.querySelectorAll('.slide'));
+    const total  = slides.length;
+    if (total <= 1) return;
+
+    let index = 0;
+    let autoTimer = null;
+    const AUTO_MS = 6000;
+    let hovering = false;
+
+    function layout() {
+        const w = root.clientWidth;
+        slides.forEach(s => s.style.width = w + 'px');
+        track.style.width = (w * total) + 'px';
+        // animate=false on layout
+        go(index, false);
+    }
+
+    function go(i, animate = true) {
+        index = (i + total) % total;
+        track.style.transitionDuration = animate ? '700ms' : '0ms';
+        const offset = -index * root.clientWidth;
+        // GPU-accelerated translate
+        track.style.transform = `translate3d(${offset}px,0,0)`;
+    }
+
+    function next(){ go(index + 1); }
+    function prev(){ go(index - 1); }
+
+    function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(() => { if (!hovering) next(); }, AUTO_MS);
+    }
+    function stopAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = null;
+    }
+
+    // Hover pause/resume
+    root.addEventListener('mouseenter', () => hovering = true);
+    root.addEventListener('mouseleave', () => hovering = false);
+
+    // Touch swipe
+    let startX = 0, dx = 0;
+    track.addEventListener('touchstart', e => {
+        stopAuto();
+        startX = e.touches[0].clientX; dx = 0;
+    }, { passive: true });
+    track.addEventListener('touchmove', e => {
+        dx = e.touches[0].clientX - startX;
+    }, { passive: true });
+    track.addEventListener('touchend', () => {
+        if (Math.abs(dx) > 40) (dx < 0 ? next() : prev());
+        startAuto();
+    });
+
+    // Keyboard support
+    root.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft')  prev();
+    });
+
+    // Public API for this instance (buttons' onclick)
+    window['nextSlide_{{ $uid }}'] = () => { next(); stopAuto(); startAuto(); };
+    window['prevSlide_{{ $uid }}'] = () => { prev(); stopAuto(); startAuto(); };
+
+    // Init
+    window.addEventListener('resize', layout);
+    layout();
+    startAuto();
+})();
+</script>
+
+
+
+
+
+{{-- Slider logic scoped to this instance --}}
+<script>
+    (() => {
+        const root = document.getElementById('testimonials-{{ $uid }}');
+        if (!root) return;
+
+        const track = root.querySelector('.slider-track');
+        const slides = [...root.querySelectorAll('.slide')];
+        const dotsC = root.querySelector('#t-dots-{{ $uid }}');
+        const prevB = root.querySelector('[data-prev]');
+        const nextB = root.querySelector('[data-next]');
+
+        const total = slides.length;
+        if (total <= 1) return; // single slide → no slider
+
+        let index = 0,
+            auto, hovering = false;
+
+        function layout() {
+            const viewportW = root.clientWidth; // container width
+            slides.forEach(s => s.style.width = viewportW + 'px');
+            track.style.width = (viewportW * total) + 'px';
+            go(index, false);
+        }
+
+        function drawDots() {
+            dotsC.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'h-2.5 w-2.5 rounded-full transition ' + (i === index ? 'bg-sky-500' :
+                    'bg-slate-300 dark:bg-slate-600');
+                b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                b.addEventListener('click', () => go(i));
+                dotsC.appendChild(b);
+            }
+        }
+
+        function go(i, animate = true) {
+            index = (i + total) % total;
+            track.style.transitionDuration = animate ? '700ms' : '0ms';
+            const offset = -index * root.clientWidth;
+            track.style.transform = `translate3d(${offset}px,0,0)`;
+            drawDots();
+        }
+
+        function start() {
+            stop();
+            auto = setInterval(() => {
+                if (!hovering) go(index + 1);
+            }, 6000);
+        }
+
+        function stop() {
+            if (auto) clearInterval(auto);
+        }
+
+        // events
+        nextB.addEventListener('click', () => go(index + 1));
+        prevB.addEventListener('click', () => go(index - 1));
+        root.addEventListener('mouseenter', () => hovering = true);
+        root.addEventListener('mouseleave', () => hovering = false);
+
+        // touch swipe
+        let startX = 0,
+            dx = 0;
+        track.addEventListener('touchstart', e => {
+            stop();
+            startX = e.touches[0].clientX;
+            dx = 0;
+        }, {
+            passive: true
+        });
+        track.addEventListener('touchmove', e => {
+            dx = e.touches[0].clientX - startX;
+        }, {
+            passive: true
+        });
+        track.addEventListener('touchend', () => {
+            Math.abs(dx) > 40 ? go(index + (dx < 0 ? 1 : -1)) : start();
+        });
+
+        // keyboard
+        root.setAttribute('tabindex', '0');
+        root.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') go(index + 1);
+            if (e.key === 'ArrowLeft') go(index - 1);
+        });
+
+        // init
+        window.addEventListener('resize', layout);
+        layout();
+        drawDots();
+        start();
+    })();
+</script>

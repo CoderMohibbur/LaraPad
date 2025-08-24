@@ -1,388 +1,272 @@
-    <div id="leadgen-hero" x-data="leadGenHero()" x-init="init()"
-        class="relative overflow-hidden isolate bg-white dark:bg-[#0b1220]">
+<!-- ========== MOBILE-FIRST TUNING (keep once in layout – extends previous helpers) ========== -->
+<style>
+    /* Safe tap targets & container pads */
+    :root {
+        --pad-x: 1rem;
+        --pad-y: 1.25rem;
+    }
 
-        <!-- Decorative gradient blobs (GPU-accelerated) -->
-        <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-            <div class="absolute -top-24 -left-20 h-72 w-72 rounded-full blur-3xl opacity-40 dark:opacity-30"
-                style="background: radial-gradient(50% 50% at 50% 50%, rgba(59,130,246,.35) 0%, rgba(59,130,246,0) 70%);">
-            </div>
-            <div class="absolute -bottom-24 -right-20 h-80 w-80 rounded-full blur-3xl opacity-40 dark:opacity-30"
-                style="background: radial-gradient(50% 50% at 50% 50%, rgba(236,72,153,.35) 0%, rgba(236,72,153,0) 70%);">
-            </div>
+    @media (min-width:640px) {
+        :root {
+            --pad-x: 1.25rem;
+            --pad-y: 1.75rem;
+        }
+    }
+
+    @media (min-width:1024px) {
+        :root {
+            --pad-x: 1.5rem;
+            --pad-y: 2rem;
+        }
+    }
+
+    /* Mobile-friendly type (clamp) */
+    .clamp-display {
+        font-size: clamp(2rem, 6vw, 3.75rem);
+        line-height: 1.15;
+    }
+
+    .clamp-sub {
+        font-size: clamp(1rem, 2.9vw, 1.25rem);
+    }
+
+    /* Mobile reveals softer (shorter distance) */
+    @media (max-width: 640px) {
+        html.reveal-ready .will-reveal:not(.is-revealed) {
+            transform: translateY(16px) !important;
+        }
+
+        .reveal-stagger>* {
+            transition-delay: calc(var(--i, 0) * 70ms) !important;
+        }
+    }
+
+    /* Mobile blobs smaller */
+    @media (max-width: 640px) {
+        .blob-sm {
+            filter: blur(40px) !important;
+            opacity: .35 !important;
+        }
+    }
+
+    /* Floating cards: stack on mobile (no overflow) */
+    .float-card {
+        animation: float 7s ease-in-out infinite;
+    }
+
+    @media (max-width: 640px) {
+        .float-wrap {
+            position: static !important;
+        }
+
+        .float-card {
+            position: relative !important;
+            inset: auto !important;
+            margin-top: .75rem;
+            animation: none;
+        }
+    }
+
+    /* Prevent horizontal scroll due to transforms */
+    body {
+        overflow-x: hidden
+    }
+</style>
+
+<script>
+    /* Disable heavy effects on touch devices (mobile/tablet) */
+    (function() {
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (!isTouch) return;
+        // Disable parallax + tilt set earlier
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-parallax]').forEach(el => el.removeAttribute('data-parallax'));
+            document.querySelectorAll('[data-tilt]').forEach(el => el.removeAttribute('data-tilt'));
+        });
+    })();
+</script>
+
+<!-- ========== HERO (Mobile-First, Super Responsive) ========== -->
+<!-- HERO v4 — Lead Generation & Cold Email (Ultra‑Responsive + Motion‑Safe) -->
+<section id="hero" class="relative overflow-hidden">
+    <!-- background gradient + pattern -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10">
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-white via-white to-slate-50 dark:from-[#0b1220] dark:via-[#0b1220] dark:to-[#0b1220]">
         </div>
+        <!-- soft blobs -->
+        <div class="absolute -top-24 -left-28 h-72 w-72 rounded-full blur-3xl opacity-40"
+            style="background:radial-gradient(50% 50% at 50% 50%, rgba(96,165,250,.35) 0%, rgba(96,165,250,0) 70%);">
+        </div>
+        <div class="absolute -bottom-28 -right-32 h-80 w-80 rounded-full blur-3xl opacity-40"
+            style="background:radial-gradient(50% 50% at 50% 50%, rgba(236,72,153,.35) 0%, rgba(236,72,153,0) 70%);">
+        </div>
+        <!-- tiny grid pattern -->
+        <svg class="absolute inset-0 h-full w-full opacity-[0.08] dark:opacity-[0.12]"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="p" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width=".7" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#p)" />
+        </svg>
+    </div>
 
-        <!-- Container -->
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-14 md:pt-28">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-10">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <!-- Left: Copy -->
+            <div class="order-2 lg:order-2">
+                <p class="text-sm sm:text-base font-medium tracking-wide text-sky-600 dark:text-sky-400">Lead Generation
+                    & Cold Email</p>
+                <h1
+                    class="mt-2 font-extrabold tracking-tight text-slate-900 dark:text-white
+                   text-[clamp(2rem,6vw,3.75rem)] leading-[1.12]">
+                    Book More Meetings,
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-pink-500">
+                        Close More Pipeline
+                    </span>
+                </h1>
 
-                <!-- Left: Copy -->
-                <div class="lg:col-span-7 order-2 lg:order-1 reveal">
-                    <p
-                        class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold tracking-wide uppercase text-sky-600 dark:text-sky-300">
-                        <span class="i-dot w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-                        Lead Generation • Cold Email Marketing
-                    </p>
+                <p class="mt-4 text-[clamp(.98rem,2.5vw,1.125rem)] text-slate-600 dark:text-slate-300 max-w-xl">
+                    Targeted B2B lists + deliverability‑first sending + reply‑oriented copy.
+                    Clean setup (SPF/DKIM/DMARC, warm‑up, rotation) = real conversations.
+                </p>
 
-                    <h1
-                        class="mt-3 text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-slate-900 dark:text-white">
-                        Grow with <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-fuchsia-500">Targeted
-                            Leads</span>
-                        & Conversion‑Ready <span class="whitespace-nowrap">Cold Emails</span>
-                    </h1>
+                <!-- bullets -->
+                <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-[15px] text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Title •
+                        Geo • Tech‑stack targeting</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span>
+                        SPF/DKIM/DMARC + Warm‑up</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span>
+                        Multi‑inbox rotation & tracking</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Weekly
+                        reporting & handover</li>
+                </ul>
 
-                    <p class="mt-4 max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-300">
-                        We design <strong>ROI-first lead generation</strong> systems and run
-                        <strong>inbox‑safe cold email campaigns</strong> that open conversations with your best‑fit
-                        buyers.
-                        Zero fluff—just measurable pipeline growth.
-                    </p>
-
-                    <!-- Benefit bullets -->
-                    <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 dark:text-slate-200">
-                        <li class="flex items-start gap-3">
-                            <span
-                                class="mt-1 inline-block w-5 h-5 rounded-full bg-sky-500/10 ring-1 ring-sky-500/30 flex items-center justify-center"><svg
-                                    class="w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="m20 6-11 11-5-5" />
-                                </svg></span>
-                            High‑intent ICP lists (hand‑curated + verified)
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span
-                                class="mt-1 inline-block w-5 h-5 rounded-full bg-sky-500/10 ring-1 ring-sky-500/30 flex items-center justify-center"><svg
-                                    class="w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="m20 6-11 11-5-5" />
-                                </svg></span>
-                            Deliverability‑first cold email warmup & routing
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span
-                                class="mt-1 inline-block w-5 h-5 rounded-full bg-sky-500/10 ring-1 ring-sky-500/30 flex items-center justify-center"><svg
-                                    class="w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="m20 6-11 11-5-5" />
-                                </svg></span>
-                            Multi‑touch sequences that feel human
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span
-                                class="mt-1 inline-block w-5 h-5 rounded-full bg-sky-500/10 ring-1 ring-sky-500/30 flex items-center justify-center"><svg
-                                    class="w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="m20 6-11 11-5-5" />
-                                </svg></span>
-                            Transparent reporting: replies, meetings, revenue
-                        </li>
-                    </ul>
-
-                    <!-- CTAs -->
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="#lead-form" @mousemove="ripple($event)"
-                            class="ripple inline-flex items-center justify-center px-6 py-3 rounded-xl bg-sky-600 text-white font-semibold shadow hover:shadow-lg hover:bg-sky-700 transition focus:outline-none focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800">
-                            Get Your Free Action Plan
-                        </a>
-                        <a href="#how-it-works"
-                            class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
-                            See How It Works
-                        </a>
-                    </div>
-
-                    <!-- Trust strip -->
-                    <div class="mt-8 flex flex-wrap items-center gap-6 opacity-80">
-                        <img class="h-8 md:h-10" loading="lazy" src="/logos/top-seo.svg" alt="Top B2B Lead Gen" />
-                        <img class="h-8 md:h-10" loading="lazy" src="/logos/top-ppc.svg" alt="Email Marketing Award" />
-                        <img class="h-8 md:h-10" loading="lazy" src="/logos/singular.svg"
-                            alt="Trusted by 100+ brands" />
-                    </div>
+                <!-- CTAs -->
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="#get-sample"
+                        class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-white font-semibold
+                    bg-gradient-to-r from-sky-500 to-pink-500 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-400 ring-offset-white dark:ring-offset-[#0b1220]
+                    transition-shadow shadow-[0_10px_30px_rgba(59,130,246,.25)]">
+                        Get Sample Leads
+                    </a>
+                    <a href="#how-it-works"
+                        class="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold
+                    border border-slate-200 text-slate-800 hover:bg-white/60
+                    dark:border-slate-700 dark:text-slate-100 dark:hover:bg-white/5 transition">
+                        See How It Works
+                    </a>
                 </div>
 
-                <!-- Right: Carded form + mini feature chips -->
-                <div class="lg:col-span-5 order-1 lg:order-2 reveal">
-                    <div id="lead-form"
-                        class="relative rounded-2xl p-5 sm:p-6 lg:p-8 bg-gradient-to-b from-sky-500 to-sky-600 dark:from-sky-700 dark:to-sky-800 shadow-xl ring-1 ring-white/10">
-                        <h2 class="text-white font-semibold text-xl md:text-2xl text-center">Get a Free Lead Gen Plan
-                        </h2>
-                        <p class="mt-1 text-sky-100 text-center text-sm">We’ll audit ICP, messaging & deliverability
-                            within 24–48h.</p>
+                <!-- trust strip -->
+                <div class="mt-8 hidden sm:flex flex-wrap items-center gap-5 opacity-90">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/11/Searchbloom-Best-SEO-Services-Of-2024-2024-PNG.png"
+                        class="h-10 sm:h-12" alt="Award" loading="lazy">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2024/12/SEO-Singular.png"
+                        class="h-10 sm:h-12" alt="Recognition" loading="lazy">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2020/07/top-seo-companies.svg"
+                        class="h-8 sm:h-10" alt="Top SEO" loading="lazy">
+                    <img src="https://www.Searchbloom.com/wp-content/uploads/2020/07/top-ppc-agencies.svg"
+                        class="h-8 sm:h-10" alt="Top PPC" loading="lazy">
+                </div>
+            </div>
 
-                        <form class="mt-5 grid grid-cols-1 gap-3" @submit.prevent="submit()">
-                            <label class="block">
-                                <span class="text-white/90 text-sm font-medium">Your Name</span>
-                                <input type="text" x-model="form.name" required placeholder="Jane Miller"
-                                    class="mt-1 w-full rounded-lg border-0 px-4 py-2.5 text-slate-900 focus:ring-2 focus:ring-sky-300" />
-                            </label>
-                            <label class="block">
-                                <span class="text-white/90 text-sm font-medium">Work Email</span>
-                                <input type="email" x-model="form.email" required placeholder="jane@company.com"
-                                    class="mt-1 w-full rounded-lg border-0 px-4 py-2.5 text-slate-900 focus:ring-2 focus:ring-sky-300" />
-                            </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="block">
-                                    <span class="text-white/90 text-sm font-medium">Website</span>
-                                    <input type="url" x-model="form.site" placeholder="https://yourdomain.com"
-                                        class="mt-1 w-full rounded-lg border-0 px-4 py-2.5 text-slate-900 focus:ring-2 focus:ring-sky-300" />
-                                </label>
-                                <label class="block">
-                                    <span class="text-white/90 text-sm font-medium">Monthly Lead Goal</span>
-                                    <input type="number" min="1" x-model="form.goal" placeholder="50"
-                                        class="mt-1 w-full rounded-lg border-0 px-4 py-2.5 text-slate-900 focus:ring-2 focus:ring-sky-300" />
-                                </label>
+            <!-- Right: Visual (mobile-first stack, desktop collage) -->
+            <div class="order-2 lg:order-2">
+                <div class="relative">
+                    <!-- base mock -->
+                    <div
+                        class="rounded-[18px] bg-white/85 dark:bg-white/5 backdrop-blur ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"
+                            alt="Campaign dashboard" fetchpriority="high" sizes="(max-width: 640px) 100vw, 600px"
+                            class="w-full aspect-[4/3] sm:aspect-video object-cover motion-safe:animate-hero-zoom">
+                    </div>
+
+                    <!-- floating cards (stack on mobile) -->
+                    <div class="mt-3 hidden sm:block">
+                        <!-- ICP -->
+                        <div
+                            class="rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg p-4 bg-white/90 dark:bg-[#0b1220]/85 backdrop-blur
+                        sm:absolute sm:-bottom-8 sm:-left-6 sm:w-64 motion-safe:animate-float">
+                            <div class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">ICP Profile</div>
+                            <div class="text-xs text-slate-700 dark:text-slate-300 space-y-1">
+                                <div class="flex justify-between"><span>Title</span><span>Head of Growth</span></div>
+                                <div class="flex justify-between"><span>Industry</span><span>SaaS</span></div>
+                                <div class="flex justify-between"><span>Region</span><span>US</span></div>
                             </div>
-                            <label class="block">
-                                <span class="text-white/90 text-sm font-medium">Ideal Customer Profile</span>
-                                <textarea rows="3" x-model="form.icp" placeholder="Industry, title, geo, ACV…"
-                                    class="mt-1 w-full rounded-lg border-0 px-4 py-2.5 text-slate-900 focus:ring-2 focus:ring-sky-300"></textarea>
-                            </label>
-
-                            <button type="submit" @mousemove="ripple($event)" :disabled="submitting"
-                                class="ripple mt-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow hover:shadow-lg hover:bg-slate-50 transition disabled:opacity-60">
-                                <svg x-show="!submitting" class="w-5" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M22 2L11 13" />
-                                    <path d="M22 2l-7 20-4-9-9-4 20-7Z" />
-                                </svg>
-                                <svg x-show="submitting" class="w-5 animate-spin" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10" class="opacity-25" />
-                                    <path d="M4 12a8 8 0 0 1 8-8" />
-                                </svg>
-                                <span x-text="submitting ? 'Sending…' : 'Send My Plan'"></span>
-                            </button>
-                            <p class="text-xs text-sky-100/90 text-center">We hate spam. Unsubscribe anytime.</p>
-                        </form>
-
-                        
-                        <!-- Floating chips (slightly shifted; no overlap; non-interactive) -->
-                        <div class="hidden md:block pointer-events-none select-none" aria-hidden="true">
-                            <div class="floating-chip -left-20 top-[22%]">Lead Quality ↑</div>
-                            <div class="floating-chip -right-20 top-[12%]">Open Rate 60%+</div>
-                            <div class="floating-chip -right-20 bottom-[18%]">Reply Rate 8–15%</div>
                         </div>
 
-                    </div>
-
-                    <!-- Two feature cards to match the reference image -->
-                    <div class="mt-6 grid grid-cols-2 gap-4">
-                        <article
-                            class="rounded-2xl bg-white dark:bg-slate-900 shadow ring-1 ring-slate-200/70 dark:ring-slate-800/70 p-4 reveal">
-                            <h3 class="text-xs font-bold text-sky-600">LEAD</h3>
-                            <h4 class="text-lg font-extrabold text-slate-900 dark:text-white">GENERATION</h4>
-                            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Find & prioritize perfect
-                                prospects. Grow faster with intent‑driven lists.</p>
-                        </article>
-                        <article
-                            class="rounded-2xl bg-white dark:bg-slate-900 shadow ring-1 ring-slate-200/70 dark:ring-slate-800/70 p-4 reveal delay-200">
-                            <h3 class="text-xs font-bold text-slate-900 dark:text-white">COLD EMAIL</h3>
-                            <h4 class="text-lg font-extrabold text-amber-500">MARKETING</h4>
-                            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Reach decision‑makers directly.
-                                Generate qualified meetings.</p>
-                        </article>
+                        <!-- Inbox -->
+                        <div
+                            class="rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg p-4 bg-white/90 dark:bg-[#0b1220]/85 backdrop-blur
+                        sm:absolute sm:-top-6 sm:-right-6 sm:w-64 mt-3 sm:mt-0 motion-safe:animate-float2">
+                            <div class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Inbox Health
+                            </div>
+                            <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1">
+                                <li class="flex items-center gap-2"><span
+                                        class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> SPF/DKIM/DMARC</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Warm‑up Active</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Rotation On</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
-        <!-- How it works (SEO content fold) -->
-        <div id="how-it-works" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
-            <div class="mt-4 grid md:grid-cols-3 gap-6">
-                <div class="step reveal">
-                    <div class="step-num">1</div>
-                    <h3 class="step-title">ICP & Data Enrichment</h3>
-                    <p class="step-text">We profile your ideal buyers, then enrich with verified emails, firmographics,
-                        tech‑stack and triggers.</p>
-                </div>
-                <div class="step reveal delay-150">
-                    <div class="step-num">2</div>
-                    <h3 class="step-title">Deliverability & Warmup</h3>
-                    <p class="step-text">Custom domains, DNS (SPF, DKIM, DMARC), rotation & warmup to land in
-                        Primary—never spam.</p>
-                </div>
-                <div class="step reveal delay-300">
-                    <div class="step-num">3</div>
-                    <h3 class="step-title">Human‑First Sequencing</h3>
-                    <p class="step-text">Short, relevant, value‑led emails + soft CTAs. Multithreaded follow‑ups that
-                        feel like real people.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Minimal CSS for animation + ripple (inline for speed) -->
-        <style>
-            #leadgen-hero .reveal {
-                opacity: 0;
-                transform: translateY(14px);
-                will-change: transform, opacity
-            }
-
-            #leadgen-hero .reveal.show {
-                opacity: 1;
-                transform: none;
-                transition: all .7s cubic-bezier(.21, 1, .21, 1)
-            }
-
-            #leadgen-hero .reveal.delay-150 {
-                transition-delay: .15s
-            }
-
-            #leadgen-hero .reveal.delay-200 {
-                transition-delay: .2s
-            }
-
-            #leadgen-hero .reveal.delay-300 {
-                transition-delay: .3s
-            }
-
-            .floating-chip {
-                position: absolute;
-                background: rgba(255, 255, 255, .9);
-                color: #0f172a;
-                padding: .5rem .7rem;
-                border-radius: 9999px;
-                box-shadow: 0 10px 25px rgba(2, 10, 28, .15);
-                font-size: .75rem;
-                font-weight: 700
-            }
-
-            @media (prefers-color-scheme:dark) {
-                .floating-chip {
-                    background: rgba(15, 23, 42, .85);
-                    color: #e2e8f0
-                }
-            }
-
-            .step {
-                border-radius: 1rem;
-                padding: 1rem;
-                background: linear-gradient(180deg, rgba(241, 245, 249, .7), rgba(241, 245, 249, 0));
-                border: 1px solid rgba(203, 213, 225, .6)
-            }
-
-            .dark .step {
-                background: linear-gradient(180deg, rgba(15, 23, 42, .55), rgba(15, 23, 42, 0));
-                border-color: rgba(51, 65, 85, .6)
-            }
-
-            .step-num {
-                width: 2rem;
-                height: 2rem;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 9999px;
-                background: rgba(56, 189, 248, .15);
-                color: #0369a1;
-                font-weight: 800
-            }
-
-            .step-title {
-                margin-top: .6rem;
-                font-weight: 800;
-                color: #0f172a
-            }
-
-            .dark .step-title {
-                color: #fff
-            }
-
-            .step-text {
-                margin-top: .25rem;
-                color: #334155
-            }
-
-            .dark .step-text {
-                color: #cbd5e1
-            }
-
-            .ripple {
-                position: relative;
-                overflow: hidden
-            }
-
-            .ripple:after {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-radius: 9999px;
-                background: rgba(255, 255, 255, .35);
-                transform: translate(-50%, -50%);
-                pointer-events: none;
-                opacity: 0
-            }
-
-            .ripple.active:after {
-                opacity: 1;
-                width: 220px;
-                height: 220px;
-                transition: width .45s ease, height .45s ease, opacity .8s ease;
-                opacity: 0
-            }
-        </style>
-
-        <!-- Alpine component -->
-        <script>
-            function leadGenHero() {
-                return {
-                    submitting: false,
-                    form: {
-                        name: '',
-                        email: '',
-                        site: '',
-                        goal: '',
-                        icp: ''
-                    },
-                    init() {
-                        const obs = new IntersectionObserver((ents) => {
-                            ents.forEach(e => {
-                                if (e.isIntersecting) {
-                                    e.target.classList.add('show');
-                                    obs.unobserve(e.target);
-                                }
-                            });
-                        }, {
-                            threshold: .16
-                        });
-                        document.querySelectorAll('#leadgen-hero .reveal').forEach(el => obs.observe(el));
-                    },
-                    ripple(e) {
-                        const t = e.currentTarget;
-                        const r = t.getBoundingClientRect();
-                        t.style.setProperty('--x', (e.clientX - r.left) + 'px');
-                        t.style.setProperty('--y', (e.clientY - r.top) + 'px');
-                        t.classList.remove('active');
-                        void t.offsetWidth;
-                        t.classList.add('active');
-                    },
-                    async submit() {
-                        this.submitting = true; // TODO: wire to backend or Livewire/Axios
-                        await new Promise(res => setTimeout(res, 900));
-                        this.submitting = false;
-                        alert('Thanks! We\'ll send your free plan shortly.');
-                    }
-                }
-            }
-        </script>
-
-        <!-- SEO: JSON-LD for FAQ (inline, adjust Q/A as needed) -->
-        <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is lead generation?",
-        "acceptedAnswer": {"@type": "Answer","text": "Lead generation is the process of identifying and qualifying potential buyers for your product or service. We focus on ICP definition, data enrichment and compliant outreach to book meetings."}
-      },
-      {
-        "@type": "Question",
-        "name": "Is cold email marketing legal and safe?",
-        "acceptedAnswer": {"@type": "Answer","text": "Yes, when done with consent best-practices (legitimate interest, opt-outs) and strong deliverability (SPF/DKIM/DMARC, warmup, rotation). Our emails are short, relevant and respectful."}
-      }
-    ]
-  }
-  </script>
     </div>
+
+    <!-- subtle divider -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-4">
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent dark:via-slate-800">
+        </div>
+    </div>
+</section>
+
+<!-- Minimal CSS animations (motion-safe) -->
+<style>
+    @media (prefers-reduced-motion: no-preference) {
+        .motion-safe\:animate-hero-zoom {
+            animation: heroZoom 14s ease-in-out both
+        }
+
+        @keyframes heroZoom {
+            0% {
+                transform: scale(1.02)
+            }
+
+            50% {
+                transform: scale(1.06)
+            }
+
+            100% {
+                transform: scale(1.02)
+            }
+        }
+
+        .motion-safe\:animate-float {
+            animation: float 7.2s ease-in-out infinite
+        }
+
+        .motion-safe\:animate-float2 {
+            animation: float 6.4s ease-in-out infinite
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-7px)
+            }
+        }
+    }
+</style>
