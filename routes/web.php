@@ -45,6 +45,9 @@ Route::prefix('admin/pages')->middleware('auth')->group(function () {
 
 Route::get('/', [TestimonialController::class, 'show'])->name('home');
 
+Route::get('/services', function () {
+    return view('pages.services');
+});
 Route::get('/contact', function () {
     return view('pages.contact');
 });
@@ -119,6 +122,10 @@ Route::get('/reviews', function () {
 
 Route::get('/team', function () {
     return view('pages.team');
+});
+
+Route::get('/about', function () {
+    return view('pages.about');
 });
 
 

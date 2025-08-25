@@ -3,8 +3,24 @@
      Fast, responsive, animated, and SEO-focused.
      Replace your old SEARCH ENGINE section with this. --}}
 
+    <!-- AOS (scroll animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 800,
+                easing: 'cubic-bezier(.2,.7,.2,1)',
+                once: true,
+                offset: 80
+            });
+        });
+    </script>
+
+
     @include('components.hero')
 
+    @include('components.new-testimonial')
     @include('components.testimonials', ['testimonials' => $testimonials ?? []])
 
 
@@ -22,7 +38,7 @@
     @include('components.home-section-15')
     @include('components.home-section-16')
 
-    <!-- Tiny ripple effect for buttons (optional) -->
+    {{-- <!-- Tiny ripple effect for buttons (optional) -->
     <style>
         .ripple {
             position: relative;
@@ -99,6 +115,6 @@
                 btn.style.setProperty('--y', (e.clientY - rect.top) + 'px');
             });
         })();
-    </script>
+    </script> --}}
 
 </x-guest-layout>

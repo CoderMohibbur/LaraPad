@@ -1,4 +1,5 @@
-<!-- Lead Gen & Cold Email Tools (Drop-in Replacement) -->
+
+<!-- Lead Gen & Cold Email Tools (Tailwind-only + AOS) -->
 <section class="relative py-16 overflow-hidden">
   <!-- full-bleed subtle bg -->
   <div aria-hidden="true"
@@ -9,13 +10,16 @@
   <div class="relative max-w-screen-xl mx-auto px-4">
     <!-- Heading -->
     <div class="text-center max-w-4xl mx-auto">
-      <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-700 border-sky-200 bg-white/70 dark:bg-gray-900/60 dark:text-sky-300 dark:border-sky-900 animate-fadeIn">
+      <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-700 border-sky-200 bg-white/70 dark:bg-gray-900/60 dark:text-sky-300 dark:border-sky-900"
+            data-aos="fade-up">
         Lead Gen • Cold Email
       </span>
-      <h1 class="mt-4 text-[#2ca8d9] text-3xl lg:text-5xl font-extrabold tracking-tight animate-fadeIn delay-100">
+      <h1 class="mt-4 text-[#2ca8d9] text-3xl lg:text-5xl font-extrabold tracking-tight"
+          data-aos="fade-up" data-aos-delay="100">
         Use These Free Lead Gen & Cold Email Tools
       </h1>
-      <p class="mt-6 text-[#5d7183] dark:text-gray-300 text-lg lg:text-2xl animate-fadeIn delay-200">
+      <p class="mt-6 text-[#5d7183] dark:text-gray-300 text-lg lg:text-2xl"
+         data-aos="fade-up" data-aos-delay="200">
         Save hours and boost reply rates—our team’s favorite free utilities for prospecting, personalization, deliverability & tracking.
       </p>
     </div>
@@ -23,10 +27,10 @@
     <!-- Tools Grid -->
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- 1: ICP & Persona Builder -->
-      <a href="#icp-builder" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp">
+      <a href="#icp-builder" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="0">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-sky-100 dark:bg-sky-900/40 flex items-center justify-center">
-            <!-- icon -->
             <svg class="h-6 w-6 text-sky-700 dark:text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
               <path d="M20 8v3"/><path d="M20 21v-6"/><path d="M17 12h6"/>
@@ -34,13 +38,14 @@
           </div>
           <div>
             <h2 class="text-2xl text-[#2ca8d9] font-semibold">ICP & Persona Builder</h2>
-            <p class="mt-2 text-[#828e99]">Define role, industry, headcount, tech-stack & pain points—export filters for list building.</p>
+            <p class="mt-2 text-[#828e99]">Define role, industry, headcount, tech‑stack & pain points—export filters for list building.</p>
           </div>
         </div>
       </a>
 
       <!-- 2: Bulk Email Verifier -->
-      <a href="#email-verifier" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-100">
+      <a href="#email-verifier" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="80">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-emerald-700 dark:text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -49,13 +54,14 @@
           </div>
           <div>
             <h2 class="text-2xl text-[#2ca8d9] font-semibold">Bulk Email Verifier</h2>
-            <p class="mt-2 text-[#828e99]">SMTP/MX checks, catch-all detection & dedupe to cut hard bounces before sending.</p>
+            <p class="mt-2 text-[#828e99]">SMTP/MX checks, catch‑all detection & dedupe to cut hard bounces before sending.</p>
           </div>
         </div>
       </a>
 
       <!-- 3: Warm-up Tracker -->
-      <a href="#warmup-tracker" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-200">
+      <a href="#warmup-tracker" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="160">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-amber-700 dark:text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -63,14 +69,15 @@
             </svg>
           </div>
           <div>
-            <h2 class="text-2xl text-[#2ca8d9] font-semibold">Mailbox Warm-up Tracker</h2>
+            <h2 class="text-2xl text-[#2ca8d9] font-semibold">Mailbox Warm‑up Tracker</h2>
             <p class="mt-2 text-[#828e99]">Daily ramp plan & reputation tracking to keep opens high and spam low.</p>
           </div>
         </div>
       </a>
 
       <!-- 4: Deliverability Audit -->
-      <a href="#deliverability-audit" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp">
+      <a href="#deliverability-audit" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="0">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-teal-700 dark:text-teal-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -85,7 +92,8 @@
       </a>
 
       <!-- 5: Subject Line A/B Tester -->
-      <a href="#subject-ab" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-100">
+      <a href="#subject-ab" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="80">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-indigo-700 dark:text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -94,13 +102,14 @@
           </div>
           <div>
             <h2 class="text-2xl text-[#2ca8d9] font-semibold">Subject Line A/B Tester</h2>
-            <p class="mt-2 text-[#828e99]">Score & compare open-rate potential; test length, sentiment & variables.</p>
+            <p class="mt-2 text-[#828e99]">Score & compare open‑rate potential; test length, sentiment & variables.</p>
           </div>
         </div>
       </a>
 
       <!-- 6: Sequence Planner -->
-      <a href="#sequence-planner" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-200">
+      <a href="#sequence-planner" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="160">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-fuchsia-100 dark:bg-fuchsia-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-fuchsia-700 dark:text-fuchsia-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -109,13 +118,14 @@
           </div>
           <div>
             <h2 class="text-2xl text-[#2ca8d9] font-semibold">Sequence Planner</h2>
-            <p class="mt-2 text-[#828e99]">Design 4–6 step sequences, smart delays, stop-on-reply & timezone scheduling.</p>
+            <p class="mt-2 text-[#828e99]">Design 4–6 step sequences, smart delays, stop‑on‑reply & timezone scheduling.</p>
           </div>
         </div>
       </a>
 
       <!-- 7: Personalization Tester -->
-      <a href="#personalization-tester" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp">
+      <a href="#personalization-tester" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="0">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-rose-700 dark:text-rose-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -124,13 +134,14 @@
           </div>
           <div>
             <h2 class="text-2xl text-[#2ca8d9] font-semibold">Personalization Tester</h2>
-            <p class="mt-2 text-[#828e99]">Preview merge-tags & first-line snippets pulled from LinkedIn/website data.</p>
+            <p class="mt-2 text-[#828e99]">Preview merge‑tags & first‑line snippets pulled from LinkedIn/website data.</p>
           </div>
         </div>
       </a>
 
       <!-- 8: UTM & Tracking Builder -->
-      <a href="#utm-builder" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-100">
+      <a href="#utm-builder" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="80">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-lime-100 dark:bg-lime-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-lime-700 dark:text-lime-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -145,7 +156,8 @@
       </a>
 
       <!-- 9: ROI & Meeting Calculator -->
-      <a href="#roi-calculator" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeInUp delay-200">
+      <a href="#roi-calculator" class="group rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900 p-6 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+         data-aos="fade-up" data-aos-delay="160">
         <div class="flex items-start gap-4">
           <div class="h-12 w-12 rounded-xl bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
             <svg class="h-6 w-6 text-purple-700 dark:text-purple-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -162,26 +174,18 @@
 
     <!-- Bottom Copy -->
     <div class="text-center mt-12">
-      <h2 class="py-4 text-[#2ca8d9] text-2xl lg:text-4xl font-bold">Want more tools to scale your outreach?</h2>
-      <p class="text-[#828e99]">Built for our internal team—now free for you. No sign-up required.</p>
+      <h2 class="py-4 text-[#2ca8d9] text-2xl lg:text-4xl font-bold" data-aos="fade-up">Want more tools to scale your outreach?</h2>
+      <p class="text-[#828e99]" data-aos="fade-up" data-aos-delay="80">Built for our internal team—now free for you. No sign‑up required.</p>
     </div>
 
     <!-- CTA -->
-    <div class="text-center pt-6">
+    <div class="text-center pt-6" data-aos="zoom-in" data-aos-delay="140">
       <a href="#free-tools"
-         class="inline-flex items-center gap-2 text-lg font-bold italic uppercase text-[#03b9f1] border-2 border-[#03b9f1] rounded px-6 py-3 hover:bg-[#03b9f1] hover:text-white transition-all duration-500">
+         class="inline-flex items-center gap-2 text-lg font-bold italic uppercase text-[#03b9f1] border-2 border-[#03b9f1] rounded px-6 py-3 transition-all duration-300
+                hover:bg-[#03b9f1] hover:text-white active:scale-95 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800">
         Get Free Toolkit
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
       </a>
     </div>
   </div>
-
-  <!-- Animations -->
-  <style>
-    @keyframes fadeInUp { 0% {opacity:0; transform: translateY(18px)} 100% {opacity:1; transform: translateY(0)} }
-    @keyframes fadeIn   { 0% {opacity:0; transform: translateY(8px)}  100% {opacity:1; transform: translateY(0)}  }
-    .animate-fadeInUp { animation: fadeInUp 0.9s ease forwards }
-    .animate-fadeIn   { animation: fadeIn   0.8s ease forwards }
-    .delay-100 { animation-delay: .1s } .delay-200 { animation-delay: .2s } .delay-300 { animation-delay: .3s }
-  </style>
 </section>

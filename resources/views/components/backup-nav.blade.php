@@ -26,54 +26,10 @@
 
                 <!-- Home -->
                 <a href="/" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Home</a>
-
-
                 <!-- Services -->
-                <div class="relative group/services">
-                    <button class="font-semibold flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400">
-                        Services
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                <a href="/services" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Services</a>
 
-                    <!-- Level 1 dropdown (only opens when Services hovered) -->
-                    <div
-                        class="absolute top-full left-0 bg-white dark:bg-gray-800 shadow-xl p-6 w-56 rounded-lg border border-gray-200 dark:border-gray-700
-           invisible opacity-0 transition duration-200 z-50 pointer-events-none
-           group-hover/services:visible group-hover/services:opacity-100 group-hover/services:pointer-events-auto">
-                        <h4 class="font-bold mb-2 text-blue-600 dark:text-blue-400">SEO Services</h4>
 
-                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                            <!-- Local SEO with its own group -->
-                            <li class="relative group/local">
-                                <a href="#"
-                                    class="hover:text-blue-600 dark:hover:text-blue-400 flex justify-between items-center">
-                                    Local SEO
-                                    <svg class="w-4 h-4 transition-transform group-hover/local:rotate-90" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-
-                                <!-- Level 2 submenu (opens only when Local SEO hovered) -->
-                                <ul
-                                    class="absolute top-0 left-full bg-white dark:bg-gray-800 shadow-lg p-4 w-56 border border-gray-200 dark:border-gray-700 text-sm
-                 invisible opacity-0 transition duration-200 z-50 pointer-events-none
-                 group-hover/local:visible group-hover/local:opacity-100 group-hover/local:pointer-events-auto">
-                                    <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">GMB
-                                            Optimization</a></li>
-                                    <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">Map Pack
-                                            Ranking</a></li>
-                                </ul>
-                            </li>
-
-                            <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">Ecommerce SEO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
 
                 {{-- <!-- Free Tools -->
@@ -103,6 +59,10 @@
                     </div>
                 </div> --}}
 
+
+
+                <!-- Blog -->
+                <a href="/blog" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
                 <!-- Company -->
                 <div class="relative group">
                     <button class="font-semibold flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400">
@@ -115,7 +75,7 @@
                         class="absolute top-full left-0 bg-white dark:bg-gray-800 shadow-xl p-6 w-56 rounded-lg border border-gray-200 dark:border-gray-700
                                 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200 z-50">
                         <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                            <li><a href="/" class="hover:text-blue-600 dark:hover:text-blue-400">About Us</a></li>
+
                             <li><a href="/awards" class="hover:text-blue-600 dark:hover:text-blue-400">Award</a></li>
                             <li><a href="/team" class="hover:text-blue-600 dark:hover:text-blue-400">Our Team</a></li>
                             <li><a href="/careers" class="hover:text-blue-600 dark:hover:text-blue-400">Careers</a></li>
@@ -130,11 +90,14 @@
                 </div>
 
 
+
+
+
+
+                <a href="/about" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">About Us</a>
+
                 <!-- Contact us -->
                 <a href="/contact" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Contact Us</a>
-
-                <!-- Blog -->
-                <a href="/blog" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
 
                 <!-- Free Action Plan -->
                 <a href="#"
@@ -160,8 +123,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="md:hidden hidden px-4 pb-4 bg-white dark:bg-gray-900 text-gray-800 dark:text-white"
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white dark:bg-gray-900 text-gray-800 dark:text-white"
             x-data="{ openServices: false, openLocal: false, openCompany: false }">
             <ul class="space-y-2">
 
@@ -177,8 +139,7 @@
                         <span>Services</span>
                         <svg class="w-5 h-5 transition-transform" :class="openServices ? 'rotate-180' : ''"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 9l-7 7-7-7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
 
