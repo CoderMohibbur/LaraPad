@@ -99,82 +99,58 @@
   </section>
 
   <!-- ====================== REVIEWS GRID ====================== -->
-  <section id="all-reviews" class="py-10 bg-white dark:bg-[#0b1220]">
-    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @php
-          $reviews = [
-            [
-              'rating' => '5.0',
-              'quote'  => 'Clear communication, fast iteration, and steady performance gains across campaigns.',
-              'role'   => 'Marketing Coordinator, Healthcare Provider'
-            ],
-            [
-              'rating' => '5.0',
-              'quote'  => 'Our partnership keeps growing—more qualified demos from targeted cold outreach.',
-              'role'   => 'Sales & Marketing Executive, Corporate Gifts'
-            ],
-            [
-              'rating' => '5.0',
-              'quote'  => 'They proactively follow up, align on ICP, and keep deliverability spotless.',
-              'role'   => 'National Sales Manager, CPG Brand'
-            ],
-            [
-              'rating' => '5.0',
-              'quote'  => 'They listened to concerns and refined sequences until replies felt human.',
-              'role'   => 'Marketing Manager, Beverage Retail'
-            ],
-            [
-              'rating' => '5.0',
-              'quote'  => 'Their PPC + email combo unlocked pipeline we could forecast with confidence.',
-              'role'   => 'Sr. BizDev Manager, Pharma'
-            ],
-            [
-              'rating' => '5.0',
-              'quote'  => 'SEO depth plus ethical outreach—most impressive mix we’ve worked with.',
-              'role'   => 'Field Marketing Manager, Software'
-            ],
-          ];
-        @endphp
+<section id="all-reviews" class="py-10 bg-white dark:bg-[#0b1220]">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        @foreach($reviews as $i => $r)
-          <article
-            class="glass border border-slate-200/60 dark:border-slate-700/50 rounded-2xl p-5
-                   shadow-[0_10px_40px_-10px_rgba(2,6,23,0.12)]
-                   hover:shadow-[0_15px_50px_-10px_rgba(2,6,23,0.25)]
-                   transition relative overflow-hidden"
-            data-aos="fade-up" data-aos-delay="{{ 60 + ($i*60) }}">
-            <!-- soft aura -->
-            <div class="pointer-events-none absolute -top-10 -right-10 w-44 h-44 rounded-full bg-cyan-400/20 blur-3xl animate-[floatY_6s_ease-in-out_infinite]"></div>
+      @foreach($reviews as $i => $r)
+        <article
+          class="glass border border-slate-200/60 dark:border-slate-700/50 rounded-2xl p-5
+                 shadow-[0_10px_40px_-10px_rgba(2,6,23,0.12)]
+                 hover:shadow-[0_15px_50px_-10px_rgba(2,6,23,0.25)]
+                 transition relative overflow-hidden"
+          data-aos="fade-up" data-aos-delay="{{ 60 + ($i*60) }}">
 
-            <div class="text-lg font-semibold text-slate-900 dark:text-white"> {{ $r['rating'] }}
-              <span class="text-amber-500">★★★★★</span>
-            </div>
-            <p class="mt-3 text-slate-700 dark:text-slate-300">“{{ $r['quote'] }}”</p>
-            <div class="mt-4 text-sm text-slate-500 dark:text-slate-400">{{ $r['role'] }}</div>
-            <div class="mt-3 text-sky-600 text-sm flex items-center gap-1">
-              <span>✔</span><span>Verified Review</span>
-            </div>
-          </article>
-        @endforeach
-      </div>
+          <!-- soft aura -->
+          <div class="pointer-events-none absolute -top-10 -right-10 w-44 h-44 rounded-full bg-cyan-400/20 blur-3xl animate-[floatY_6s_ease-in-out_infinite]"></div>
 
-      <!-- CTA -->
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5">
-        <p class="text-slate-600 dark:text-slate-300" data-aos="fade-right">
-          Want reviews with results? See how we run <strong>lead gen</strong> & <strong>cold email</strong> the right way.
-        </p>
-        <div class="flex gap-3" data-aos="fade-left">
-          <a href="/case-studies" class="px-5 py-2.5 rounded-lg font-semibold border-2 border-cyan-500 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-500 hover:text-white transition">
-            Read Case Studies
-          </a>
-          <a href="/contact" class="px-5 py-2.5 rounded-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 shadow-lg hover:shadow-xl transition">
-            Start a Project
-          </a>
-        </div>
+          <div class="text-lg font-semibold text-slate-900 dark:text-white">
+            {{ $r['rating'] }}
+            <span class="text-amber-500">★★★★★</span>
+          </div>
+
+          <p class="mt-3 text-slate-700 dark:text-slate-300">“{{ $r['quote'] }}”</p>
+
+          <div class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            {{ $r['role'] }}
+          </div>
+
+          <div class="mt-3 text-sky-600 text-sm flex items-center gap-1">
+            <span>✔</span>
+            <span>{{ $r['verified'] ?? 'Verified Review' }}</span>
+          </div>
+        </article>
+      @endforeach
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5">
+      <p class="text-slate-600 dark:text-slate-300" data-aos="fade-right">
+        Want reviews with results? See how we run <strong>lead gen</strong> & <strong>cold email</strong> the right way.
+      </p>
+      <div class="flex gap-3" data-aos="fade-left">
+        <a href="/case-studies" class="px-5 py-2.5 rounded-lg font-semibold border-2 border-cyan-500 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-500 hover:text-white transition">
+          Read Case Studies
+        </a>
+        <a href="/contact" class="px-5 py-2.5 rounded-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 shadow-lg hover:shadow-xl transition">
+          Start a Project
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ====================== JSON-LD (SEO) ====================== -->
   <script type="application/ld+json">

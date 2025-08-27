@@ -32,7 +32,7 @@
       <!-- Intro -->
       <header class="text-center space-y-6" data-aos="fade-up">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-          🟢 About <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">Khalid IT</span>
+          🟢 About <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">Khalid <span class="text-orange-400">IT</span></span>
         </h1>
         <p class="max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
           Khalid IT is a full-service digital agency helping businesses grow online through 
@@ -81,7 +81,7 @@
           <p class="text-slate-600 dark:text-slate-400">Happy Clients</p>
         </div>
         <div>
-          <p class="text-4xl font-extrabold text-sky-500">5+</p>
+          <p class="text-4xl font-extrabold text-sky-500">8+</p>
           <p class="text-slate-600 dark:text-slate-400">Years Experience</p>
         </div>
         <div>

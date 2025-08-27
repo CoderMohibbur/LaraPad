@@ -1,24 +1,29 @@
 <?php
 
-
-
+use Illuminate\Support\Facades\App;
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\TagController;
-use App\Http\Controllers\BlogController;
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AwardsController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageFileController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\GalleryItemController;
+use App\Http\Controllers\TeamSectionController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\PostRevisionController;
+use App\Http\Controllers\Admin\GeneralController;
+use App\Http\Controllers\PublicGalleryController;
 use App\Http\Controllers\Admin\ReadingSettingController;
 use App\Http\Controllers\Admin\WritingSettingController;
 use App\Http\Controllers\Admin\DiscussionSettingController;
@@ -52,11 +57,25 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::get('/awards', function () {
-    return view('pages.awards');
-});
+Route::get('/awards', [AwardsController::class, 'show'])->name('awards.show');
+
+Route::resource('/admin/awards', AwardsController::class)->except(['show']);
+
+Route::resource('/admin/reviews', ReviewsController::class)->except(['show']);
+Route::get('/reviews', [ReviewsController::class, 'show'])->name('reviews.show');
+
+Route::resource('/admin/team', TeamSectionController::class)->except(['show']);
+
+// Public Team page (এই পেজে pages.team রেন্ডার হবে)
+Route::get('/our-team', [TeamSectionController::class, 'showTeamPage'])->name('team.page');
 
 
+Route::resource('/admin/gallery-items', GalleryItemController::class)
+    ->parameters(['gallery-items' => 'gallery_item']);
+
+
+Route::get('/gallery-memory', [GalleryItemController::class, 'show'])
+    ->name('gallery.memory.show');
 
 
 // -------------------------------
@@ -115,10 +134,6 @@ Route::get('/member-info', function () {
     return view('pages.memberinfo');
 });
 
-
-Route::get('/reviews', function () {
-    return view('pages.reviews');
-});
 
 Route::get('/team', function () {
     return view('pages.team');
@@ -263,7 +278,7 @@ Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 // Route::get('admin/settings', [SettingController::class, 'index'])->name('settings.index')->middleware('role:Admin');
 // Route::post('admin/settings', [SettingController::class, 'store'])->name('settings.store')->middleware('role:Admin');
 Route::prefix('admin/settings')->middleware(['auth', 'role:Admin'])->group(function () {
-    Route::get('/', [App\Http\Controllers\Admin\GeneralController::class, 'general'])->name('settings.index');
-    Route::post('/', [App\Http\Controllers\Admin\GeneralController::class, 'store'])->name('settings.store');
+    Route::get('/', [GeneralController::class, 'general'])->name('settings.index');
+    Route::post('/', [GeneralController::class, 'store'])->name('settings.store');
 });
 // Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');

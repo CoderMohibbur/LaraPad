@@ -77,7 +77,8 @@
                         <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
 
                             <li><a href="/awards" class="hover:text-blue-600 dark:hover:text-blue-400">Award</a></li>
-                            <li><a href="/team" class="hover:text-blue-600 dark:hover:text-blue-400">Our Team</a></li>
+                            <li><a href="/our-team" class="hover:text-blue-600 dark:hover:text-blue-400">Our Team</a>
+                            </li>
                             <li><a href="/careers" class="hover:text-blue-600 dark:hover:text-blue-400">Careers</a></li>
                             <li><a href="/member-info" class="hover:text-blue-600 dark:hover:text-blue-400">Member
                                     Info</a></li>
@@ -132,53 +133,11 @@
                 <a href="/" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Home</a>
 
                 <!-- Services -->
-                <li class="border-b border-gray-200 dark:border-gray-800 py-2">
-                    <button type="button" class="w-full flex items-center justify-between font-semibold py-2"
-                        @click="openServices = !openServices" :aria-expanded="openServices.toString()"
-                        aria-controls="m-services">
-                        <span>Services</span>
-                        <svg class="w-5 h-5 transition-transform" :class="openServices ? 'rotate-180' : ''"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                <li><a href="/services"
+                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">Services</a></li>
 
-                    <div id="m-services" x-show="openServices" x-transition.opacity class="pl-3">
-                        <ul class="space-y-1 text-sm">
-
-                            <!-- Local SEO (has submenu) -->
-                            <li class="py-1">
-                                <button type="button"
-                                    class="w-full flex items-center justify-between hover:text-blue-600 dark:hover:text-blue-400"
-                                    @click="openLocal = !openLocal" :aria-expanded="openLocal.toString()"
-                                    aria-controls="m-local-seo">
-                                    <span>Local SEO</span>
-                                    <svg class="w-4 h-4 transition-transform" :class="openLocal ? 'rotate-90' : ''"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-
-                                <ul id="m-local-seo" x-show="openLocal" x-transition.opacity
-                                    class="mt-2 ml-3 space-y-1">
-                                    <li><a href="#"
-                                            class="block px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">GMB
-                                            Optimization</a></li>
-                                    <li><a href="#"
-                                            class="block px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">Map
-                                            Pack Ranking</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Ecommerce SEO -->
-                            <li class="py-1">
-                                <a href="#" class="block hover:text-blue-600 dark:hover:text-blue-400">Ecommerce
-                                    SEO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                <li><a href="/blog"
+                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">Blog</a></li>
 
                 <!-- Company -->
                 <li class="border-b border-gray-200 dark:border-gray-800 py-2">
@@ -188,14 +147,12 @@
                         <span>Company</span>
                         <svg class="w-5 h-5 transition-transform" :class="openCompany ? 'rotate-180' : ''"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 9l-7 7-7-7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
 
                     <div id="m-company" x-show="openCompany" x-transition.opacity class="pl-3">
                         <ul class="space-y-1 text-sm">
-                            <li><a href="/" class="block">About Us</a></li>
                             <li><a href="/awards" class="block">Award</a></li>
                             <li><a href="/team" class="block">Our Team</a></li>
                             <li><a href="/careers" class="block">Careers</a></li>
@@ -206,11 +163,15 @@
                 </li>
 
                 <!-- Others (simple links) -->
+                <li><a href="/about"
+                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">about</a>
+                </li>
+
                 <li><a href="/contact"
                         class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">Contact Us</a>
                 </li>
-                <li><a href="/blog"
-                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">Blog</a></li>
+
+
             </ul>
         </div>
 

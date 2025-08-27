@@ -171,6 +171,43 @@
             </li>
 
 
+            {{-- Awards --}}
+            <li>
+                <a href="/admin/awards"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <i data-lucide="award"></i>
+                    <span class="menu-text hidden ms-3">Awards</span>
+                </a>
+            </li>
+
+            {{-- Reviews --}}
+            <li>
+                <a href="/admin/reviews"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <i data-lucide="star"></i>
+                    <span class="menu-text hidden ms-3">Reviews</span>
+                </a>
+            </li>
+
+            {{-- Team --}}
+            <li>
+                <a href="/admin/team"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <i data-lucide="users"></i>
+                    <span class="menu-text hidden ms-3">Team</span>
+                </a>
+                </a>
+            </li>
+
+            {{-- gallery --}}
+            <li>
+                <a href="/admin/gallery-items"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <i data-lucide="image"></i>
+                    <span class="menu-text hidden ms-3">Gallery</span>
+                </a>
+
+            </li>
 
             {{-- Setting
             <li>

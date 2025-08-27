@@ -32,40 +32,48 @@
                     we’re proud to be trusted by businesses worldwide.
                 </p>
             </header>
-            {{-- কার্ড গ্রিড --}}
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7" data-aos="fade-up">
-                @foreach ($cards as $i => $a)
+                @foreach ([
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png', 'alt' => 'Clutch Global — B2B Lead Generation (Fall 2024)', 'label' => 'Clutch Global — B2B Lead Gen (Fall 2024)'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png', 'alt' => 'Clutch Global — Cold Email (Spring 2024)', 'label' => 'Clutch Global — Cold Email (Spring 2024)'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png', 'alt' => 'Clutch Top 1000 — 2023', 'label' => 'Clutch Top 1000 — 2023'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png', 'alt' => 'Clutch Global — Fall 2023', 'label' => 'Clutch Global — Fall 2023'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_fall_2024.png', 'alt' => 'Clutch Global — B2B Lead Generation (Fall 2024)', 'label' => 'Clutch Global — B2B Lead Gen (Fall 2024)'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_spring_2024.png', 'alt' => 'Clutch Global — Cold Email (Spring 2024)', 'label' => 'Clutch Global — Cold Email (Spring 2024)'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/clutch_1000_2023_award.png', 'alt' => 'Clutch Top 1000 — 2023', 'label' => 'Clutch Top 1000 — 2023'],
+        ['src' => 'https://www.Searchbloom.com/wp-content/uploads/2024/12/global_award_2023.png', 'alt' => 'Clutch Global — Fall 2023', 'label' => 'Clutch Global — Fall 2023'],
+    ] as $i => $a)
                     <div class="group relative overflow-hidden rounded-2xl border border-slate-200/70 dark:border-slate-700/60
-           bg-white/90 dark:bg-slate-900/80 backdrop-blur
-           ring-1 ring-black/5 dark:ring-white/5
-           shadow-sm hover:shadow-2xl hover:shadow-sky-500/10
-           transition-all duration-500
-           hover:-translate-y-1 hover:scale-[1.015]"
+               bg-white/90 dark:bg-slate-900/80 backdrop-blur
+               ring-1 ring-black/5 dark:ring-white/5
+               shadow-sm hover:shadow-2xl hover:shadow-sky-500/10
+               transition-all duration-500
+               hover:-translate-y-1 hover:scale-[1.015]"
                         data-aos="zoom-in" data-aos-delay="{{ $i * 60 }}">
-
                         {{-- shine swipe --}}
                         <div
                             class="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full
-                        transition-transform duration-700 ease-out
-                        bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-40">
+                    transition-transform duration-700 ease-out
+                    bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-40">
                         </div>
 
                         {{-- top image --}}
                         <div class="flex items-center h-auto lg:h-[250px] relative">
                             <img src="{{ $a['src'] }}" alt="{{ $a['alt'] }}"
                                 class="w-[200px] lg:w-full h-auto p-6 mx-auto
-                    transition-transform duration-500 group-hover:scale-105" />
+                      transition-transform duration-500 group-hover:scale-105" />
+                            {{-- subtle glow ring on hover --}}
                             <div
                                 class="pointer-events-none absolute inset-3 rounded-2xl
-                    ring-0 group-hover:ring-2 ring-sky-400/40 dark:ring-sky-500/30
-                    transition-all duration-500">
+                      ring-0 group-hover:ring-2 ring-sky-400/40 dark:ring-sky-500/30
+                      transition-all duration-500">
                             </div>
                         </div>
 
                         {{-- label --}}
                         <div
                             class="flex items-center justify-center h-[100px] border-t dark:border-gray-700
-                bg-gradient-to-b from-white/60 to-white/30 dark:from-slate-900/40 dark:to-slate-900/20">
+                 bg-gradient-to-b from-white/60 to-white/30 dark:from-slate-900/40 dark:to-slate-900/20">
                             <p
                                 class="text-base lg:text-xl font-semibold px-5 text-gray-800 dark:text-gray-200
                     transition-colors duration-300 group-hover:text-sky-600 dark:group-hover:text-sky-300">
@@ -76,9 +84,9 @@
                         {{-- corner badge accent --}}
                         <div
                             class="absolute right-3 top-3 px-2 py-1 rounded-full text-[10px] font-bold
-                bg-sky-100 text-sky-700 ring-1 ring-sky-300/40
-                dark:bg-sky-900/40 dark:text-sky-200 dark:ring-sky-400/30
-                opacity-0 group-hover:opacity-100 transition-opacity">
+                    bg-sky-100 text-sky-700 ring-1 ring-sky-300/40
+                    dark:bg-sky-900/40 dark:text-sky-200 dark:ring-sky-400/30
+                    opacity-0 group-hover:opacity-100 transition-opacity">
                             Verified
                         </div>
                     </div>
