@@ -560,7 +560,7 @@
             <div class="grid gap-8 lg:grid-cols-5">
                 <div class="lg:col-span-2" data-aos="fade-right">
                     <h3 class="text-2xl font-extrabold text-ink">Let’s Talk</h3>
-                    <p class="mt-2 text-muted">In a 15‑minute call, we’ll map a focused plan to get results fast with
+                    <p class="mt-2 text-muted ">In a 15‑minute call, we’ll map a focused plan to get results fast with
                         Lead Gen and Cold Email.</p>
                     <ul class="mt-4 text-muted space-y-1 text-sm">
                         <li>• Replies within ~24h</li>

@@ -101,7 +101,7 @@
                 <a href="/contact" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Contact Us</a>
 
                 <!-- Free Action Plan -->
-                <a href="#"
+                <a href="/contact"
                     class="ml-6 px-6 py-2 uppercase font-bold italic text-lg bg-white dark:bg-gray-900 text-[#ff5056] border-2 border-[#ff5056] rounded hover:text-white hover:bg-[#ff5056] transition duration-500 ease-in-out">
                     Free Action Plan
                 </a>

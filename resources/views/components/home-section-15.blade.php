@@ -180,7 +180,7 @@
 
     <!-- CTA -->
     <div class="text-center pt-6" data-aos="zoom-in" data-aos-delay="140">
-      <a href="#free-tools"
+      <a href="/contact"
          class="inline-flex items-center gap-2 text-lg font-bold italic uppercase text-[#03b9f1] border-2 border-[#03b9f1] rounded px-6 py-3 transition-all duration-300
                 hover:bg-[#03b9f1] hover:text-white active:scale-95 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800">
         Get Free Toolkit

@@ -68,8 +68,34 @@ class BlogController extends Controller
 
         return view('pages.blog-details', compact('post', 'relatedPosts', 'topics', 'comments'));
     }
+public function home()
+{
+    $latestPosts = Post::with(['author', 'tags'])
+        ->whereNotNull('published_at')
+        ->where('published_at', '<=', now())
+        ->latest('published_at')
+        ->take(3)
+        ->get();
 
+    if ($latestPosts->isEmpty()) {
+        $latestPosts = collect([
+            [
+                'title' => 'Cold Email Deliverability in 2025: DMARC, SPF, DKIM & The Inboxing Checklist',
+                'slug'  => 'cold-email-deliverability-2025',
+                'excerpt' => 'Stop landing in Promotions. Sender reputation, sub-domain strategy...',
+                'author'  => 'Ayesha Rahman',
+                'avatar'  => 'https://i.pravatar.cc/80?img=21',
+                'cover'   => 'https://images.pexels.com/photos/1181343/pexels-photo-1181343.jpeg',
+                'read'    => 7,
+                'date'    => '2025-08-10',
+                'tags'    => ['Deliverability','DMARC','Warm-up'],
+            ],
+        ]);
+    }
 
+    // এখানে তোমার হোম পেজের আসল blade দিন (যেটাতে includes আছে)
+    return view('home', ['latestPosts' => $latestPosts]);
+}
 
     public function category($slug)
     {

@@ -71,14 +71,14 @@
 
       <!-- CTAs -->
       <div class="mt-8 flex items-center justify-center gap-4">
-        <a href="#contact"
+        <a href="/contact"
            class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-white font-semibold shadow transition
                   hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 active:scale-95"
            data-aos="fade-up" data-aos-delay="240">
           Get a Free Proposal
         </a>
         <a href="#cases"
-           class="inline-flex items-center justify-center rounded-xl bg-slate-900/5 text-slate-900 border border-slate-900/10 px-6 py-3 font-semibold transition
+           class="hidden inline-flex items-center justify-center rounded-xl bg-slate-900/5 text-slate-900 border border-slate-900/10 px-6 py-3 font-semibold transition
                   hover:bg-slate-900/10 focus:outline-none focus:ring-4 focus:ring-slate-200
                   dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20 dark:focus:ring-white/30 active:scale-95"
            data-aos="fade-up" data-aos-delay="280">

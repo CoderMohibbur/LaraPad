@@ -66,7 +66,7 @@
                         class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-white font-semibold bg-gradient-to-r from-sky-500 to-pink-500 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-400 ring-offset-white dark:ring-offset-[#0b1220] transition-shadow shadow-[0_10px_30px_rgba(59,130,246,.25)]">
                         Get Sample Leads
                     </a>
-                    <a href="#how-it-works"
+                    <a href="/services#process"
                         class="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold border border-slate-200 text-slate-800 hover:bg-white/60 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-white/5 transition">
                         See How It Works
                     </a>

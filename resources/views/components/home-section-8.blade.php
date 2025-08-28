@@ -70,7 +70,7 @@
 
                     <div class="grow"></div>
 
-                    <a href="#contact"
+                    <a href="/contact"
                         class="inline-flex items-center gap-2 rounded-xl bg-[#2ca8d9] px-5 py-3 text-white font-extrabold
                     shadow-[0_10px_26px_rgba(44,168,217,.35)] transition
                     hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(44,168,217,.5)]

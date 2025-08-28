@@ -140,9 +140,9 @@
         Want reviews with results? See how we run <strong>lead gen</strong> & <strong>cold email</strong> the right way.
       </p>
       <div class="flex gap-3" data-aos="fade-left">
-        <a href="/case-studies" class="px-5 py-2.5 rounded-lg font-semibold border-2 border-cyan-500 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-500 hover:text-white transition">
+        {{-- <a href="/case-studies" class="px-5 py-2.5 rounded-lg font-semibold border-2 border-cyan-500 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-500 hover:text-white transition">
           Read Case Studies
-        </a>
+        </a> --}}
         <a href="/contact" class="px-5 py-2.5 rounded-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 shadow-lg hover:shadow-xl transition">
           Start a Project
         </a>

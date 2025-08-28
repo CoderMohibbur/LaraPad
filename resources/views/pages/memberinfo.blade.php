@@ -90,7 +90,7 @@
         <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-14 lg:py-20 grid lg:grid-cols-12 gap-10 items-center">
             <!-- Photo -->
             <div class="lg:col-span-4" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1200&auto=format&fit=crop"
+                <img src="{{asset('testimonial/user.png')}}"
                      alt="Head of Lead Generation & Cold Email"
                      class="w-full h-auto rounded-xl shadow-lg tilt">
             </div>

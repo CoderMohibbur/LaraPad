@@ -86,7 +86,7 @@
             </div>
 
             {{-- bullet columns: small hover polish --}}
-            <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {{-- <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
                 @php
                     $bulletsCol1 = [
                         'Top B2B Lead Generation Company — 2024',
@@ -118,7 +118,7 @@
                 @endphp
 
                 {{-- col 1 --}}
-                <div class="px-5 lg:pr-10" data-aos="fade-up">
+                {{-- <div class="px-5 lg:pr-10" data-aos="fade-up">
                     <h3 class="text-xl font-semibold pb-5 text-gray-800 dark:text-white">Clutch Awards</h3>
                     <ul>
                         @foreach ($bulletsCol1 as $b)
@@ -132,10 +132,10 @@
                             </li>
                         @endforeach
                     </ul>
-                </div>
+                </div> --}}
 
                 {{-- col 2 --}}
-                <div class="lg:border-l-2 px-5 lg:pl-5 lg:pr-10 border-[#ecf1f8]" data-aos="fade-up"
+                {{-- <div class="lg:border-l-2 px-5 lg:pl-5 lg:pr-10 border-[#ecf1f8]" data-aos="fade-up"
                     data-aos-delay="80">
                     <h3 class="text-xl font-semibold pb-5 text-gray-800 dark:text-white">More Awards</h3>
                     <ul>
@@ -150,10 +150,10 @@
                             </li>
                         @endforeach
                     </ul>
-                </div>
+                </div> --}}
 
                 {{-- col 3 --}}
-                <div class="border-l-2 pl-5 pr-10 border-[#ecf1f8]" data-aos="fade-up" data-aos-delay="160">
+                {{-- <div class="border-l-2 pl-5 pr-10 border-[#ecf1f8]" data-aos="fade-up" data-aos-delay="160">
                     <h3 class="text-xl font-semibold pb-5 text-gray-800 dark:text-white">Performance Highlights</h3>
                     <ul>
                         @foreach ($bulletsCol3 as $b)
@@ -167,8 +167,8 @@
                             </li>
                         @endforeach
                     </ul>
-                </div>
-            </div>
+                </div> --}}
+            </div> 
         </div>
     </section>
 

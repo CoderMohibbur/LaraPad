@@ -134,10 +134,10 @@
 
         <!-- CTA -->
         <div class="mt-8 flex flex-col sm:flex-row items-center gap-3" data-aos="fade-up">
-          <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#2ca8d9] text-white font-semibold shadow hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 active:scale-95">
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#2ca8d9] text-white font-semibold shadow hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 active:scale-95">
             Get a Lead Gen Plan
           </a>
-          <a href="#case-studies" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 font-semibold shadow ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg active:scale-95">
+          <a href="#case-studies" class=" hidden inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 font-semibold shadow ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg active:scale-95">
             See Cold Email Case Studies
           </a>
         </div>

@@ -177,12 +177,12 @@
 
     <!-- CTA -->
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="360">
-      <a href="#contact"
+      <a href="/contact"
          class="inline-flex items-center justify-center rounded-2xl bg-cyan-600 px-7 py-3 text-white font-semibold shadow-xl shadow-cyan-900/20 ring-1 ring-white/10 transition
                 hover:-translate-y-0.5 hover:bg-cyan-500 active:scale-95 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800">
         Show me my Lead Plan
       </a>
-      <a href="#cases"
+      <a href="/services#process"
          class="inline-flex items-center justify-center rounded-2xl bg-white/10 px-7 py-3 text-cyan-700 dark:text-cyan-300 font-semibold backdrop-blur border border-white/20 ring-1 ring-white/10 transition
                 hover:bg-white/20 active:scale-95">
         See what worked for others

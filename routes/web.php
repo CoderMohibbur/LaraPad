@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AwardsController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageFileController;
@@ -53,9 +54,13 @@ Route::get('/', [TestimonialController::class, 'show'])->name('home');
 Route::get('/services', function () {
     return view('pages.services');
 });
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+
+
+Route::get('contact',[ContactController::class,'show'])->name('contact.show');
+Route::post('/submit', [ContactController::class, 'submit'])
+    ->middleware(['throttle:submit'])
+    ->name('submit.submit');
+
 
 Route::get('/awards', [AwardsController::class, 'show'])->name('awards.show');
 

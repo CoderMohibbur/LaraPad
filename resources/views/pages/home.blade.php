@@ -20,7 +20,12 @@
     @include('components.home-section-9')
 
     @include('components.home-section-15')
-    @include('components.home-section-16')
+    @include('components.home-section-16', ['posts' => $latestPosts ?? []])
+    
+
+
+
+
 
     <!-- Tiny ripple effect for buttons (optional) -->
     <style>
