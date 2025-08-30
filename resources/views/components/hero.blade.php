@@ -1,4 +1,3 @@
-
 <!-- HERO — Tailwind only (no custom CSS) -->
 <section id="hero" class="relative overflow-hidden">
     <!-- background gradient + pattern -->
@@ -55,14 +54,18 @@
 
                 <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-[15px] text-slate-700 dark:text-slate-300"
                     data-aos="fade-up" data-aos-delay="220">
-                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Pin-point targeting (Title • Geo • Industry)</li>
-                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Perfect deliverability setup (SPF/DKIM/DMARC)</li>
-                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Multi-inbox rotation & human-like sending</li>
-                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Weekly updates & actionable insights</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Pin-point
+                        targeting (Title • Geo • Industry)</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Perfect
+                        deliverability setup (SPF/DKIM/DMARC)</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span>
+                        Multi-inbox rotation & human-like sending</li>
+                    <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Weekly
+                        updates & actionable insights</li>
                 </ul>
 
                 <div class="mt-6 flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="280">
-                    <a href="#get-sample"
+                    <a href="/contact"
                         class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-white font-semibold bg-gradient-to-r from-sky-500 to-pink-500 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-400 ring-offset-white dark:ring-offset-[#0b1220] transition-shadow shadow-[0_10px_30px_rgba(59,130,246,.25)]">
                         Get Sample Leads
                     </a>
@@ -92,8 +95,10 @@
                         class="rounded-[18px] bg-white/80 dark:bg-white/5 backdrop-blur ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"
                             alt="Campaign dashboard" fetchpriority="high" sizes="(max-width: 640px) 100vw, 600px"
-                            class="w-full aspect-[4/3] sm:aspect-video object-cover">
+                            class="w-full aspect-[4/3] sm:aspect-video object-cover"
+                            onerror="this.onerror=null;this.src='{{ asset('images/hero.png') }}';">
                     </div>
+
 
                     <!-- floating cards (appear with AOS; no custom keyframes) -->
                     <div class="hidden sm:block">

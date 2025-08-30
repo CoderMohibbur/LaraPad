@@ -100,11 +100,57 @@
                 <!-- Contact us -->
                 <a href="/contact" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400">Contact Us</a>
 
-                <!-- Free Action Plan -->
-                <a href="/contact"
-                    class="ml-6 px-6 py-2 uppercase font-bold italic text-lg bg-white dark:bg-gray-900 text-[#ff5056] border-2 border-[#ff5056] rounded hover:text-white hover:bg-[#ff5056] transition duration-500 ease-in-out">
-                    Free Action Plan
+                <a href="https://calendly.com/khalidmdop/15-minutes-free-consultation?back=1&month=2025-08"
+                    class="group relative inline-flex items-center justify-center px-8 py-3
+          rounded-2xl text-white font-extrabold tracking-wide overflow-hidden
+          focus:outline-none transition-all duration-500 ease-out">
+
+                    <!-- gradient background (same color both sides, blink color middle) -->
+                    <span
+                        class="absolute inset-0 rounded-2xl
+               bg-gradient-to-r from-violet-700 via-pink-500 to-violet-700
+               transition-all duration-500 ease-out
+               group-hover:scale-[1.03] group-hover:shadow-[0_12px_34px_-8px_rgba(236,72,153,.55)]"></span>
+
+                    <!-- cartoon blinking overlay (fast blink on middle color) -->
+                    <span
+                        class="absolute inset-0 rounded-2xl
+               bg-gradient-to-r from-violet-700 via-pink-500 to-violet-700
+               mix-blend-overlay opacity-55
+               animate-[cartoonBlink_1.2s_ease-in-out_infinite]"></span>
+
+                    <!-- hover-only shine streak -->
+                    <span class="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+                        <span
+                            class="absolute -left-1/3 top-0 h-full w-1/3
+                 translate-x-[-120%] skew-x-[-20deg]
+                 bg-white/40 opacity-0
+                 transition-transform duration-700 ease-out
+                 group-hover:translate-x-[260%] group-hover:opacity-90"></span>
+                    </span>
+
+                    <span class="relative z-10 drop-shadow-lg">Free Consultation</span>
                 </a>
+
+                <style>
+                    @keyframes cartoonBlink {
+
+                        0%,
+                        100% {
+                            opacity: .35;
+                            filter: brightness(1)
+                        }
+
+                        50% {
+                            opacity: .95;
+                            filter: brightness(1.35) saturate(1.3)
+                        }
+                    }
+                </style>
+
+
+
+
 
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" type="button"
@@ -164,7 +210,7 @@
 
                 <!-- Others (simple links) -->
                 <li><a href="/about"
-                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">about</a>
+                        class="block font-semibold py-2 hover:text-blue-600 dark:hover:text-blue-400">About</a>
                 </li>
 
                 <li><a href="/contact"

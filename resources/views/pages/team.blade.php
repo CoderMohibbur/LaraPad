@@ -16,28 +16,30 @@
         });
     </script>
 
-    <!-- Mission Banner (compact, human-written + SEO) -->
-    <section class="relative overflow-hidden border-b dark:border-gray-700">
-        <!-- bg accents -->
-        <div aria-hidden="true" class="absolute inset-0 -z-10 pointer-events-none">
-            <div class="absolute -top-24 left-[10%] h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl"></div>
-            <div class="absolute -bottom-28 right-[8%] h-96 w-96 rounded-full bg-indigo-400/15 blur-3xl"></div>
-            <svg class="absolute inset-0 h-full w-full opacity-[0.06] dark:opacity-[0.12]"
-                xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="grid-m" width="24" height="24" patternUnits="userSpaceOnUse">
-                        <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width=".7" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid-m)" />
-            </svg>
-        </div>
+<!-- Mission Banner (compact, human-written + SEO) -->
+<section class="relative overflow-hidden border-b dark:border-gray-700">
+    <!-- bg accents -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute -top-24 left-[10%] h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl"></div>
+        <div class="absolute -bottom-28 right-[8%] h-96 w-96 rounded-full bg-indigo-400/15 blur-3xl"></div>
+        <svg class="absolute inset-0 h-full w-full opacity-[0.06] dark:opacity-[0.12]"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid-m" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width=".7" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-m)" />
+        </svg>
+    </div>
 
-        <div class="py-12 md:py-14 max-w-screen-xl mx-auto text-center lg:text-left px-4">
+    <div class="py-12 md:py-14 max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Left Text Content -->
+        <div class="text-center lg:text-left">
             <h1 class="font-extrabold text-slate-900 dark:text-white tracking-tight
-                text-[clamp(1.8rem,4vw,3rem)] leading-[1.15] max-w-2xl lg:max-w-xl mx-auto lg:mx-0"
+                text-[clamp(1.8rem,4vw,3rem)] leading-[1.15] max-w-2xl mx-auto lg:mx-0"
                 data-aos="fade-up">
-                Khalid IT Mission
+                <span class="text-[#007CAA]">Khalid</span> <span class="text-orange-400">IT</span> Mission
                 <span
                     class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-cyan-400 to-indigo-500
                     text-[clamp(1.3rem,3.2vw,2.25rem)] leading-tight">
@@ -46,18 +48,18 @@
             </h1>
 
             <p class="mt-4 md:mt-5 max-w-2xl text-[#5d7183] dark:text-gray-300
-               text-[clamp(1rem,1.6vw,1.125rem)] leading-relaxed"
+               text-[clamp(1rem,1.6vw,1.125rem)] leading-relaxed mx-auto lg:mx-0"
                 data-aos="fade-up" data-aos-delay="100">
-                We’re a small, hands‑on team that builds <strong>predictable B2B pipelines</strong>.
-                We research your ICP, find and verify real decision‑makers, set up <strong>SPF/DKIM/DMARC</strong> the
+                We’re a small, hands-on team that builds <strong>predictable B2B pipelines</strong>.
+                We research your ICP, find and verify real decision-makers, set up <strong>SPF/DKIM/DMARC</strong> the
                 right way,
                 warm new inboxes, and write <em>human</em> emails that sound like you. The goal is simple: more replies,
                 more qualified calls, and revenue you can track back to <strong>cold email</strong>.
             </p>
 
             <!-- SEO chips (compact) -->
-            <div class="mt-5 flex flex-wrap items-center gap-2.5 justify-center sm:justify-start" data-aos="zoom-in"
-                data-aos-delay="160">
+            <div class="mt-5 flex flex-wrap items-center gap-2.5 justify-center lg:justify-start"
+                data-aos="zoom-in" data-aos-delay="160">
                 <span
                     class="px-2.5 py-1 rounded-full text-[12px] bg-white dark:bg-gray-800 text-sky-700 dark:text-sky-300 ring-1 ring-sky-200/60 dark:ring-sky-900/40">B2B
                     Lead Generation</span>
@@ -73,12 +75,21 @@
             </div>
         </div>
 
-        <!-- divider -->
-        <div class="mx-auto max-w-screen-xl px-4 pb-3">
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent dark:via-slate-800">
-            </div>
+        <!-- Right Image -->
+        <div class="flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+            <img src="{{ asset('images/career.png') }}" 
+                 alt="Khalid IT Mission Visual"
+                 class="max-w-md w-full rounded-2xl shadow-lg">
         </div>
-    </section>
+    </div>
+
+    <!-- divider -->
+    <div class="mx-auto max-w-screen-xl px-4 pb-3">
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent dark:via-slate-800">
+        </div>
+    </div>
+</section>
+
 
     <!-- Our Leadership Team (human-written copy) -->
     <section class="relative border-b dark:border-gray-700 overflow-hidden">

@@ -138,13 +138,7 @@
                     — all under one roof.
                 </p>
                 <div class="mt-8 flex flex-wrap justify-center gap-4">
-                    <a href="#"
-                        class="relative inline-flex items-center gap-3 rounded-full px-8 py-3 text-lg font-semibold text-white shadow-lg
-                    bg-gradient-to-r from-sky-600 via-cyan-600 to-indigo-600
-                    hover:from-sky-500 hover:to-indigo-500 active:scale-[.97] transition">
-                        <span>💡 Get Free Audit</span>
-                    </a>
-                    <a href="#"
+                    <a href="https://calendly.com/khalidmdop/15-minutes-free-consultation?back=1&month=2025-08"
                         class="inline-flex items-center gap-2 rounded-full px-8 py-3 text-lg font-semibold
                     ring-2 ring-sky-400/50 hover:bg-sky-50 dark:hover:bg-sky-900/20 transition">
                         📅 Book Strategy Call

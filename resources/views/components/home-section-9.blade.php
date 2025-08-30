@@ -115,40 +115,59 @@
       </div>
 
       <!-- Right Visual -->
-      <div class="w-full lg:w-1/2 flex justify-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative w-full max-w-lg">
-          <!-- illustrative chart/card -->
-          <div class="rounded-2xl border border-sky-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 shadow-lg">
-            <h4 class="text-base font-semibold text-gray-800 dark:text-gray-100">Weekly Pipeline Impact</h4>
-            <div class="mt-4 h-36 w-full rounded-lg bg-gradient-to-tr from-sky-100 to-emerald-100 dark:from-sky-900/30 dark:to-emerald-900/30"></div>
-            <div class="mt-4 grid grid-cols-3 gap-3 text-center">
-              <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
-                <div class="text-2xl font-bold text-[#0e7490]">3.2k</div>
-                <div class="text-xs text-[#5d7183]">Opens</div>
-              </div>
-              <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
-                <div class="text-2xl font-bold text-[#0e7490]">480</div>
-                <div class="text-xs text-[#5d7183]">Replies</div>
-              </div>
-              <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
-                <div class="text-2xl font-bold text-[#0e7490]">62</div>
-                <div class="text-xs text-[#5d7183]">Meetings</div>
-              </div>
+<div class="w-full lg:w-1/2 flex justify-center" data-aos="fade-up" data-aos-delay="200">
+  <div class="relative w-full max-w-lg">
+    <!-- illustrative chart/card -->
+    <div class="rounded-2xl border border-sky-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 shadow-lg">
+      <h4 class="text-base font-semibold text-gray-800 dark:text-gray-100">Weekly Pipeline Impact</h4>
+
+      {{-- Image থাকলে ইমেজ শো করবে, না থাকলে আগের ব্যাকগ্রাউন্ড --}}
+      <div class="mt-4 h-36 w-full rounded-lg overflow-hidden">
+        @if (file_exists(public_path('images/graph.png')))
+            <img src="{{ asset('images/graph.png') }}"
+                 alt="Weekly Pipeline Graph"
+                 class="w-full h-full object-cover rounded-lg">
+        @else
+            <div class="h-full w-full rounded-lg 
+                        bg-gradient-to-tr from-sky-100 to-emerald-100 
+                        dark:from-sky-900/30 dark:to-emerald-900/30">
             </div>
-          </div>
-          <!-- glow -->
-          <div class="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-r from-sky-200/40 to-emerald-200/40 blur-2xl dark:from-sky-400/10 dark:to-emerald-400/10"></div>
+        @endif
+      </div>
+
+      <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+        <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
+          <div class="text-2xl font-bold text-[#0e7490]">3.2k</div>
+          <div class="text-xs text-[#5d7183]">Opens</div>
+        </div>
+        <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
+          <div class="text-2xl font-bold text-[#0e7490]">480</div>
+          <div class="text-xs text-[#5d7183]">Replies</div>
+        </div>
+        <div class="rounded-lg border border-gray-100 dark:border-gray-800 p-3">
+          <div class="text-2xl font-bold text-[#0e7490]">62</div>
+          <div class="text-xs text-[#5d7183]">Meetings</div>
         </div>
       </div>
     </div>
 
+    <!-- glow -->
+    <div class="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] 
+                bg-gradient-to-r from-sky-200/40 to-emerald-200/40 blur-2xl 
+                dark:from-sky-400/10 dark:to-emerald-400/10">
+    </div>
+  </div>
+</div>
+
+    </div>
+
     <!-- CTA Row -->
     <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="#book-demo" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-[#2ca8d9] px-6 py-3 text-white font-semibold shadow transition
+      <a href="https://calendly.com/khalidmdop/15-minutes-free-consultation?back=1&month=2025-08" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-[#2ca8d9] px-6 py-3 text-white font-semibold shadow transition
                                 hover:bg-sky-600 active:scale-95 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800">
         Book a 15‑Minute Strategy Call
       </a>
-      <a href="#samples" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-6 py-3 text-gray-800 dark:text-gray-100 font-semibold hover:shadow-md transition active:scale-95">
+      <a href="/contact" class="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-6 py-3 text-gray-800 dark:text-gray-100 font-semibold hover:shadow-md transition active:scale-95">
         See Cold Email Samples
       </a>
     </div>
